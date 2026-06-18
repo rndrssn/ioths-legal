@@ -1,0 +1,11 @@
+name = "ioths-contact"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+# Secrets are NEVER stored here.
+# Set them once via CLI:
+#   wrangler secret put GITHUB_TOKEN
+#   wrangler secret put TURNSTILE_SECRET
+#
+# GITHUB_TOKEN  — fine-grained PAT, issues:write on rndrssn/ioths only
+# TURNSTILE_SECRET — from dash.cloudflare.com > Turnstile > your site

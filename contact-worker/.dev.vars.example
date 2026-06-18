@@ -1,0 +1,4 @@
+# Copy to .dev.vars for local development (wrangler dev).
+# .dev.vars is gitignored — never commit real values.
+GITHUB_TOKEN=github_pat_REPLACE_ME
+TURNSTILE_SECRET=REPLACE_ME

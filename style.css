@@ -22,10 +22,15 @@
   --negative:        #b83227;
   --meta:            #2a3c4a;
 
+  /* Surfaces */
+  --surface:     #f5f5f5;
+  --destructive: #b83227;
+
   /* Radius */
-  --radius-xs:  3px;
-  --radius-sm:  8px;
-  --radius-md:  12px;
+  --radius-xs:   3px;
+  --radius-sm:   8px;
+  --radius-md:   12px;
+  --radius-pill: 999px;
 
   /* Spacing */
   --space-xxs:  4px;
@@ -56,6 +61,8 @@
     --fg-mid:          #c8c8c8;
     --fg-faint:        #8c8c8c;
     --fg-ghost:        #686868;
+    --surface:         #1c1c1c;
+    --destructive:     #d05546;
     --positive:        #4a9065;
     --negative:        #d05546;
     --meta:            #4e6578;
