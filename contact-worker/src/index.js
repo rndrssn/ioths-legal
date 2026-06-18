@@ -25,6 +25,13 @@ export default {
       return new Response('Method Not Allowed', { status: 405 });
     }
 
+    // Per-IP rate limit before any expensive work (Turnstile, GitHub).
+    const ip = request.headers.get('CF-Connecting-IP') ?? '';
+    const { success: underLimit } = await env.RATE_LIMITER.limit({ key: ip });
+    if (!underLimit) {
+      return jsonResponse({ error: 'Too many requests. Please wait a minute and try again.' }, 429, origin);
+    }
+
     let body;
     try {
       body = await request.json();
@@ -47,13 +54,15 @@ export default {
       return jsonResponse({ error: 'Message is too short.' }, 400, origin);
     }
 
+    // Issue titles render as plain text (no markdown, no @mention notifications),
+    // so the subject is safe as-is. The body IS markdown — neutralise it.
     const issueTitle = subject || 'Contact form submission';
     const issueBody  = [
-      email ? `**From:** ${email}` : '**From:** *(no email provided)*',
+      email ? `**From:** \`${escapeInline(email)}\`` : '**From:** *(no email provided)*',
       '',
       '**Message:**',
       '',
-      message,
+      fencedBlock(message),
     ].join('\n');
 
     const ghRes = await fetch(`${GITHUB_API}/repos/${GITHUB_REPO}/issues`, {
@@ -96,6 +105,22 @@ async function verifyTurnstile(token, secret, request) {
 function sanitise(value, maxLen) {
   if (typeof value !== 'string') return '';
   return value.trim().slice(0, maxLen);
+}
+
+// Single-line fields rendered inside an inline code span. Strip backticks
+// (prevents span breakout) and collapse newlines so the value stays on one line.
+function escapeInline(value) {
+  return value.replace(/`/g, "'").replace(/[\r\n]+/g, ' ').trim();
+}
+
+// Wrap untrusted multi-line content in a fenced code block. GitHub does not
+// parse @mentions, issue refs, or links inside code fences, so this neutralises
+// notification/link injection. The fence is made longer than the longest run of
+// backticks in the content so the block cannot be broken out of.
+function fencedBlock(value) {
+  const longestRun = (value.match(/`+/g) ?? []).reduce((m, s) => Math.max(m, s.length), 0);
+  const fence = '`'.repeat(Math.max(3, longestRun + 1));
+  return `${fence}\n${value}\n${fence}`;
 }
 
 function corsHeaders(origin) {
