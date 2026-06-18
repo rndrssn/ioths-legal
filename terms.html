@@ -99,7 +99,8 @@
 
   <footer>
     <p>ioths &mdash; made with care</p>
-    <p><a href="index.html">Privacy Policy</a> &middot; <a href="impressum.html">Legal Notice</a></p>
+    <p><a href="index.html">Privacy Policy</a><span id="impressum-link"> &middot; <a href="impressum.html">Legal Notice</a></span></p>
+    <script>if(!navigator.language.startsWith('de'))document.getElementById('impressum-link').remove();</script>
   </footer>
 
 </body>

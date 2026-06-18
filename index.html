@@ -103,7 +103,8 @@
 
   <footer>
     <p>ioths &mdash; made with care</p>
-    <p><a href="terms.html">Terms of Use</a> &middot; <a href="impressum.html">Legal Notice</a></p>
+    <p><a href="terms.html">Terms of Use</a><span id="impressum-link"> &middot; <a href="impressum.html">Legal Notice</a></span></p>
+    <script>if(!navigator.language.startsWith('de'))document.getElementById('impressum-link').remove();</script>
   </footer>
 
 </body>
