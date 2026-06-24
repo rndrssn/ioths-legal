@@ -108,6 +108,22 @@ header {
   text-decoration: none;
 }
 
+.lang-switch {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+}
+
+.lang-switch a {
+  color: var(--fg-ghost);
+  text-decoration: none;
+  padding: 0 var(--space-xxs);
+}
+
+.lang-switch a.active {
+  color: var(--fg);
+}
+
 main {
   max-width: 680px;
   margin: 0 auto;
