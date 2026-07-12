@@ -24,7 +24,7 @@
   <main>
 
     <h1>Datenschutzerklärung</h1>
-    <p class="meta">Gültig ab 12. Juli 2026 · Version 2026.07.1</p>
+    <p class="meta">Gültig ab 12. Juli 2026 · Version 2026.07.2</p>
 
     <div class="callout">
       <p>Kurz gefasst: ioths ist Offline-first. Ihre Notizen bleiben auf Ihrem Gerät. Wir lesen sie nie, verkaufen sie nie und nutzen sie nie, um ein Modell zu trainieren. Link-Vorschauen sind standardmäßig aktiviert und können deaktiviert werden.</p>
@@ -43,10 +43,10 @@
 
     <section>
       <h2>Optionale Synchronisierung – Ihre Wahl, Ihre Daten</h2>
-      <p>ioths unterstützt zwei optionale Synchronisierungsziele. Keines ist standardmäßig aktiviert.</p>
+      <p>ioths unterstützt zwei optionale Speicherziele außerhalb Ihres Geräts. Keines ist standardmäßig aktiviert.</p>
       <ul>
-        <li><strong>Obsidian-iCloud-Vault.</strong> Wenn Sie ioths auf einen Ordner in Ihrem iCloud Drive verweisen, werden Notizen über Apples iCloud-Infrastruktur unter Ihrer eigenen Apple-ID synchronisiert. Für diese Speicherung gilt Apples Datenschutzerklärung. Wir haben darauf keinen Zugriff.</li>
-        <li><strong>GitHub-Backup.</strong> Wenn Sie ein GitHub-Repository verbinden, werden Notizen direkt von Ihrem Gerät an Ihr eigenes GitHub-Konto übertragen – mithilfe eines persönlichen Zugriffstokens, das Sie selbst bereitstellen. Wir sehen weder das Token noch den Inhalt.</li>
+        <li><strong>Ein von Ihnen gewählter externer Ordner.</strong> Sie können ioths auf einen über die iOS-Dateien-Auswahl ausgewählten Ordner verweisen – einen iCloud-Drive-Ordner, einen Obsidian-Vault-Ordner oder einen Ordner eines anderen von Ihnen genutzten Dateianbieters. Ihre Notizen und Anhänge werden dann direkt in diesen Ordner geschrieben und von diesem Anbieter unter Ihrem eigenen Konto, dessen Bedingungen und dessen Datenschutzerklärung verarbeitet. Wir haben darauf keinen Zugriff.</li>
+        <li><strong>GitHub-Backup.</strong> Wenn Sie ein GitHub-Repository verbinden, werden Notizen direkt von Ihrem Gerät an Ihr eigenes GitHub-Konto übertragen – mithilfe eines persönlichen Zugriffstokens, das Sie selbst bereitstellen. Das Token wird im iOS-Schlüsselbund (Keychain) auf Ihrem Gerät gespeichert. Wir sehen weder das Token noch den Inhalt.</li>
       </ul>
       <p>Sie können jede Verbindung jederzeit in den Einstellungen widerrufen; ioths schreibt dann sofort nicht mehr an dieses Ziel.</p>
     </section>
@@ -84,7 +84,7 @@
       <p>ioths nutzt die folgenden Dienste von Drittanbietern:</p>
       <ul>
         <li><strong>TelemetryDeck</strong> – anonyme Nutzungsanalyse wie oben beschrieben. Es gilt die <a href="https://telemetrydeck.com/privacy" rel="noopener noreferrer" target="_blank">Datenschutzerklärung von TelemetryDeck</a>.</li>
-        <li><strong>Apple iCloud</strong> (wenn Sie den iCloud-Vault-Modus aktivieren) – es gilt <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer" target="_blank">Apples Datenschutzerklärung</a>.</li>
+        <li><strong>Ihr gewählter Dateianbieter</strong> (wenn Sie einen externen Ordner auswählen) – bei einem iCloud-Drive-Ordner ist dies Apple; es gilt <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer" target="_blank">Apples Datenschutzerklärung</a>. Wenn Sie einen Ordner eines anderen Anbieters wählen, gilt für die dort abgelegten Dateien dessen eigene Datenschutzerklärung.</li>
         <li><strong>GitHub</strong> (wenn Sie das GitHub-Backup aktivieren) – es gilt die <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer" target="_blank">Datenschutzerklärung von GitHub</a>.</li>
       </ul>
       <p>Sofern Sie Link-Vorschauen nicht deaktivieren, erhalten aus Notizen verlinkte Websites gewöhnliche Webanfragen für die verlinkten URLs. Kein anderer Drittanbieterdienst erhält Ihre Daten.</p>
@@ -92,8 +92,8 @@
 
     <section>
       <h2>Datenspeicherung und Löschung</h2>
-      <p>Da wir keine personenbezogenen Daten oder Notizinhalte erfassen, gibt es für uns nichts, was wir in Ihrem Namen löschen könnten. Alle Notizdaten befinden sich auf Ihrem Gerät; durch das Löschen der App werden sie entfernt.</p>
-      <p>Wenn Sie die iCloud- oder GitHub-Synchronisierung aktiviert haben, gelten für die Daten an diesen Orten die Bedingungen Ihrer Konten bei Apple bzw. GitHub. Sie können sie dort jederzeit löschen.</p>
+      <p>Da wir keine personenbezogenen Daten oder Notizinhalte erfassen, gibt es für uns nichts, was wir in Ihrem Namen löschen könnten.</p>
+      <p>Durch das Löschen der App werden die lokal auf Ihrem Gerät gespeicherten Notizdaten entfernt. <strong>Nicht</strong> gelöscht werden Kopien, die bereits in einen externen Ordner eines Dateianbieters oder in ein GitHub-Repository geschrieben wurden – diese Kopien verbleiben beim jeweiligen Anbieter unter Ihrem eigenen Konto. Löschen Sie sie dort, wenn Sie sie entfernen möchten.</p>
     </section>
 
     <section>
@@ -111,6 +111,11 @@
       <p>Wenn Sie das <a href="../contact.html">Kontaktformular</a> verwenden, erfassen wir die von Ihnen verfasste Nachricht und Ihre E-Mail-Adresse, sofern Sie diese angeben. Diese Daten werden als privates GitHub-Issue in unserem Quellcode-Repository gespeichert, auf das nur der Entwickler zugreifen kann. Sie werden ausschließlich zur Beantwortung Ihrer Anfrage verwendet und gelöscht, sobald das Anliegen erledigt ist.</p>
       <p>Rechtsgrundlage: berechtigtes Interesse (Beantwortung Ihrer Anfrage). Auftragsverarbeiter: Cloudflare (nur Übertragung, keine dauerhafte Speicherung) und GitHub/Microsoft (Speicherung der Issues). Sie können jederzeit über das Formular selbst die Löschung verlangen.</p>
       <p>Das Kontaktformular ist durch Cloudflare Turnstile (unsichtbarer Modus) vor Bots geschützt. Turnstile erfasst möglicherweise begrenzte Telemetriedaten, um zu beurteilen, ob ein Besucher ein Mensch ist. Hierfür gilt das <a href="https://www.cloudflare.com/cloudflare-customer-dpa/" rel="noopener noreferrer" target="_blank">Cloudflare Turnstile Privacy Addendum</a>. Keine von Turnstile erfassten Daten werden für Werbung verwendet oder an Dritte verkauft.</p>
+    </section>
+
+    <section>
+      <h2>Marken</h2>
+      <p>ioths nennt Dienste wie Apple, iCloud, Obsidian, GitHub, TelemetryDeck und Cloudflare ausschließlich zur Bezeichnung optionaler Integrationen und der oben beschriebenen Auftragsverarbeiter. Diese Namen und Logos sind Marken der jeweiligen Inhaber. ioths ist unabhängig und wird von keinem dieser Anbieter unterstützt, gesponsert oder ist mit ihnen verbunden.</p>
     </section>
 
     <section>
