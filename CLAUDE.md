@@ -29,9 +29,9 @@ points at. Two consequences that are easy to miss:
 
 ## Publishing state
 
-GitHub Pages is currently **off**, deliberately — the terms describe an in-app
-purchase the app does not ship yet. Do not re-enable publishing, and do not
-suggest it, without an explicit decision from the owner. See `README.md`.
+Cloudflare Pages is the production host. Do not re-enable GitHub Pages. Static
+site and contact Worker deployments remain explicit owner-authorized actions;
+see `README.md` for the staging and deployment commands.
 
 ---
 

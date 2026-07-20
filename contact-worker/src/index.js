@@ -1,4 +1,4 @@
-const ALLOWED_ORIGIN = 'https://rndrssn.github.io';
+const ALLOWED_ORIGIN = 'https://ioths-legal.pages.dev';
 const GITHUB_REPO    = 'rndrssn/ioths';
 const GITHUB_API     = 'https://api.github.com';
 const TURNSTILE_URL  = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
@@ -7,6 +7,8 @@ const MAX_MESSAGE = 2000;
 const MAX_EMAIL   = 254;
 const MAX_SUBJECT = 150;
 const MIN_MESSAGE = 10;
+const MAX_BODY_BYTES = 16 * 1024;
+const UPSTREAM_TIMEOUT_MS = 10_000;
 
 export default {
   async fetch(request, env) {
@@ -24,6 +26,13 @@ export default {
     if (request.method !== 'POST') {
       return new Response('Method Not Allowed', { status: 405 });
     }
+    if (!request.headers.get('Content-Type')?.toLowerCase().startsWith('application/json')) {
+      return jsonResponse({ error: 'Content-Type must be application/json.' }, 415, origin);
+    }
+    const contentLength = Number(request.headers.get('Content-Length'));
+    if (Number.isFinite(contentLength) && contentLength > MAX_BODY_BYTES) {
+      return jsonResponse({ error: 'Request is too large.' }, 413, origin);
+    }
 
     // Per-IP rate limit before any expensive work (Turnstile, GitHub).
     const ip = request.headers.get('CF-Connecting-IP') ?? '';
@@ -34,8 +43,15 @@ export default {
 
     let body;
     try {
-      body = await request.json();
+      const rawBody = await request.text();
+      if (new TextEncoder().encode(rawBody).byteLength > MAX_BODY_BYTES) {
+        return jsonResponse({ error: 'Request is too large.' }, 413, origin);
+      }
+      body = JSON.parse(rawBody);
     } catch {
+      return jsonResponse({ error: 'Invalid request.' }, 400, origin);
+    }
+    if (!body || typeof body !== 'object' || Array.isArray(body)) {
       return jsonResponse({ error: 'Invalid request.' }, 400, origin);
     }
 
@@ -65,20 +81,26 @@ export default {
       fencedBlock(message),
     ].join('\n');
 
-    const ghRes = await fetch(`${GITHUB_API}/repos/${GITHUB_REPO}/issues`, {
-      method: 'POST',
-      headers: {
-        Authorization:          `Bearer ${env.GITHUB_TOKEN}`,
-        'Content-Type':         'application/json',
-        'User-Agent':           'ioths-contact-worker/1.0',
-        'X-GitHub-Api-Version': '2022-11-28',
-      },
-      body: JSON.stringify({
-        title:  issueTitle,
-        body:   issueBody,
-        labels: ['contact'],
-      }),
-    });
+    let ghRes;
+    try {
+      ghRes = await fetch(`${GITHUB_API}/repos/${GITHUB_REPO}/issues`, {
+        method: 'POST',
+        headers: {
+          Authorization:          `Bearer ${env.GITHUB_TOKEN}`,
+          'Content-Type':         'application/json',
+          'User-Agent':            'ioths-contact-worker/1.0',
+          'X-GitHub-Api-Version': '2022-11-28',
+        },
+        body: JSON.stringify({
+          title:  issueTitle,
+          body:   issueBody,
+          labels: ['contact'],
+        }),
+        signal: AbortSignal.timeout(UPSTREAM_TIMEOUT_MS),
+      });
+    } catch {
+      return jsonResponse({ error: 'Could not submit. Please try again later.' }, 502, origin);
+    }
 
     if (!ghRes.ok) {
       // Do not forward GitHub's error body — it may contain token hints
@@ -93,13 +115,19 @@ async function verifyTurnstile(token, secret, request) {
   if (!token || !secret) return false;
   // Pass the visitor IP for stronger verification
   const ip = request.headers.get('CF-Connecting-IP') ?? '';
-  const res = await fetch(TURNSTILE_URL, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ secret, response: token, remoteip: ip }),
-  });
-  const data = await res.json();
-  return data.success === true;
+  try {
+    const res = await fetch(TURNSTILE_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ secret, response: token, remoteip: ip }),
+      signal: AbortSignal.timeout(UPSTREAM_TIMEOUT_MS),
+    });
+    if (!res.ok) return false;
+    const data = await res.json();
+    return data.success === true;
+  } catch {
+    return false;
+  }
 }
 
 function sanitise(value, maxLen) {

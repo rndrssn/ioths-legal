@@ -1,0 +1,6 @@
+{
+  "$schema": "./contact-worker/node_modules/wrangler/config-schema.json",
+  "name": "ioths-legal",
+  "pages_build_output_dir": "./dist",
+  "compatibility_date": "2026-07-20"
+}

@@ -10,22 +10,15 @@ private GitHub issue.
 
 ---
 
-## Status: unpublished on purpose
+## Production hosting
 
-The site is finished but **not served**: `https://rndrssn.github.io/ioths-legal/`
-returns 404. It must not be live while the app isn't — the Terms of Use state that
-sync is a one-time in-app purchase, and the app does not ship StoreKit yet.
+The production legal site is deployed to Cloudflare Pages at
+`https://ioths-legal.pages.dev/`. The checked-in `scripts/build-pages.sh` stages
+only the public HTML, CSS, headers, and redirects in `dist/`; repository guidance,
+Worker source, and development files are never uploaded as static assets.
 
-App Store review requires a privacy-policy URL that resolves, so republication and
-app submission arrive together. At that point the in-app-purchase claim must
-already be true, or the terms must be corrected first.
-
-Checking whether it's live: **fetch the URL, don't trust the Pages settings page or
-`gh api .../pages`.** Both keep reporting the last successful build (`status: built`,
-source `main`) after publishing is switched off, so they read as "live" when nothing
-is served. The CDN also caches pages for 10 minutes and ignores query strings, so a
-`?cachebust=` trick doesn't work — check the `age` header, or just use a private
-window.
+The custom `ioths.app` domain is not configured. App and documentation links use
+the stable Pages hostname until an owned domain is connected and verified.
 
 ---
 
@@ -55,15 +48,15 @@ middle and is the only component holding secrets.
 
 ```text
 contact.html                  Cloudflare Worker              GitHub
-(rndrssn.github.io)           (ioths-contact)                (private repo)
+(ioths-legal.pages.dev)       (ioths-contact)                (private repo)
 
   user fills form
   Turnstile issues token
          │
-         │  POST { subject, email, message, cf-turnstile-response }
+         │  POST { subject, email, message, turnstileToken }
          ├──────────────────────────────►
          │                          1. reject unless Origin is
-         │                             https://rndrssn.github.io
+         │                             https://ioths-legal.pages.dev
          │                          2. rate-limit by IP (5 / 60s)
          │                          3. verify Turnstile token
          │                          4. sanitise + length-check
@@ -72,7 +65,7 @@ contact.html                  Cloudflare Worker              GitHub
          │                                    │  create issue, label: contact
          │                                    ├──────────────────────────────►
          │  ◄─────────────────────────────────┤
-         │       { ok } or a neutral error
+         │       { success: true } or a neutral error
 ```
 
 Points that are easy to get wrong, and why they're built this way:
@@ -120,6 +113,13 @@ wrangler secret put TURNSTILE_SECRET   # from the Turnstile dashboard
 
 Deploying is `npm run deploy`, but **don't deploy unless you were asked to** —
 the Worker is live infrastructure serving a public form.
+
+The static site is staged and deployed separately:
+
+```sh
+./scripts/build-pages.sh
+./contact-worker/node_modules/.bin/wrangler pages deploy ./dist --project-name=ioths-legal
+```
 
 ---
 

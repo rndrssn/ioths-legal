@@ -2,10 +2,10 @@
   "name": "ioths-contact-worker",
   "private": true,
   "scripts": {
-    "deploy": "wrangler deploy",
-    "dev": "wrangler dev"
+    "deploy": "wrangler deploy --config wrangler.toml",
+    "dev": "wrangler dev --config wrangler.toml"
   },
   "devDependencies": {
-    "wrangler": "^3"
+    "wrangler": "^4.112.0"
   }
 }

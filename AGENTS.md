@@ -74,7 +74,7 @@ Ignore documentation inside `node_modules/`; it belongs to dependencies, not thi
 
 - The contact Worker lives in `contact-worker/src/index.js`.
 - Cloudflare Worker config lives in `contact-worker/wrangler.toml`.
-- The Worker accepts requests only from `https://rndrssn.github.io`.
+- The Worker accepts requests only from `https://ioths-legal.pages.dev`.
 - Keep CORS narrow. Do not replace the fixed allowed origin with `*`.
 - Only `POST` and `OPTIONS` are valid request methods.
 - Rate-limit before expensive or external work.
