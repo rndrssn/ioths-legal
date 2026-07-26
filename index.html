@@ -24,7 +24,7 @@
   <main>
 
     <h1>Privacy Policy</h1>
-    <p class="meta">Effective 20 July 2026 · Version 2026.07.3</p>
+    <p class="meta">Effective 26 July 2026 · Version 2026.07.4</p>
 
     <div class="callout">
       <p>The short version: ioths is offline-first. Your notes stay on your device. We never read them, sell them, or use them to train any model. Link previews are on by default and can be turned off.</p>
@@ -43,12 +43,14 @@
 
     <section>
       <h2>Optional sync — your choice, your data</h2>
-      <p>ioths supports two opt-in storage destinations beyond your device. Neither is enabled by default.</p>
+      <p>ioths supports opt-in storage destinations beyond your device. None is enabled by default.</p>
       <ul>
         <li><strong>An external folder you choose.</strong> You can point ioths at a folder selected through the iOS Files picker — an iCloud Drive folder, an Obsidian vault folder, or a folder belonging to another Files provider you use. Your notes and attachments are then written directly into that folder and handled by that provider under your own account, terms, and privacy policy. We have no access to it.</li>
         <li><strong>GitHub sync.</strong> If you connect a GitHub repository, ioths sends and receives supported vault files directly between your device and one dedicated repository path under your GitHub account. This can include note content, filenames, YAML frontmatter, attachments, Archive files, Trash files, and the ioths Library marker. Authorization uses the GitHub App guided flow or, as an advanced fallback, a personal access token. Credentials are stored in the iOS Keychain on your device. We never receive the credential, repository details, or synced content.</li>
+        <li><strong>GitLab sync.</strong> If you connect a GitLab.com project, ioths sends and receives supported vault files directly between your device and one dedicated path in a branch you choose within that project. This can include note content, filenames, YAML frontmatter, attachments, Archive files, Trash files, and the ioths Library marker. Authorization uses GitLab's OAuth sign-in flow. GitLab's OAuth scope for this flow is broad by design, but ioths only ever reads or writes the one project and path you selected. Credentials are stored in the iOS Keychain on your device. We never receive the credential, project details, or synced content.</li>
       </ul>
       <p>Anyone with access to the selected GitHub repository can read the files stored there. If the repository is public, the synced files are public. Stopping GitHub sync in ioths stops network access and removes the saved connection and credential from the device while keeping local notes. GitHub authorization remains active until you revoke it through GitHub.</p>
+      <p>Anyone with access to the selected GitLab project can read the files stored there. If the project is public, the synced files are public. Stopping GitLab sync in ioths stops network access and removes the saved connection and credential from the device while keeping local notes. GitLab authorization remains active until you revoke it through your GitLab account's Applications settings.</p>
     </section>
 
     <section>
@@ -63,6 +65,7 @@
         <li>Appearance setting changed</li>
         <li>Feature tour opened from Settings</li>
         <li>GitHub authorization started, completed, or failed — only a coarse result category, never an account, repository, path, code, or credential</li>
+        <li>GitLab authorization started, completed, or failed — only a coarse result category, never an account, project, path, code, or credential</li>
       </ul>
       <p>No signal ever includes note content, note titles, tags, or any data derived from what you write. TelemetryDeck's own privacy policy is at <a href="https://telemetrydeck.com/privacy" rel="noopener noreferrer" target="_blank">telemetrydeck.com/privacy</a>.</p>
       <p>Analytics are optional. You can turn them off completely in the app under <strong>Settings → Privacy → Share anonymous analytics</strong>. When off, no signals are sent — not even the session signal — until you turn it back on.</p>
@@ -70,7 +73,7 @@
 
     <section>
       <h2>No ioths account required</h2>
-      <p>ioths requires no developer-operated account or sign-in. Optional providers may require their own account and authorization: GitHub sync requires a GitHub account, and Files providers may require an account with that provider. We do not receive your provider credentials.</p>
+      <p>ioths requires no developer-operated account or sign-in. Optional providers may require their own account and authorization: GitHub sync requires a GitHub account, GitLab sync requires a GitLab.com account, and Files providers may require an account with that provider. We do not receive your provider credentials.</p>
     </section>
 
     <section>
@@ -87,6 +90,7 @@
         <li><strong>TelemetryDeck</strong> — anonymous usage analytics as described above. Governed by <a href="https://telemetrydeck.com/privacy" rel="noopener noreferrer" target="_blank">TelemetryDeck's Privacy Policy</a>.</li>
         <li><strong>Your chosen Files provider</strong> (if you select an external folder) — for an iCloud Drive folder this is Apple, governed by <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer" target="_blank">Apple's Privacy Policy</a>. If you choose a folder belonging to a different provider, that provider's own privacy policy governs the files you place there.</li>
         <li><strong>GitHub</strong> (if you enable GitHub sync) — governed by <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer" target="_blank">GitHub's Privacy Statement</a>.</li>
+        <li><strong>GitLab</strong> (if you enable GitLab sync) — governed by <a href="https://about.gitlab.com/privacy/" rel="noopener noreferrer" target="_blank">GitLab's Privacy Statement</a>.</li>
       </ul>
       <p>Unless you turn off link previews, websites linked from notes receive ordinary web requests for the linked URLs. No other third-party service receives your data.</p>
     </section>
@@ -94,7 +98,7 @@
     <section>
       <h2>Data retention and deletion</h2>
       <p>Because we do not collect personal data or note content, there is nothing for us to delete on your behalf.</p>
-      <p>Deleting the app removes the note data stored locally on your device. It does <strong>not</strong> delete copies already written to an external Files-provider folder or to a GitHub repository — those copies stay with the provider under your own account. Delete them there if you want them gone.</p>
+      <p>Deleting the app removes the note data stored locally on your device. It does <strong>not</strong> delete copies already written to an external Files-provider folder, a GitHub repository, or a GitLab project — those copies stay with the provider under your own account. Delete them there if you want them gone.</p>
     </section>
 
     <section>
@@ -116,7 +120,7 @@
 
     <section>
       <h2>Trademarks</h2>
-      <p>ioths names services such as Apple, iCloud, Obsidian, GitHub, TelemetryDeck, and Cloudflare only to identify optional integrations and the processors described above. Those names and logos are trademarks of their respective owners. ioths is independent and is not endorsed by, sponsored by, or affiliated with any of them.</p>
+      <p>ioths names services such as Apple, iCloud, Obsidian, GitHub, GitLab, TelemetryDeck, and Cloudflare only to identify optional integrations and the processors described above. Those names and logos are trademarks of their respective owners. ioths is independent and is not endorsed by, sponsored by, or affiliated with any of them.</p>
     </section>
 
     <section>
