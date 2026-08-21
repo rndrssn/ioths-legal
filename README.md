@@ -13,12 +13,12 @@ private GitHub issue.
 ## Production hosting
 
 The production legal site is deployed to Cloudflare Pages at
-`https://ioths-legal.pages.dev/`. The checked-in `scripts/build-pages.sh` stages
+`https://legal.bedrockrebel.app/`. The checked-in `scripts/build-pages.sh` stages
 only the public HTML, CSS, headers, and redirects in `dist/`; repository guidance,
 Worker source, and development files are never uploaded as static assets.
 
-The custom `ioths.app` domain is not configured. App and documentation links use
-the stable Pages hostname until an owned domain is connected and verified.
+The legacy `ioths-legal.pages.dev` hostname remains available during the
+contact-form cutover. App and documentation links use the custom domain.
 
 ---
 
@@ -48,15 +48,15 @@ middle and is the only component holding secrets.
 
 ```text
 contact.html                  Cloudflare Worker              GitHub
-(ioths-legal.pages.dev)       (ioths-contact)                (private repo)
+(Pages/custom domain)          (ioths-contact)                (private repo)
 
   user fills form
   Turnstile issues token
          │
          │  POST { subject, email, message, turnstileToken }
          ├──────────────────────────────►
-         │                          1. reject unless Origin is
-         │                             https://ioths-legal.pages.dev
+         │                          1. reject unless Origin is one of the
+         │                             two migration hostnames
          │                          2. rate-limit by IP (5 / 60s)
          │                          3. verify Turnstile token
          │                          4. sanitise + length-check

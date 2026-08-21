@@ -1,4 +1,7 @@
-const ALLOWED_ORIGIN = 'https://ioths-legal.pages.dev';
+const ALLOWED_ORIGINS = new Set([
+  'https://ioths-legal.pages.dev',
+  'https://legal.bedrockrebel.app',
+]);
 const GITHUB_REPO    = 'rndrssn/ioths';
 const GITHUB_API     = 'https://api.github.com';
 const TURNSTILE_URL  = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
@@ -20,7 +23,7 @@ export default {
     }
 
     // Only accept POST from the legal site
-    if (origin !== ALLOWED_ORIGIN) {
+    if (!ALLOWED_ORIGINS.has(origin)) {
       return new Response('Forbidden', { status: 403 });
     }
     if (request.method !== 'POST') {
@@ -152,7 +155,7 @@ function fencedBlock(value) {
 }
 
 function corsHeaders(origin) {
-  const allowed = origin === ALLOWED_ORIGIN ? origin : '';
+  const allowed = ALLOWED_ORIGINS.has(origin) ? origin : '';
   return {
     'Access-Control-Allow-Origin':  allowed,
     'Access-Control-Allow-Methods': 'POST, OPTIONS',

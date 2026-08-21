@@ -74,8 +74,8 @@ Ignore documentation inside `node_modules/`; it belongs to dependencies, not thi
 
 - The contact Worker lives in `contact-worker/src/index.js`.
 - Cloudflare Worker config lives in `contact-worker/wrangler.toml`.
-- The Worker accepts requests only from `https://ioths-legal.pages.dev`.
-- Keep CORS narrow. Do not replace the fixed allowed origin with `*`.
+- During the custom-domain migration, the Worker accepts requests only from `https://ioths-legal.pages.dev` and `https://legal.bedrockrebel.app`.
+- Keep CORS narrow. Do not replace the fixed allowed-origin set with `*`.
 - Only `POST` and `OPTIONS` are valid request methods.
 - Rate-limit before expensive or external work.
 - Verify Cloudflare Turnstile before processing user-submitted content.
