@@ -32,6 +32,7 @@
       text-transform: uppercase;
     }
     .field input,
+    .field select,
     .field textarea {
       font-family: var(--font-serif);
       font-size: 1rem;
@@ -47,6 +48,7 @@
       -webkit-appearance: none;
     }
     .field input:focus,
+    .field select:focus,
     .field textarea:focus {
       border-color: var(--positive);
     }
@@ -114,13 +116,22 @@
   <main>
 
     <h1>Contact</h1>
-    <p class="meta">Questions, feedback, or privacy requests · Updated 21 August 2026 · Version 2026.08.0</p>
+    <p class="meta">Questions, feedback, or privacy requests · Updated 21 August 2026 · Version 2026.08.1</p>
 
     <div class="callout">
       <p>Your message is stored as a private issue — only Bedrock Rebellion can see it. Include your email if you'd like a reply. For general questions, email <a href="mailto:info@bedrockrebel.app">info@bedrockrebel.app</a>; for privacy requests, email <a href="mailto:privacy@bedrockrebel.app">privacy@bedrockrebel.app</a>.</p>
     </div>
 
     <form class="contact-form" id="contactForm" novalidate>
+
+      <div class="field">
+        <label for="topic">What can we help with?</label>
+        <select id="topic" name="topic">
+          <option value="support">Support</option>
+          <option value="feedback">Feedback</option>
+          <option value="privacy">Privacy</option>
+        </select>
+      </div>
 
       <div class="field">
         <label for="subject">Subject <span style="color:var(--fg-ghost)">(optional)</span></label>
@@ -167,6 +178,11 @@
     const status    = document.getElementById('status');
     const msgField  = document.getElementById('message');
     const charCount = document.getElementById('charCount');
+    const topicField = document.getElementById('topic');
+    const requestedTopic = new URLSearchParams(window.location.search).get('topic');
+    if (['support', 'feedback', 'privacy'].includes(requestedTopic)) {
+      topicField.value = requestedTopic;
+    }
 
     msgField.addEventListener('input', () => {
       charCount.textContent = `${msgField.value.length} / 2000`;
@@ -197,6 +213,7 @@
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
+            topic:          topicField.value,
             subject:        document.getElementById('subject').value.trim(),
             email:          document.getElementById('email').value.trim(),
             message,

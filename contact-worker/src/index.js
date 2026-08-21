@@ -1,6 +1,7 @@
 const ALLOWED_ORIGINS = new Set([
   'https://ioths-legal.pages.dev',
   'https://legal.bedrockrebel.app',
+  'https://bedrockrebel.app',
 ]);
 const GITHUB_REPO    = 'rndrssn/ioths';
 const GITHUB_API     = 'https://api.github.com';
@@ -10,6 +11,11 @@ const MAX_MESSAGE = 2000;
 const MAX_EMAIL   = 254;
 const MAX_SUBJECT = 150;
 const MIN_MESSAGE = 10;
+const CONTACT_TOPICS = Object.freeze({
+  support: "Support",
+  feedback: "Feedback",
+  privacy: "Privacy",
+});
 const MAX_BODY_BYTES = 16 * 1024;
 const UPSTREAM_TIMEOUT_MS = 10_000;
 
@@ -68,6 +74,7 @@ export default {
     const message = sanitise(body.message, MAX_MESSAGE);
     const email   = sanitise(body.email,   MAX_EMAIL);
     const subject = sanitise(body.subject,  MAX_SUBJECT);
+    const topic   = contactTopic(body.topic);
 
     if (message.length < MIN_MESSAGE) {
       return jsonResponse({ error: 'Message is too short.' }, 400, origin);
@@ -75,8 +82,9 @@ export default {
 
     // Issue titles render as plain text (no markdown, no @mention notifications),
     // so the subject is safe as-is. The body IS markdown — neutralise it.
-    const issueTitle = subject || 'Contact form submission';
+    const issueTitle = "[" + topic + "] " + (subject || "Contact form submission");
     const issueBody  = [
+      "**Topic:** " + topic,
       email ? `**From:** \`${escapeInline(email)}\`` : '**From:** *(no email provided)*',
       '',
       '**Message:**',
@@ -136,6 +144,10 @@ async function verifyTurnstile(token, secret, request) {
 function sanitise(value, maxLen) {
   if (typeof value !== 'string') return '';
   return value.trim().slice(0, maxLen);
+}
+
+function contactTopic(value) {
+  return typeof value === "string" && CONTACT_TOPICS[value] ? CONTACT_TOPICS[value] : CONTACT_TOPICS.support;
 }
 
 // Single-line fields rendered inside an inline code span. Strip backticks

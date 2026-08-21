@@ -53,7 +53,7 @@ contact.html                  Cloudflare Worker              GitHub
   user fills form
   Turnstile issues token
          │
-         │  POST { subject, email, message, turnstileToken }
+         │  POST { topic, subject, email, message, turnstileToken }
          ├──────────────────────────────►
          │                          1. reject unless Origin is one of the
          │                             two migration hostnames
@@ -84,8 +84,7 @@ Points that are easy to get wrong, and why they're built this way:
   and token details. The client gets a neutral failure.
 - **CORS is pinned to one origin.** Not `*`.
 
-Submissions land as private issues labelled `contact`, readable only by the
-developer, and are used solely to answer the enquiry.
+Submissions land as private issues labelled `contact`, with the validated topic shown in the issue title and body, readable only by the developer, and are used solely to answer the enquiry.
 
 ---
 
