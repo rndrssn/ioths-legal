@@ -1,5 +1,10 @@
 const ALLOWED_ORIGINS = new Set([
   'https://ioths-legal.pages.dev',
+  'https://ioths.bedrockrebel.app',
+  // Transitional — retire once the legal.bedrockrebel.app / bedrockrebel.app/support
+  // redirects from the 2026-08-23 domain restructuring are confirmed retired.
+  // See docs/engineering/handovers/2026-08-23-bedrockrebel-app-domain-restructuring.md
+  // in the ioths repo.
   'https://legal.bedrockrebel.app',
   'https://bedrockrebel.app',
 ]);

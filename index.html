@@ -1,138 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light-forced">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — IOTHS</title>
-  <meta name="description" content="Privacy policy for IOTHS, an offline-first note-taking app for iOS.">
-  <meta name="robots" content="noindex">
+  <title>IOTHS — Offline Markdown Notes &amp; Kanban Tasks</title>
+  <meta name="description" content="IOTHS is a fast, offline-first notes app for iPhone and iPad with a real kanban board built in. Plain Markdown files, private by default.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 <body>
 
   <header>
-    <span class="wordmark">IOTHS</span>
-    <nav class="lang-switch">
-      <a href="index.html" class="active">EN</a>
-      <a href="de/index.html">DE</a>
+    <a class="wordmark" href="/">IOTHS</a>
+    <nav class="link-row">
+      <a href="/support.html">Support</a>
+      <a href="/legal/privacy.html">Privacy</a>
+      <a href="/legal/terms.html">Terms</a>
     </nav>
   </header>
 
   <main>
 
-    <h1>Privacy Policy</h1>
-    <p class="meta">Effective 23 August 2026 · Version 2026.08.2</p>
-
-    <div class="callout">
-      <p>The short version: IOTHS is offline-first. Your notes stay on your device. We never read them, sell them, or use them to train any model. Link previews are on by default and can be turned off.</p>
+    <div class="hero">
+      <h1>IOTHS</h1>
+      <p class="tagline">Offline markdown notes &amp; kanban tasks</p>
+      <p class="lede">A fast, offline-first notes app for iPhone and iPad, with a real kanban board built in. Every note is a plain Markdown file — readable, portable, and yours forever.</p>
+      <div class="cta-row">
+        <span class="button-primary" aria-disabled="true">Coming soon to the App Store</span>
+        <span class="cta-note">No account required. No proprietary format.</span>
+      </div>
     </div>
 
     <section>
-      <h2>Who we are</h2>
-      <p>IOTHS is an iOS note-taking app built and operated by Bedrock Rebellion. References to "we", "us", or "our" in this policy mean Bedrock Rebellion.</p>
+      <h2>Tasks, kanban, and focus</h2>
+      <div class="feature-grid">
+        <div class="feature">
+          <h3>Notes that double as tasks</h3>
+          <p>Any checklist inside a note turns it into a task note — no separate task manager to maintain.</p>
+        </div>
+        <div class="feature">
+          <h3>A kanban board built for one</h3>
+          <p>Switch between List, Tile, Kanban, and Thoughts layouts. Cards move lanes automatically as tasks get checked off — a kanban board built for one, not a team.</p>
+        </div>
+        <div class="feature">
+          <h3>A work-in-progress limit that means it</h3>
+          <p>Cap how many notes can be "in progress" at once, so focus stays real instead of aspirational.</p>
+        </div>
+        <div class="feature">
+          <h3>Every task, one screen</h3>
+          <p>A dedicated Tasks view flattens every open checklist item across your whole Library into one list.</p>
+        </div>
+      </div>
     </section>
 
     <section>
-      <h2>Your notes</h2>
-      <p>Notes are stored as plain Markdown files on your device. They never leave your device unless you explicitly activate one of the optional vault modes described below.</p>
-      <p>We have no server that receives, stores, or processes note content. We have no ability to read your notes.</p>
+      <h2>Capture, fast</h2>
+      <div class="feature-grid">
+        <div class="feature">
+          <h3>Type, dictate, or snap a photo</h3>
+          <p>Camera, voice, and Share Extension capture land straight in Markdown.</p>
+        </div>
+        <div class="feature">
+          <h3>PDF to Markdown</h3>
+          <p>Convert a PDF to Markdown with on-device review before you save.</p>
+        </div>
+        <div class="feature">
+          <h3>Tags, pins, and search</h3>
+          <p>Tags, pinned notes, and quick search keep everything findable.</p>
+        </div>
+        <div class="feature">
+          <h3>Widgets</h3>
+          <p>A Home Screen widget for a glanceable view of what matters most.</p>
+        </div>
+      </div>
     </section>
 
     <section>
-      <h2>Optional sync — your choice, your data</h2>
-      <p>IOTHS supports opt-in storage destinations beyond your device. None is enabled by default.</p>
+      <h2>Built on plain files</h2>
+      <p>Notes are stored as <code>.md</code> files with YAML frontmatter — the same structure Obsidian vaults use. Nothing proprietary, nothing to migrate later. Open your notes in any text editor, on any device, at any time.</p>
+    </section>
+
+    <section>
+      <h2>Private by default</h2>
+      <p>Your notes stay on this device until you explicitly turn on a sync destination. There's no IOTHS account and no developer-operated sign-in. Usage analytics are off unless you turn them on, and even then they never include note content, titles, or tags. Nothing is sold. Nothing trains an AI model. Read the full <a href="/legal/privacy.html">Privacy Policy</a>.</p>
+    </section>
+
+    <section>
+      <h2>Unlock more storage</h2>
+      <p><strong>Full Unlock</strong> is a one-time purchase — not a subscription — that adds:</p>
       <ul>
-        <li><strong>An external folder you choose.</strong> You can point IOTHS at a folder selected through the iOS Files picker — an iCloud Drive folder, an Obsidian vault folder, or a folder belonging to another Files provider you use. Your notes and attachments are then written directly into that folder and handled by that provider under your own account, terms, and privacy policy. We have no access to it.</li>
-        <li><strong>GitHub sync.</strong> If you connect a GitHub repository, IOTHS sends and receives supported vault files directly between your device and one dedicated repository path under your GitHub account. This can include note content, filenames, YAML frontmatter, attachments, Archive files, Trash files, and the IOTHS Library marker. Authorization uses the GitHub App guided flow or, as an advanced fallback, a personal access token. Credentials are stored in the iOS Keychain on your device. We never receive the credential, repository details, or synced content.</li>
-        <li><strong>GitLab sync.</strong> If you connect a GitLab.com project, IOTHS sends and receives supported vault files directly between your device and one dedicated path in a branch you choose within that project. This can include note content, filenames, YAML frontmatter, attachments, Archive files, Trash files, and the IOTHS Library marker. Authorization uses GitLab's OAuth sign-in flow. GitLab's OAuth scope for this flow is broad by design, but IOTHS only ever reads or writes the one project and path you selected. Credentials are stored in the iOS Keychain on your device. We never receive the credential, project details, or synced content.</li>
+        <li><strong>Files folder storage</strong>, through any Files-compatible provider such as an Obsidian vault, Box, Dropbox, or Microsoft OneDrive</li>
+        <li><strong>GitHub storage and sync</strong>, to a dedicated repository path</li>
+        <li><strong>GitLab storage and sync</strong>, to a dedicated project path</li>
+        <li><strong>Portable export</strong> — save your whole Library as a ZIP archive anytime</li>
       </ul>
-      <p>Anyone with access to the selected GitHub repository can read the files stored there. If the repository is public, the synced files are public. Stopping GitHub sync in IOTHS stops network access and removes the saved connection and credential from the device while keeping local notes. GitHub authorization remains active until you revoke it through GitHub.</p>
-      <p>Anyone with access to the selected GitLab project can read the files stored there. If the project is public, the synced files are public. Stopping GitLab sync in IOTHS stops network access and removes the saved connection and credential from the device while keeping local notes. GitLab authorization remains active until you revoke it through your GitLab account's Applications settings.</p>
+      <p>Capture, editing, reading, sharing, PDF conversion, tagging, task tracking, archive, and trash recovery are free, forever.</p>
     </section>
 
     <section>
-      <h2>Diagnostics and analytics</h2>
-      <p>IOTHS collects anonymous usage signals via <a href="https://telemetrydeck.com" rel="noopener noreferrer" target="_blank">TelemetryDeck</a>, a privacy-first analytics platform. Signals are hashed on your device before transmission — TelemetryDeck cannot identify individual users, and neither can we.</p>
-      <p>We collect signals for:</p>
-      <ul>
-        <li>Note creation — type only (plain, task, camera, or voice), never the content</li>
-        <li>Note archiving and moving to trash</li>
-        <li>Search being used — a count, not the query text</li>
-        <li>Editor mode toggled between natural and markdown view</li>
-        <li>Appearance setting changed</li>
-        <li>Feature tour opened from Settings</li>
-        <li>GitHub authorization started, completed, or failed — only a coarse result category, never an account, repository, path, code, or credential</li>
-        <li>GitLab authorization started, completed, or failed — only a coarse result category, never an account, project, path, code, or credential</li>
-      </ul>
-      <p>No signal ever includes note content, note titles, tags, or any data derived from what you write. TelemetryDeck's own privacy policy is at <a href="https://telemetrydeck.com/privacy" rel="noopener noreferrer" target="_blank">telemetrydeck.com/privacy</a>.</p>
-      <p>Analytics are optional. You can turn them off completely in the app under <strong>Settings → Privacy → Share anonymous analytics</strong>. When off, no signals are sent — not even the session signal — until you turn it back on.</p>
-    </section>
-
-    <section>
-      <h2>No IOTHS account required</h2>
-      <p>IOTHS requires no developer-operated account or sign-in. Optional providers may require their own account and authorization: GitHub sync requires a GitHub account, GitLab sync requires a GitLab.com account, and Files providers may require an account with that provider. We do not receive your provider credentials.</p>
-    </section>
-
-    <section>
-      <h2>Link previews</h2>
-      <p>IOTHS can show rich previews for notes that contain web links on the notes list. This feature is on by default and can be turned off under <strong>Settings → Privacy → Load link previews</strong>.</p>
-      <p>While enabled, IOTHS contacts the website named by a link in your note to fetch public page metadata such as title, description, site name, and site icon. The request goes directly from your device to that website. The website may receive the URL, your IP address, and ordinary web request metadata.</p>
-      <p>IOTHS does not send surrounding note content, note titles, tags, filenames, photos, recordings, or search queries. Fetched link metadata and site icons are cached locally on your device. Full preview images are not fetched.</p>
-    </section>
-
-    <section>
-      <h2>Third-party services</h2>
-      <p>IOTHS uses the following third-party services:</p>
-      <ul>
-        <li><strong>TelemetryDeck</strong> — anonymous usage analytics as described above. Governed by <a href="https://telemetrydeck.com/privacy" rel="noopener noreferrer" target="_blank">TelemetryDeck's Privacy Policy</a>.</li>
-        <li><strong>Your chosen Files provider</strong> (if you select an external folder) — for an iCloud Drive folder this is Apple, governed by <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer" target="_blank">Apple's Privacy Policy</a>. If you choose a folder belonging to a different provider, that provider's own privacy policy governs the files you place there.</li>
-        <li><strong>GitHub</strong> (if you enable GitHub sync) — governed by <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer" target="_blank">GitHub's Privacy Statement</a>.</li>
-        <li><strong>GitLab</strong> (if you enable GitLab sync) — governed by <a href="https://about.gitlab.com/privacy/" rel="noopener noreferrer" target="_blank">GitLab's Privacy Statement</a>.</li>
-      </ul>
-      <p>Unless you turn off link previews, websites linked from notes receive ordinary web requests for the linked URLs. No other third-party service receives your data.</p>
-    </section>
-
-    <section>
-      <h2>Data retention and deletion</h2>
-      <p>Because we do not collect personal data or note content, there is nothing for us to delete on your behalf.</p>
-      <p>Deleting the app removes the note data stored locally on your device. It does <strong>not</strong> delete copies already written to an external Files-provider folder, a GitHub repository, or a GitLab project — those copies stay with the provider under your own account. Delete them there if you want them gone.</p>
-    </section>
-
-    <section>
-      <h2>Children</h2>
-      <p>IOTHS is not directed at children under 13. We do not knowingly collect personal information from children beyond the optional analytics and contact processing described in this policy.</p>
-    </section>
-
-    <section>
-      <h2>Changes to this policy</h2>
-      <p>If we make material changes, we will update the effective date at the top of this page and, where appropriate, note the change in the app's release notes. Continued use of the app after a change constitutes acceptance of the updated policy.</p>
-    </section>
-
-    <section>
-      <h2>Contact form data</h2>
-      <p>If you use the <a href="contact.html?topic=privacy">contact form</a>, we collect the category you choose, the message you write, and your email address if you choose to provide one. This data is stored as a private GitHub issue in our source repository, accessible only to Bedrock Rebellion. It is used solely to respond to your enquiry and is deleted when the issue is resolved.</p>
-      <p>Legal basis: legitimate interest (responding to your enquiry). Data processors: Cloudflare (transit only, nothing persisted) and GitHub/Microsoft (issue storage). You may request deletion at any time by emailing <a href="mailto:privacy@bedrockrebel.app">privacy@bedrockrebel.app</a>.</p>
-      <p>The contact form is protected against bots by Cloudflare Turnstile (invisible mode). Turnstile may collect limited telemetry to assess whether a visitor is human. This is governed by the <a href="https://www.cloudflare.com/cloudflare-customer-dpa/" rel="noopener noreferrer" target="_blank">Cloudflare Turnstile Privacy Addendum</a>. No data collected by Turnstile is used for advertising or sold to third parties.</p>
-    </section>
-
-    <section>
-      <h2>Trademarks</h2>
-      <p>IOTHS names services such as Apple, iCloud, Obsidian, GitHub, GitLab, TelemetryDeck, and Cloudflare only to identify optional integrations and the processors described above. Those names and logos are trademarks of their respective owners. IOTHS is independent and is not endorsed by, sponsored by, or affiliated with any of them.</p>
-    </section>
-
-    <section>
-      <h2>Contact</h2>
-      <p>For privacy requests, email <a href="mailto:privacy@bedrockrebel.app">privacy@bedrockrebel.app</a> or use the <a href="contact.html?topic=privacy">privacy contact form</a>. For general questions or feedback, email <a href="mailto:info@bedrockrebel.app">info@bedrockrebel.app</a> or use <a href="https://bedrockrebel.app/support">Support</a>.</p>
+      <h2>For people who think in plain text</h2>
+      <p>Made by Bedrock Rebellion for people who already think in plain text and want their notes — and their kanban board — to outlive any single app.</p>
+      <div class="link-row">
+        <a href="/support.html">Support</a>
+        <a href="/legal/privacy.html">Privacy Policy</a>
+        <a href="/legal/terms.html">Terms of Use</a>
+      </div>
     </section>
 
   </main>
 
   <footer>
     <p>IOTHS &mdash; made with care</p>
-    <p><a href="contact.html">Contact</a> &middot; <a href="terms.html">Terms of Use</a><span id="impressum-link"> &middot; <a href="impressum.html">Legal Notice</a></span></p>
+    <p><a href="/support.html">Contact</a> &middot; <a href="/legal/privacy.html">Privacy Policy</a> &middot; <a href="/legal/terms.html">Terms of Use</a><span id="impressum-link"> &middot; <a href="/legal/impressum.html">Legal Notice</a></span></p>
     <script>if(!navigator.language.startsWith('de'))document.getElementById('impressum-link').remove();</script>
   </footer>
 

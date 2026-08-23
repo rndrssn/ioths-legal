@@ -12,13 +12,21 @@ private GitHub issue.
 
 ## Production hosting
 
-The production legal site is deployed to Cloudflare Pages at
-`https://legal.bedrockrebel.app/`. The checked-in `scripts/build-pages.sh` stages
-only the public HTML, CSS, headers, and redirects in `dist/`; repository guidance,
-Worker source, and development files are never uploaded as static assets.
+The production site is deployed to Cloudflare Pages at
+`https://ioths.bedrockrebel.app/` — the ioths product zone, hosting the marketing
+landing page, legal pages, and support/contact in one place. The checked-in
+`scripts/build-pages.sh` stages only the public HTML, CSS, headers, and redirects
+in `dist/`; repository guidance, Worker source, and development files are never
+uploaded as static assets.
 
-The legacy `ioths-legal.pages.dev` hostname remains available during the
-contact-form cutover. App and documentation links use the custom domain.
+This replaces the earlier split between `legal.bedrockrebel.app` (legal pages)
+and `bedrockrebel.app/support` (contact) — see
+`docs/engineering/handovers/2026-08-23-bedrockrebel-app-domain-restructuring.md`
+in the `ioths` repo for the full migration record. Both old hosts must keep
+redirecting to their new paths under `ioths.bedrockrebel.app` for a transition
+period; that redirect configuration lives in Cloudflare, not this repo. The
+legacy `ioths-legal.pages.dev` hostname also remains available during cutover.
+App and documentation links use the `ioths.bedrockrebel.app` custom domain.
 
 ---
 
@@ -26,11 +34,13 @@ contact-form cutover. App and documentation links use the custom domain.
 
 | Path | What it is |
 | --- | --- |
-| `index.html` / `de/index.html` | Privacy policy (EN / DE) |
-| `terms.html` / `de/terms.html` | Terms of Use (EN / DE) |
-| `impressum.html` | German legal notice (§ 5 DDG) |
-| `contact.html` | Contact form — talks to the Worker |
+| `index.html` | Marketing landing page (the only indexed page here) |
+| `legal/privacy.html` / `legal/de/privacy.html` | Privacy policy (EN / DE) |
+| `legal/terms.html` / `legal/de/terms.html` | Terms of Use (EN / DE) |
+| `legal/impressum.html` | German legal notice (§ 5 DDG) |
+| `support.html` | Contact/support form — talks to the Worker |
 | `style.css` | Shared design tokens and layout |
+| `favicon-16x16.png` / `favicon-32x32.png` / `apple-touch-icon.png` | Site favicon, referenced on every page |
 | `VERSION` | Source of truth for the legal-site version |
 | `contact-worker/` | Cloudflare Worker backing the contact form |
 | `AGENTS.md` / `CLAUDE.md` | Rules for AI agents working in this repo |
@@ -47,7 +57,7 @@ GitHub (that would leak a token into a public page). So a Worker sits in the
 middle and is the only component holding secrets.
 
 ```text
-contact.html                  Cloudflare Worker              GitHub
+support.html                  Cloudflare Worker              GitHub
 (Pages/custom domain)          (ioths-contact)                (private repo)
 
   user fills form
@@ -126,8 +136,8 @@ The static site is staged and deployed separately:
 
 Three rules carry most of the weight:
 
-1. **EN and DE move together.** `index.html` ↔ `de/index.html`,
-   `terms.html` ↔ `de/terms.html`. Never update one language alone.
+1. **EN and DE move together.** `legal/privacy.html` ↔ `legal/de/privacy.html`,
+   `legal/terms.html` ↔ `legal/de/terms.html`. Never update one language alone.
 2. **Say only what the app actually does.** Privacy, sync, monetization, and
    liability claims must match real app behaviour — no aspirational wording. If
    app behaviour changes, every affected page changes in the same commit.

@@ -10,10 +10,13 @@ Agent instructions for this repository.
 
 The repository contains:
 
-- Static legal pages: `index.html`, `terms.html`, `de/index.html`, `de/terms.html`, and `impressum.html`
-- Contact page: `contact.html`
+- Marketing landing page: `index.html` (indexed, unlike everything else here)
+- Static legal pages: `legal/privacy.html`, `legal/terms.html`, `legal/de/privacy.html`, `legal/de/terms.html`, and `legal/impressum.html`
+- Support/contact page: `support.html`
 - Shared styling: `style.css`
 - Cloudflare Worker contact backend: `contact-worker/`
+
+All internal links use root-relative absolute paths (`/legal/privacy.html`, `/support.html`, `/`), not relative paths — this matters once pages are nested under `legal/` and `legal/de/`. Since 2026-08-23 this site is the `ioths.bedrockrebel.app` product zone; see `docs/engineering/handovers/2026-08-23-bedrockrebel-app-domain-restructuring.md` in the `ioths` repo for the full migration record and what remains owner-executed (Cloudflare custom domain, redirects from the old `legal.bedrockrebel.app` / `bedrockrebel.app/support` hosts, App Store Connect fields).
 
 The legal pages are intentionally static HTML/CSS with a small amount of vanilla JavaScript. The contact backend is a Cloudflare Worker that creates private GitHub issues from form submissions.
 
@@ -48,12 +51,12 @@ Ignore documentation inside `node_modules/`; it belongs to dependencies, not thi
 ## Localization Rules
 
 - English and German legal pages must stay in sync:
-  - `index.html` ↔ `de/index.html`
-  - `terms.html` ↔ `de/terms.html`
+  - `legal/privacy.html` ↔ `legal/de/privacy.html`
+  - `legal/terms.html` ↔ `legal/de/terms.html`
 - Update both languages in the same change unless the task explicitly asks for one language only.
 - Preserve proper nouns and service names: `ioths`, `TelemetryDeck`, `Obsidian`, `iCloud`, `GitHub`, `Cloudflare`, `Turnstile`, `Markdown`.
 - Preserve legal meaning over literal translation.
-- `impressum.html` is German legal notice content. Do not remove it or hide the underlying provider/contact facts.
+- `legal/impressum.html` is German legal notice content. Do not remove it or hide the underlying provider/contact facts.
 - Language switch links must continue to point between corresponding EN/DE pages.
 
 ---
@@ -63,7 +66,8 @@ Ignore documentation inside `node_modules/`; it belongs to dependencies, not thi
 - Use plain HTML, CSS, and minimal vanilla JavaScript. Do not add a frontend framework, bundler, or build step unless the task explicitly requires it.
 - Keep shared visual styling in `style.css` and use its existing design tokens for colors, spacing, radii, and typography.
 - Keep page structure simple: `header`, `main`, `section`, and `footer`.
-- Keep `<meta name="robots" content="noindex">` unless the user explicitly asks to change indexing behavior.
+- Keep `<meta name="robots" content="noindex">` on every legal and support page unless the user explicitly asks to change indexing behavior. The marketing landing page (`index.html`) is the deliberate exception — it must not carry `noindex`.
+- The landing page must never name iCloud as the paid Files-folder capability, and must never capitalize or brand "Personal Kanban" as a proper noun (it's an actively-commercialized third-party methodology name). See `docs/product/app-store-listing.md` in the `ioths` repo for the full rationale — this site's landing copy must stay consistent with that document.
 - External links that open a new tab must use `rel="noopener noreferrer"`.
 - Do not put secrets, access tokens, private addresses beyond the existing Impressum content, or hidden operational notes in static HTML.
 - Keep contact form validation messages user-facing, short, and content-neutral.
@@ -74,7 +78,7 @@ Ignore documentation inside `node_modules/`; it belongs to dependencies, not thi
 
 - The contact Worker lives in `contact-worker/src/index.js`.
 - Cloudflare Worker config lives in `contact-worker/wrangler.toml`.
-- During the custom-domain migration, the Worker accepts requests only from `https://ioths-legal.pages.dev` and `https://legal.bedrockrebel.app`.
+- The Worker accepts requests only from an explicit allowlist in `ALLOWED_ORIGINS`. As of the 2026-08-23 domain restructuring this is `https://ioths-legal.pages.dev` and `https://ioths.bedrockrebel.app`, plus the transitional `https://legal.bedrockrebel.app` and `https://bedrockrebel.app` — remove the transitional origins once their redirects are confirmed retired.
 - Keep CORS narrow. Do not replace the fixed allowed-origin set with `*`.
 - Only `POST` and `OPTIONS` are valid request methods.
 - Rate-limit before expensive or external work.

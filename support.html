@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact — IOTHS</title>
-  <meta name="description" content="Get in touch with the IOTHS developer.">
+  <title>Support — IOTHS</title>
+  <meta name="description" content="Get support or get in touch with the IOTHS developer.">
   <meta name="robots" content="noindex">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <!-- Cloudflare Turnstile — bot protection, no fingerprinting, GDPR-safe -->
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <style>
@@ -61,16 +64,10 @@
       font-size: 0.625rem;
       color: var(--fg-ghost);
     }
+    /* Shares its type/color/radius/padding recipe with .button-primary in
+       style.css — only what's specific to a real <button> lives here. */
     .submit-btn {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--bg);
-      background: var(--fg);
       border: none;
-      border-radius: var(--radius-pill);
-      padding: var(--space-sm) var(--space-xl);
       cursor: pointer;
       align-self: flex-start;
       transition: opacity 0.15s;
@@ -110,13 +107,13 @@
 <body>
 
   <header>
-    <span class="wordmark">IOTHS</span>
+    <a class="wordmark" href="/"><span class="back-icon" aria-hidden="true">←</span>IOTHS</a>
   </header>
 
   <main>
 
     <h1>Contact</h1>
-    <p class="meta">Questions, feedback, or privacy requests · Updated 23 August 2026 · Version 2026.08.2</p>
+    <p class="meta">Questions, feedback, or privacy requests · Updated 23 August 2026 · Version 2026.08.3</p>
 
     <div class="callout">
       <p>Your message is stored as a private issue — only Bedrock Rebellion can see it. Include your email if you'd like a reply. For general questions, email <a href="mailto:info@bedrockrebel.app">info@bedrockrebel.app</a>; for privacy requests, email <a href="mailto:privacy@bedrockrebel.app">privacy@bedrockrebel.app</a>.</p>
@@ -155,10 +152,10 @@
       <div id="status" role="alert"></div>
 
       <p class="privacy-notice">
-        Your message and optional email are stored as a private GitHub issue accessible only to Bedrock Rebellion. They are used solely to respond to your enquiry and deleted when resolved. See our <a href="index.html">Privacy Policy</a> for details.
+        Your message and optional email are stored as a private GitHub issue accessible only to Bedrock Rebellion. They are used solely to respond to your enquiry and deleted when resolved. See our <a href="/legal/privacy.html">Privacy Policy</a> for details.
       </p>
 
-      <button type="submit" class="submit-btn" id="submitBtn">Send message</button>
+      <button type="submit" class="button-primary submit-btn" id="submitBtn">Send message</button>
 
     </form>
 
@@ -166,7 +163,7 @@
 
   <footer>
     <p>IOTHS &mdash; made with care</p>
-    <p><a href="index.html">Privacy Policy</a> &middot; <a href="terms.html">Terms of Use</a><span id="impressum-link"> &middot; <a href="impressum.html">Legal Notice</a></span></p>
+    <p><a href="/legal/privacy.html">Privacy Policy</a> &middot; <a href="/legal/terms.html">Terms of Use</a><span id="impressum-link"> &middot; <a href="/legal/impressum.html">Legal Notice</a></span></p>
     <script>if(!navigator.language.startsWith('de'))document.getElementById('impressum-link').remove();</script>
   </footer>
 

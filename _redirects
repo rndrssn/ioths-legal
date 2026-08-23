@@ -1,2 +1,7 @@
-/privacy /index.html 301
-/de/privacy /de/index.html 301
+/privacy /legal/privacy.html 301
+/de/privacy /legal/de/privacy.html 301
+/terms.html /legal/terms.html 301
+/impressum.html /legal/impressum.html 301
+/contact.html /support.html 301
+/de/index.html /legal/de/privacy.html 301
+/de/terms.html /legal/de/terms.html 301

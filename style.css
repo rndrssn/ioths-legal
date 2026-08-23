@@ -51,8 +51,15 @@
   --shadow-card: 0 2px 2px rgba(17, 34, 54, 0.08);
 }
 
+/* Pages that must stay on the light "paper" palette regardless of system
+   theme (currently just the landing page) opt out with this class on <html>,
+   rather than the dark override below being skipped implicitly. */
+.light-forced {
+  color-scheme: light;
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not(.light-forced) {
     --bg:              #111111;
     --bg-raised:       #1c1c1c;
     --bg-deep:         #252525;
@@ -101,11 +108,22 @@ header {
 }
 
 .wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
   font-family: var(--font-display);
   font-size: 1.5rem;
   letter-spacing: 0.08em;
   color: var(--fg-ghost);
   text-decoration: none;
+}
+
+/* Back-to-landing cue on every subpage — the wordmark alone reads as a
+   static logo, not a link, so people fell back to the browser back button. */
+.back-icon {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  letter-spacing: normal;
 }
 
 .lang-switch {
@@ -248,10 +266,106 @@ footer p {
   margin-bottom: 0;
 }
 
+/* Landing hero */
+
+.hero {
+  text-align: center;
+  padding-top: var(--space-md);
+  padding-bottom: var(--space-xxxl);
+  border-bottom: 1px solid var(--separator);
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+}
+
+.hero .tagline {
+  font-family: var(--font-mono);
+  font-size: 0.9375rem;
+  color: var(--fg-faint);
+  letter-spacing: 0.02em;
+  margin-bottom: var(--space-xl);
+}
+
+.hero .lede {
+  max-width: 46ch;
+  margin: 0 auto var(--space-xl);
+  color: var(--fg-mid);
+}
+
+.cta-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.button-primary {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--bg);
+  background: var(--fg);
+  border-radius: var(--radius-pill);
+  padding: var(--space-sm) var(--space-xl);
+}
+
+.button-primary:hover { color: var(--bg); opacity: 0.85; }
+
+.cta-note {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--fg-ghost);
+}
+
+/* Landing feature grid */
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+  margin-top: var(--space-md);
+}
+
+.feature h3 {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  letter-spacing: 0.03em;
+  color: var(--fg);
+  margin-bottom: var(--space-xs);
+}
+
+.feature p { color: var(--fg-mid); margin-bottom: 0; }
+
+/* Landing footer links */
+
+.link-row {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+}
+
+.link-row a {
+  color: var(--fg-mid);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+}
+
+.link-row a:hover { color: var(--fg); }
+
+header .link-row { margin-top: 0; }
+
 /* Responsive */
 
 @media (max-width: 600px) {
   main { padding: var(--space-xxl) var(--space-md) calc(var(--space-xxxl) * 2); }
   header { padding: var(--space-md); }
   h1 { font-size: 2rem; }
+  .hero h1 { font-size: 2.5rem; }
+  .feature-grid { grid-template-columns: 1fr; }
 }
