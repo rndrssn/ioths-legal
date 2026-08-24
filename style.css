@@ -360,6 +360,18 @@ footer p {
 
 header .link-row { margin-top: 0; }
 
+.icon-figure {
+  text-align: center;
+  margin: var(--space-xl) 0;
+}
+
+.icon-figure img {
+  width: 120px;
+  height: 120px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
 /* Responsive */
 
 @media (max-width: 600px) {

@@ -41,6 +41,7 @@ App and documentation links use the `ioths.bedrockrebel.app` custom domain.
 | `support.html` | Contact/support form — talks to the Worker |
 | `style.css` | Shared design tokens and layout |
 | `favicon-16x16.png` / `favicon-32x32.png` / `apple-touch-icon.png` | Site favicon, referenced on every page |
+| `icon-why.png` | The app icon shown in the landing page's "Why this exists" section — composited from `ioths/ioths/ioths/AppIcon.icon/Assets/Light-Foreground.png` plus a flat background, not exported from a build (see comment in `index.html`) |
 | `VERSION` | Source of truth for the legal-site version |
 | `contact-worker/` | Cloudflare Worker backing the contact form |
 | `AGENTS.md` / `CLAUDE.md` | Rules for AI agents working in this repo |
