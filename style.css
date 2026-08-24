@@ -118,7 +118,7 @@ header {
   align-items: center;
   gap: var(--space-xs);
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 3.125rem;
   letter-spacing: 0.08em;
   color: var(--fg-ghost);
   text-decoration: none;
@@ -284,7 +284,7 @@ footer p {
 .hero .eyebrow {
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  font-weight: 400;
+  font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--fg-faint);
@@ -292,7 +292,7 @@ footer p {
 }
 
 .hero h1 {
-  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-size: clamp(2.8125rem, 8vw, 6.1875rem);
   max-width: 12ch;
 }
 
@@ -387,6 +387,7 @@ header .link-row { margin-top: 0; }
 @media (max-width: 600px) {
   main { padding: var(--space-xxl) var(--space-md) calc(var(--space-xxxl) * 2); }
   header { padding: var(--space-md); }
+  .wordmark { font-size: 2.25rem; }
   h1 { font-size: 2rem; }
   .feature-grid { grid-template-columns: 1fr; }
 }
