@@ -1,4 +1,10 @@
-/* Design tokens — mirrored from DesignSystem.swift */
+/* Design tokens — mirrored from DesignSystem.swift. Colors and fonts here
+   happen to already match the "plain-readable" theme at
+   rndrssn.github.io/platoscave (Source Serif 4 / Bebas Neue / Space Mono,
+   near-identical paper/ink hex values) — confirmed against that theme's
+   actual [data-theme='plain-readable'] override, not its default/unthemed
+   styling. Hero geometry (left-aligned, eyebrow label, fluid sizing) is
+   adapted from that site's shared hero layout. */
 
 :root {
   /* Surfaces */
@@ -269,34 +275,38 @@ footer p {
 /* Landing hero */
 
 .hero {
-  text-align: center;
-  padding-top: var(--space-md);
+  text-align: left;
+  padding-top: calc(var(--space-xxxl) * 1.5);
   padding-bottom: var(--space-xxxl);
   border-bottom: 1px solid var(--separator);
 }
 
-.hero h1 {
-  font-size: 3.5rem;
+.hero .eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--fg-faint);
+  margin-bottom: var(--space-md);
 }
 
-.hero .tagline {
-  font-family: var(--font-mono);
-  font-size: 0.9375rem;
-  color: var(--fg-faint);
-  letter-spacing: 0.02em;
-  margin-bottom: var(--space-xl);
+.hero h1 {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  max-width: 12ch;
 }
 
 .hero .lede {
-  max-width: 46ch;
-  margin: 0 auto var(--space-xl);
+  max-width: 55ch;
+  margin: 0 0 var(--space-xl);
   color: var(--fg-mid);
+  line-height: 1.72;
 }
 
 .cta-row {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--space-xs);
 }
 
@@ -378,6 +388,5 @@ header .link-row { margin-top: 0; }
   main { padding: var(--space-xxl) var(--space-md) calc(var(--space-xxxl) * 2); }
   header { padding: var(--space-md); }
   h1 { font-size: 2rem; }
-  .hero h1 { font-size: 2.5rem; }
   .feature-grid { grid-template-columns: 1fr; }
 }
