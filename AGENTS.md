@@ -107,13 +107,22 @@ Ignore documentation inside `node_modules/`; it belongs to dependencies, not thi
 
 ## Verification Rules
 
-- For static HTML/CSS-only changes, manually inspect the changed page structure and links.
-- For contact Worker changes, at minimum run:
+- Before committing or deploying either the Pages site or the contact Worker, run the complete local gate from the repository root:
 
 ```sh
-node --check contact-worker/src/index.js
+./scripts/verify.sh
 ```
 
+The gate syntax-checks the Worker, runs its native Node test suite, rebuilds `dist`, verifies the build manifest and source-to-build asset parity, checks root-relative links, inline JavaScript, image alt text, SEO indexing metadata, JSON-LD, redirects, robots, security headers, and whitespace. It also validates the sitemap when `xmllint` is installed. A failed gate blocks both commit and deployment.
+
+- Run `./scripts/verify.sh` again after the final source or asset change. Do not rely on a partial command or an earlier build.
+- For contact Worker changes, the focused test command is:
+
+```sh
+(cd contact-worker && npm test)
+```
+
+- For static HTML/CSS-only changes, the static checks in `./scripts/verify.sh` replace ad-hoc manual link checks; manually inspect the changed page structure and responsive behavior as well.
 - For dependency or Wrangler config changes, run the relevant npm command from `contact-worker/` and confirm no secrets are printed.
 - Never run commands that deploy (`wrangler deploy`) unless the user explicitly asks.
 - Never paste real tokens, Turnstile secrets, or GitHub API responses containing sensitive details into logs or commits.

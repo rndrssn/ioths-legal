@@ -1,7 +1,9 @@
 {
   "name": "ioths-contact-worker",
   "private": true,
+  "type": "module",
   "scripts": {
+    "test": "node --test --experimental-test-coverage --test-coverage-include=src/index.js --test-coverage-lines=90 --test-coverage-branches=90 --test-coverage-functions=100 test/index.test.js",
     "deploy": "wrangler deploy --config wrangler.toml",
     "dev": "wrangler dev --config wrangler.toml"
   },

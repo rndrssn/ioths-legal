@@ -108,7 +108,7 @@ npm install
 cp .dev.vars.example .dev.vars     # then put real values in .dev.vars
 npm run dev                        # wrangler dev
 
-node --check src/index.js          # minimum check before committing
+npm test                             # Worker behavior tests
 ```
 
 Secrets are **never** committed and never live in `wrangler.toml`. They are set
@@ -127,7 +127,7 @@ the Worker is live infrastructure serving a public form.
 The static site is staged and deployed separately:
 
 ```sh
-./scripts/build-pages.sh
+./scripts/verify.sh                  # required before commit or deployment
 ./contact-worker/node_modules/.bin/wrangler pages deploy ./dist --project-name=ioths-legal
 ```
 
