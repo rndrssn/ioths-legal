@@ -1,14 +1,82 @@
 <!DOCTYPE html>
-<html lang="en" class="light-forced">
+<html lang="en" data-theme="plain-readable" data-design="control-room">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IOTHS — Offline Markdown Notes &amp; Kanban Tasks</title>
-  <meta name="description" content="IOTHS is a fast, offline-first notes app for iPhone and iPad with a real kanban board built in. Plain Markdown files, private by default.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&family=Space+Mono:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+  <meta name="description" content="Offline-first Markdown notes and kanban tasks for iPhone and iPad. IOTHS keeps notes as portable .md files, private by default, with no account required.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Bedrock Rebellion">
+  <meta name="theme-color" content="#0e0f0e">
+  <link rel="canonical" href="https://ioths.bedrockrebel.app/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ioths.bedrockrebel.app/">
+  <meta property="og:site_name" content="IOTHS">
+  <meta property="og:title" content="IOTHS — Offline Markdown Notes &amp; Kanban Tasks">
+  <meta property="og:description" content="Private, offline-first notes and kanban tasks for iPhone and iPad, stored as portable Markdown files.">
+  <meta property="og:image" content="https://ioths.bedrockrebel.app/assets/marketing/social-card.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="IOTHS: offline Markdown notes with kanban tasks, private by default">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="IOTHS — Offline Markdown Notes &amp; Kanban Tasks">
+  <meta name="twitter:description" content="Private, offline-first notes and kanban tasks for iPhone and iPad, stored as portable Markdown files.">
+  <meta name="twitter:image" content="https://ioths.bedrockrebel.app/assets/marketing/social-card.png">
+  <meta name="twitter:image:alt" content="IOTHS: offline Markdown notes with kanban tasks, private by default">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://ioths.bedrockrebel.app/#website",
+          "url": "https://ioths.bedrockrebel.app/",
+          "name": "IOTHS",
+          "alternateName": ["ioths", "ioths.bedrockrebel.app"],
+          "description": "Offline-first Markdown notes and kanban tasks for iPhone and iPad.",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://ioths.bedrockrebel.app/#app",
+          "name": "IOTHS",
+          "url": "https://ioths.bedrockrebel.app/",
+          "description": "A private, offline-first notes app for iPhone and iPad with plain Markdown files and a kanban board built in.",
+          "applicationCategory": "ProductivityApplication",
+          "operatingSystem": ["iOS 18.0 or later", "iPadOS 18.0 or later"],
+          "image": "https://ioths.bedrockrebel.app/assets/marketing/social-card.png",
+          "screenshot": [
+            "https://ioths.bedrockrebel.app/assets/marketing/library-744.png",
+            "https://ioths.bedrockrebel.app/assets/marketing/kanban-744.png",
+            "https://ioths.bedrockrebel.app/assets/marketing/natural-note-744.png",
+            "https://ioths.bedrockrebel.app/assets/marketing/raw-markdown-744.png",
+            "https://ioths.bedrockrebel.app/assets/marketing/storage-744.png"
+          ],
+          "featureList": [
+            "Offline-first note capture and editing",
+            "Portable Markdown files with YAML frontmatter",
+            "Kanban and task views",
+            "On-device PDF-to-Markdown conversion",
+            "Optional Files-folder, GitHub, and GitLab storage"
+          ],
+          "author": {
+            "@type": "Organization",
+            "name": "Bedrock Rebellion",
+            "url": "https://bedrockrebel.app/"
+          }
+        }
+      ]
+    }
+  </script>
+
+  <link rel="preload" href="/assets/platoscave/fonts/JTUSjIg69CK48gW7PXoo9Wlhyw.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/platoscave/fonts/source-serif-4-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/platoscave/plain-readable.css">
   <link rel="stylesheet" href="/style.css">
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64x64.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -17,89 +85,115 @@
 
   <header>
     <a class="wordmark" href="/">IOTHS</a>
-    <nav class="link-row">
-      <a href="/support.html">Support</a>
-      <a href="/legal/privacy.html">Privacy</a>
-      <a href="/legal/terms.html">Terms</a>
+    <nav class="link-row" aria-label="Primary">
+      <a href="/support">Support</a>
+      <a href="/legal/privacy">Privacy</a>
+      <a href="/legal/terms">Terms</a>
     </nav>
   </header>
 
-  <main>
+  <main class="landing-main">
 
-    <div class="hero">
-      <p class="eyebrow">Offline markdown notes &amp; kanban tasks</p>
-      <h1>IOTHS</h1>
-      <p class="lede">A fast, offline-first notes app for iPhone and iPad, with a real kanban board built in. Every note is a plain Markdown file — readable, portable, and yours forever.</p>
-      <div class="cta-row">
-        <span class="button-primary" aria-disabled="true">Coming soon to the App Store</span>
-        <span class="cta-note">No account required. No proprietary format.</span>
+    <div class="hero hero--product">
+      <div class="hero-copy">
+        <p class="eyebrow">Private by default &middot; no account required</p>
+        <h1><span class="hero-product-name">IOTHS</span><span class="hero-descriptor">Offline Markdown notes with kanban tasks</span></h1>
+        <p class="lede">A fast, offline-first notes app for iPhone and iPad, with a real kanban board built in. Every note is a plain Markdown file — readable, portable, and yours forever.</p>
+        <div class="cta-row">
+          <span class="button-primary" aria-disabled="true">Coming soon to the App Store</span>
+          <span class="cta-note">No account required. No proprietary format.</span>
+        </div>
       </div>
+      <figure class="product-artwork product-artwork--hero">
+        <img src="/assets/marketing/library-576.png" srcset="/assets/marketing/library-496.png 496w, /assets/marketing/library-576.png 576w, /assets/marketing/library-744.png 744w" sizes="(max-width: 760px) 224px, 288px" alt="IOTHS Library in dark mode on iPhone, showing notes, task progress, tags, and link previews" width="576" height="1246" fetchpriority="high" decoding="async">
+      </figure>
     </div>
 
-    <section>
-      <h2>Tasks, kanban, and focus</h2>
-      <div class="feature-grid">
-        <div class="feature">
-          <h3>Notes that double as tasks</h3>
-          <p>Any checklist inside a note turns it into a task note — no separate task manager to maintain.</p>
-        </div>
-        <div class="feature">
-          <h3>A kanban board built for one</h3>
-          <p>Switch between List, Tile, Kanban, and Thoughts layouts. Cards move lanes automatically as tasks get checked off — a kanban board built for one, not a team.</p>
-        </div>
-        <div class="feature">
-          <h3>A work-in-progress limit that means it</h3>
-          <p>Cap how many notes can be "in progress" at once, so focus stays real instead of aspirational.</p>
-        </div>
-        <div class="feature">
-          <h3>Every task, one screen</h3>
-          <p>A dedicated Tasks view flattens every open checklist item across your whole Library into one list.</p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Capture, fast</h2>
-      <div class="feature-grid">
-        <div class="feature">
-          <h3>Type, dictate, or snap a photo</h3>
-          <p>Camera, voice, and Share Extension capture land straight in Markdown.</p>
-        </div>
-        <div class="feature">
-          <h3>PDF to Markdown</h3>
-          <p>Convert a PDF to Markdown with on-device review before you save.</p>
-        </div>
-        <div class="feature">
-          <h3>Tags, pins, and search</h3>
-          <p>Tags, pinned notes, and quick search keep everything findable.</p>
-        </div>
-        <div class="feature">
-          <h3>Widgets</h3>
-          <p>A Home Screen widget for a glanceable view of what matters most.</p>
+    <section class="feature-section feature-section--with-artwork">
+      <div>
+        <h2>Tasks, kanban, and focus</h2>
+        <div class="feature-grid">
+          <div class="feature">
+            <h3>Notes that double as tasks</h3>
+            <p>Any checklist inside a note turns it into a task note — no separate task manager to maintain.</p>
+          </div>
+          <div class="feature">
+            <h3>A kanban board built for one</h3>
+            <p>Switch between List, Tile, Kanban, and Thoughts layouts. Cards move lanes automatically as tasks get checked off — a kanban board built for one, not a team.</p>
+          </div>
+          <div class="feature">
+            <h3>A work-in-progress limit that means it</h3>
+            <p>Cap how many notes can be "in progress" at once, so focus stays real instead of aspirational.</p>
+          </div>
+          <div class="feature">
+            <h3>Every task, one screen</h3>
+            <p>A dedicated Tasks view flattens every open checklist item across your whole Library into one list.</p>
+          </div>
         </div>
       </div>
+      <figure class="product-artwork product-artwork--feature">
+        <img src="/assets/marketing/kanban-496.png" srcset="/assets/marketing/kanban-496.png 496w, /assets/marketing/kanban-744.png 744w" sizes="(max-width: 760px) 176px, 225px" alt="IOTHS Kanban view on iPhone with open, in-progress, and done task lanes" width="496" height="1073" loading="lazy" decoding="async">
+      </figure>
     </section>
 
-    <section>
-      <h2>Built on plain files</h2>
-      <p>Notes are stored as <code>.md</code> files with YAML frontmatter — the same structure Obsidian vaults use. Nothing proprietary, nothing to migrate later. Open your notes in any text editor, on any device, at any time.</p>
+    <section class="feature-section feature-section--with-artwork feature-section--reversed">
+      <div>
+        <h2>Capture, fast</h2>
+        <div class="feature-grid">
+          <div class="feature">
+            <h3>Type, dictate, or snap a photo</h3>
+            <p>Camera, voice, and Share Extension capture land straight in Markdown.</p>
+          </div>
+          <div class="feature">
+            <h3>PDF to Markdown</h3>
+            <p>Convert a PDF to Markdown with on-device review before you save.</p>
+          </div>
+          <div class="feature">
+            <h3>Tags, pins, and search</h3>
+            <p>Tags, pinned notes, and quick search keep everything findable.</p>
+          </div>
+          <div class="feature">
+            <h3>Widgets</h3>
+            <p>A Home Screen widget for a glanceable view of what matters most.</p>
+          </div>
+        </div>
+      </div>
+      <figure class="product-artwork product-artwork--feature">
+        <img src="/assets/marketing/natural-note-496.png" srcset="/assets/marketing/natural-note-496.png 496w, /assets/marketing/natural-note-744.png 744w" sizes="(max-width: 760px) 176px, 225px" alt="IOTHS note editor on iPhone with a photo attachment, Markdown link, tags, and checklist" width="496" height="1073" loading="lazy" decoding="async">
+      </figure>
+    </section>
+
+    <section class="source-showcase">
+      <div class="source-showcase-copy">
+        <p class="eyebrow">No black box</p>
+        <h2>Built on plain files</h2>
+        <p>Notes are stored as <code>.md</code> files with YAML frontmatter — the same structure Obsidian vaults use. Nothing proprietary, nothing to migrate later. Open your notes in any text editor, on any device, at any time.</p>
+      </div>
+      <figure class="product-artwork product-artwork--source">
+        <img src="/assets/marketing/raw-markdown-496.png" srcset="/assets/marketing/raw-markdown-496.png 496w, /assets/marketing/raw-markdown-744.png 744w" sizes="(max-width: 760px) 176px, 234px" alt="IOTHS raw Markdown editor on iPhone, showing portable Markdown source" width="496" height="1073" loading="lazy" decoding="async">
+      </figure>
     </section>
 
     <section>
       <h2>Private by default</h2>
-      <p>Your notes stay on this device until you explicitly turn on a sync destination. There's no IOTHS account and no developer-operated sign-in. Usage analytics are off unless you turn them on, and even then they never include note content, titles, or tags. Nothing is sold. Nothing trains an AI model. Read the full <a href="/legal/privacy.html">Privacy Policy</a>.</p>
+      <p>Your notes stay on this device until you explicitly turn on a sync destination. There's no IOTHS account and no developer-operated sign-in. Usage analytics are off unless you turn them on, and even then they never include note content, titles, or tags. Nothing is sold. Nothing trains an AI model. Read the full <a href="/legal/privacy">Privacy Policy</a>.</p>
     </section>
 
-    <section>
-      <h2>Unlock more storage</h2>
-      <p><strong>Full Unlock</strong> is a one-time purchase — not a subscription — that adds:</p>
-      <ul>
-        <li><strong>Files folder storage</strong>, through any Files-compatible provider such as an Obsidian vault, Box, Dropbox, or Microsoft OneDrive</li>
-        <li><strong>GitHub storage and sync</strong>, to a dedicated repository path</li>
-        <li><strong>GitLab storage and sync</strong>, to a dedicated project path</li>
-        <li><strong>Portable export</strong> — save your whole Library as a ZIP archive anytime</li>
-      </ul>
-      <p>Capture, editing, reading, sharing, PDF conversion, tagging, task tracking, archive, and trash recovery are free, forever.</p>
+    <section class="feature-section feature-section--with-artwork feature-section--reversed">
+      <div>
+        <h2>Unlock more storage</h2>
+        <p><strong>Full Unlock</strong> is a one-time purchase — not a subscription — that adds:</p>
+        <ul>
+          <li><strong>Files folder storage</strong>, through any Files-compatible provider such as an Obsidian vault, Box, Dropbox, or Microsoft OneDrive</li>
+          <li><strong>GitHub storage and sync</strong>, to a dedicated repository path</li>
+          <li><strong>GitLab storage and sync</strong>, to a dedicated project path</li>
+          <li><strong>Portable export</strong> — save your whole Library as a ZIP archive anytime</li>
+        </ul>
+        <p>Capture, editing, reading, sharing, PDF conversion, tagging, task tracking, archive, and trash recovery are free, forever.</p>
+      </div>
+      <figure class="product-artwork product-artwork--feature">
+        <img src="/assets/marketing/storage-496.png" srcset="/assets/marketing/storage-496.png 496w, /assets/marketing/storage-744.png 744w" sizes="(max-width: 760px) 176px, 225px" alt="IOTHS Storage setup on iPhone with on-device, Files folder, GitHub, GitLab, and portable export options" width="496" height="1073" loading="lazy" decoding="async">
+      </figure>
     </section>
 
     <section>
@@ -110,22 +204,24 @@
            visible compression artifacts at this size. Regenerate the same way
            if the icon artwork changes; see README.md. -->
       <p class="icon-figure">
-        <img src="/icon-why.png" alt="The IOTHS app icon: a note dissolving into scattered pixels" width="480" height="480" loading="lazy">
+        <img src="/icon-why-240.png" alt="The IOTHS app icon: a note dissolving into scattered pixels" width="240" height="240" loading="lazy" decoding="async">
       </p>
       <p>The icon is a small flirtation with complexity theory — a note dissolving into scattered blocks, the way Conway's Game of Life turns a handful of simple rules into patterns nobody predicted. Notes, todos, and tasks feel orderly until they don't. The same structure that organizes a day can just as easily spill into something stranger than intended.</p>
       <div class="link-row">
-        <a href="/support.html">Support</a>
-        <a href="/legal/privacy.html">Privacy Policy</a>
-        <a href="/legal/terms.html">Terms of Use</a>
+        <a href="/support">Support</a>
+        <a href="/legal/privacy">Privacy Policy</a>
+        <a href="/legal/terms">Terms of Use</a>
       </div>
     </section>
 
   </main>
 
   <footer>
-    <p>IOTHS &mdash; made with care</p>
-    <p><a href="/support.html">Contact</a> &middot; <a href="/legal/privacy.html">Privacy Policy</a> &middot; <a href="/legal/terms.html">Terms of Use</a><span id="impressum-link"> &middot; <a href="/legal/impressum.html">Legal Notice</a></span></p>
-    <script>if(!navigator.language.startsWith('de'))document.getElementById('impressum-link').remove();</script>
+    <p>IOTHS &mdash; made with care by Bedrock Rebellion</p>
+    <p><a href="/support">Contact</a> &middot; <a href="/legal/privacy">Privacy Policy</a> &middot; <a href="/legal/terms">Terms of Use</a><span id="impressum-link"> &middot; <a href="/legal/impressum">Legal Notice</a></span></p>
+    <script>
+      if (!navigator.language.startsWith('de')) document.getElementById('impressum-link').remove();
+    </script>
   </footer>
 
 </body>

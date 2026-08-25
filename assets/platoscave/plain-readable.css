@@ -1,0 +1,66 @@
+html[data-theme='plain-readable'] {
+  --paper:       #ffffff;
+  --paper-dark:  #fafafa;
+  --paper-deep:  #f4f4f4;
+
+  --ink:         #0a0a0a;
+  --ink-mid:     #2e2e2e;
+  --ink-faint:   #525252;
+  --ink-ghost:   #a8a8a8;
+
+  --rust:        #b83227;
+  --rust-light:  #d04e43;
+  --sage:        #2d6e48;
+  --sage-light:  #4a8f65;
+  --ochre:       #b87318;
+  --gold:        #d49820;
+  --slate:       #2a3c4a;
+  --slate-light: #486070;
+
+  --serif:       'Source Serif 4', Georgia, serif;
+  --serif-alt:   'Bebas Neue', Impact, sans-serif;
+  --mono:        'Space Mono', 'Courier New', monospace;
+
+  --nav-surface:                 rgba(255, 255, 255, 0.92);
+  --nav-surface-border:          #0a0a0a;
+  --nav-surface-filter:          blur(12px) saturate(1.02);
+  --nav-menu-surface:            rgba(255, 255, 255, 0.97);
+  --nav-menu-border:             rgba(0, 0, 0, 0.10);
+  --nav-menu-filter:             blur(12px) saturate(1.02);
+  --nav-menu-active-surface:     rgba(248, 248, 248, 0.99);
+  --nav-submenu-surface:         rgba(248, 248, 248, 0.88);
+
+  --viz-ink:         var(--ink);
+  --viz-ink-mid:     var(--ink-mid);
+  --viz-ink-faint:   var(--ink-faint);
+  --viz-ink-ghost:   var(--ink-ghost);
+  --viz-rust:        var(--rust);
+  --viz-rust-light:  var(--rust-light);
+  --viz-ochre:       var(--ochre);
+  --viz-gold:        var(--gold);
+  --viz-slate:       var(--slate);
+  --viz-slate-light: var(--slate-light);
+  --viz-sage:        var(--sage);
+  --viz-sage-light:  var(--sage-light);
+}
+
+[data-theme='plain-readable'] .nav-title,
+[data-theme='plain-readable'] .hero-title,
+[data-theme='plain-readable'] .module-header-title,
+[data-theme='plain-readable'] .module-title,
+[data-theme='plain-readable'] .diagnosis-title {
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  letter-spacing: 0.04em;
+  line-height: 1.04;
+}
+
+[data-theme='plain-readable'] .hero-body,
+[data-theme='plain-readable'] .module-header-body,
+[data-theme='plain-readable'] .diagnosis-body,
+[data-theme='plain-readable'] .essay-body,
+[data-theme='plain-readable'] .field-notes-body,
+[data-theme='plain-readable'] .note-content p,
+[data-theme='plain-readable'] .note-content li,
+[data-theme='plain-readable'] .note-content blockquote {
+  font-family: 'Source Serif 4', Georgia, serif;
+}

@@ -1,36 +1,108 @@
-/* Design tokens — mirrored from DesignSystem.swift. Colors and fonts here
-   happen to already match the "plain-readable" theme at
-   rndrssn.github.io/platoscave (Source Serif 4 / Bebas Neue / Space Mono,
-   near-identical paper/ink hex values) — confirmed against that theme's
-   actual [data-theme='plain-readable'] override, not its default/unthemed
-   styling. Hero geometry (left-aligned, eyebrow label, fluid sizing) is
-   adapted from that site's shared hero layout. */
+/* The font faces and theme file are vendored from platoscave so both sites
+   render the same plain-readable palette and typography without a third-party
+   font request. The HTML loads the theme alongside this file so the browser
+   can fetch both stylesheets in parallel. */
+
+@font-face {
+  font-family: "Bebas Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/platoscave/fonts/JTUSjIg69CK48gW7PXoo9Wlhyw.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/assets/platoscave/fonts/i7dPIFZifjKcF5UAWdDRYEF8RQ.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/platoscave/fonts/i7dPIFZifjKcF5UAWdDRYEF8RQ.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/assets/platoscave/fonts/i7dMIFZifjKcF5UAWdDRaPpZUFWaHg.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/assets/platoscave/fonts/source-serif-4-latin-variable.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: italic;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/assets/platoscave/fonts/source-serif-4-latin-italic-variable.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 :root {
-  /* Surfaces */
-  --bg:              #ffffff;
-  --bg-raised:       #fafafa;
-  --bg-deep:         #f0f0f0;
+  --paper:       #faf8f1;
+  --paper-dark:  #f0ead9;
+  --paper-deep:  #e6dece;
+  --ink:         #2a2018;
+  --ink-mid:     #5c4f3a;
+  --ink-faint:   #9c8e78;
+  --ink-ghost:   #c8bda8;
+  --rust:        #8b3a2a;
+  --rust-light:  #b85c40;
+  --sage:        #4a6741;
+  --sage-light:  #6b8f62;
+  --ochre:       #9a7b3a;
+  --gold:        #b8943a;
+  --slate:       #3d4f5c;
+  --slate-light: #5a7080;
+  --serif:       "EB Garamond", Georgia, serif;
+  --serif-alt:   "Cormorant Garamond", Georgia, serif;
+  --mono:        "DM Mono", "Courier New", monospace;
+  --fs-body:     0.875rem;
+  --fs-label-section: 0.75rem;
+  --fs-heading-hero-min: 2.5rem;
+  --fs-heading-hero-max: 5.5rem;
+  --fs-body-hero: 0.875rem;
 
-  /* Borders */
-  --separator:       #e8e8e8;
+  --link-text: var(--ink-mid);
+  --link-text-hover: var(--ink);
+  --link-underline: color-mix(in srgb, var(--ink-mid) 42%, transparent 58%);
+  --link-underline-hover: color-mix(in srgb, var(--ink) 74%, transparent 26%);
 
-  /* Foregrounds */
-  --fg:              #0a0a0a;
-  --fg-mid:          #2e2e2e;
-  --fg-faint:        #525252;
-  --fg-ghost:        #a8a8a8;
+  --bg: var(--paper);
+  --bg-raised: var(--paper-dark);
+  --bg-deep: var(--paper-deep);
+  --separator: var(--ink-ghost);
+  --fg: var(--ink);
+  --fg-mid: var(--ink-mid);
+  --fg-faint: var(--ink-faint);
+  --fg-ghost: var(--ink-ghost);
+  --attention: #ffd83e;
+  --attention-text: #151515;
+  --positive: var(--sage);
+  --negative: var(--rust);
+  --meta: var(--slate);
 
-  /* Accents */
-  --attention:       #ffd83e;
-  --attention-text:  #151515;
-  --positive:        #2d6e48;
-  --negative:        #b83227;
-  --meta:            #2a3c4a;
-
-  /* Surfaces */
-  --surface:     #f5f5f5;
-  --destructive: #b83227;
+  --surface: var(--paper-dark);
+  --destructive: var(--rust);
 
   /* Radius */
   --radius-xs:   3px;
@@ -48,39 +120,14 @@
   --space-xxl:  24px;
   --space-xxxl: 32px;
 
-  /* Typography */
-  --font-serif: "Source Serif 4", Georgia, serif;
-  --font-display: "Bebas Neue", Impact, sans-serif;
-  --font-mono: "Space Mono", "Courier New", monospace;
+  --font-serif: var(--serif);
+  --font-display: var(--serif-alt);
+  --font-mono: var(--mono);
 
   /* Shadow (light mode only) */
   --shadow-card: 0 2px 2px rgba(17, 34, 54, 0.08);
-}
-
-/* Pages that must stay on the light "paper" palette regardless of system
-   theme (currently just the landing page) opt out with this class on <html>,
-   rather than the dark override below being skipped implicitly. */
-.light-forced {
-  color-scheme: light;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not(.light-forced) {
-    --bg:              #111111;
-    --bg-raised:       #1c1c1c;
-    --bg-deep:         #252525;
-    --separator:       #2e2e2e;
-    --fg:              #f0f0f0;
-    --fg-mid:          #c8c8c8;
-    --fg-faint:        #8c8c8c;
-    --fg-ghost:        #686868;
-    --surface:         #1c1c1c;
-    --destructive:     #d05546;
-    --positive:        #4a9065;
-    --negative:        #d05546;
-    --meta:            #4e6578;
-    --shadow-card:     none;
-  }
+  --showcase-surface: #111111;
+  --showcase-ink: #f5f5f5;
 }
 
 /* Reset */
@@ -90,17 +137,28 @@
 /* Base */
 
 html {
-  font-size: 16px;
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
+  font-size: 18px;
+  overflow-x: hidden;
+}
+
+@media (max-width: 640px) {
+  html { font-size: 16px; }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  html { font-size: 14px; }
 }
 
 body {
-  background: var(--bg);
-  color: var(--fg);
-  font-family: var(--font-serif);
-  font-size: 1rem;
-  line-height: 1.72;
+  font-family: var(--serif);
+  font-size: var(--fs-body);
+  line-height: 1.7;
+  color: var(--ink);
+  background-color: var(--paper);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  -webkit-font-smoothing: antialiased;
+  font-synthesis: none;
+  overflow-x: hidden;
   min-height: 100dvh;
 }
 
@@ -119,8 +177,11 @@ header {
   align-items: center;
   gap: var(--space-xs);
   font-family: var(--font-display);
-  font-size: 3.125rem;
-  letter-spacing: 0.08em;
+  font-size: calc(1.1rem * 2.535);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.04;
+  letter-spacing: 0.04em;
   color: var(--fg-ghost);
   text-decoration: none;
 }
@@ -150,16 +211,28 @@ header {
 }
 
 main {
-  max-width: 680px;
+  max-width: 720px;
   margin: 0 auto;
-  padding: var(--space-xxxl) var(--space-xxl) calc(var(--space-xxxl) * 3);
+  padding: 3rem 1.25rem 6rem;
+}
+
+main.landing-main {
+  max-width: 1140px;
+  padding-top: 0;
+}
+
+main.not-found-main {
+  max-width: 720px;
+  padding-top: 3rem;
 }
 
 /* Typography */
 
 h1 {
   font-family: var(--font-display);
-  font-size: 2.75rem;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 300;
+  font-style: italic;
   line-height: 1.04;
   letter-spacing: 0.04em;
   color: var(--fg);
@@ -168,8 +241,10 @@ h1 {
 
 h2 {
   font-family: var(--font-display);
-  font-size: 1.25rem;
-  line-height: 1.25;
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.04;
   letter-spacing: 0.04em;
   color: var(--fg-mid);
   margin-top: var(--space-xxxl);
@@ -191,12 +266,17 @@ ul {
 ul li { margin-bottom: var(--space-xs); }
 
 a {
-  color: var(--positive);
+  color: var(--link-text);
   text-decoration: underline;
-  text-underline-offset: 2px;
+  text-decoration-color: var(--link-underline);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.14em;
 }
 
-a:hover { color: var(--fg); }
+a:hover {
+  color: var(--link-text-hover);
+  text-decoration-color: var(--link-underline-hover);
+}
 
 strong { font-weight: 600; }
 
@@ -222,14 +302,18 @@ code {
 /* Section divider */
 
 section {
-  border-top: 1px solid var(--separator);
-  padding-top: var(--space-sm);
-  margin-top: var(--space-xxxl);
+  border-top: 1px solid var(--ink-ghost);
+  padding: 3rem 0;
+  margin-top: 0;
 }
 
 section:first-of-type {
   border-top: none;
-  margin-top: var(--space-xxxl);
+  margin-top: 0;
+}
+
+.hero + section {
+  border-top: 1px solid var(--ink-ghost);
 }
 
 /* Contact card */
@@ -260,8 +344,10 @@ section:first-of-type {
 /* Footer */
 
 footer {
-  border-top: 1px solid var(--separator);
-  padding: var(--space-xl) var(--space-xxl);
+  border-top: 1px solid var(--ink-ghost);
+  padding: 2rem 1.25rem;
+  max-width: 720px;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -277,27 +363,48 @@ footer p {
 
 .hero {
   text-align: left;
-  padding-top: calc(var(--space-xxxl) * 1.5);
-  padding-bottom: var(--space-xxxl);
-  border-bottom: 1px solid var(--separator);
+  padding-top: calc(4rem + 3rem);
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--ink-ghost);
 }
 
 .hero .eyebrow {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: var(--fs-label-section);
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--fg-faint);
-  margin-bottom: var(--space-md);
+  margin-bottom: 1.5rem;
 }
 
 .hero h1 {
-  font-size: clamp(2.8125rem, 8vw, 6.1875rem);
-  max-width: 12ch;
+  font-size: clamp(var(--fs-heading-hero-min), 8vw, var(--fs-heading-hero-max));
+  margin-bottom: 2rem;
+  max-width: 18ch;
+}
+
+.hero-product-name,
+.hero-descriptor {
+  display: block;
+}
+
+.hero-descriptor {
+  max-width: 30ch;
+  margin-top: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: clamp(0.8rem, 1.7vw, 1.05rem);
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+  color: var(--fg-mid);
 }
 
 .hero .lede {
+  font-family: var(--serif);
+  font-size: var(--fs-body-hero);
   max-width: 55ch;
   margin: 0 0 var(--space-xl);
   color: var(--fg-mid);
@@ -383,12 +490,366 @@ header .link-row { margin-top: 0; }
   box-shadow: var(--shadow-card);
 }
 
+/* Product artwork turns the landing page into a story about the app rather
+   than a list of claims. These are final, representative App Store captures. */
+.hero--product {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.56fr);
+  align-items: center;
+  gap: clamp(2rem, 7vw, 6rem);
+}
+
+.hero-copy {
+  max-width: 37rem;
+}
+
+.product-artwork {
+  margin: 0;
+  overflow: hidden;
+  background: var(--showcase-surface);
+  box-shadow: 0 1.25rem 3.5rem color-mix(in srgb, var(--ink) 20%, transparent);
+}
+
+.product-artwork img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.product-artwork--hero {
+  max-width: 22rem;
+  justify-self: end;
+  transform: rotate(2deg);
+}
+
+.feature-section--with-artwork {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(15rem, 0.42fr);
+  align-items: center;
+  gap: clamp(2rem, 7vw, 6rem);
+}
+
+.feature-section--reversed .product-artwork {
+  order: -1;
+}
+
+.product-artwork--feature {
+  max-width: 18rem;
+  justify-self: end;
+  transform: rotate(1.25deg);
+}
+
+.feature-section--reversed .product-artwork--feature {
+  justify-self: start;
+  transform: rotate(-1.25deg);
+}
+
+.source-showcase {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(15rem, 0.46fr);
+  align-items: center;
+  gap: clamp(2rem, 7vw, 6rem);
+  margin-top: 3rem;
+  padding: clamp(2rem, 7vw, 5rem);
+  border: 0;
+  background: var(--showcase-surface);
+}
+
+.source-showcase-copy {
+  max-width: 34rem;
+}
+
+.source-showcase .eyebrow,
+.source-showcase h2,
+.source-showcase p {
+  color: var(--showcase-ink);
+}
+
+.source-showcase .eyebrow {
+  margin-bottom: 1.5rem;
+}
+
+.source-showcase h2 {
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.source-showcase code {
+  background: color-mix(in srgb, var(--showcase-ink) 14%, transparent);
+  color: var(--showcase-ink);
+}
+
+.product-artwork--source {
+  max-width: 18rem;
+  justify-self: end;
+  transform: rotate(2deg);
+}
+
 /* Responsive */
 
 @media (max-width: 600px) {
   main { padding: var(--space-xxl) var(--space-md) calc(var(--space-xxxl) * 2); }
   header { padding: var(--space-md); }
-  .wordmark { font-size: 2.25rem; }
+  .wordmark { font-size: calc(1.1rem * 1.8525); }
   h1 { font-size: 2rem; }
   .feature-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 760px) {
+  main.landing-main { max-width: 720px; }
+
+  .hero--product,
+  .feature-section--with-artwork,
+  .source-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .hero--product { gap: 3rem; }
+
+  .product-artwork--hero,
+  .product-artwork--feature,
+  .feature-section--reversed .product-artwork--feature,
+  .product-artwork--source {
+    justify-self: center;
+  }
+
+  .product-artwork--hero { max-width: min(22rem, 82vw); }
+  .product-artwork--feature,
+  .product-artwork--source { max-width: min(18rem, 72vw); }
+
+  .feature-section--reversed .product-artwork { order: 0; }
+
+  .source-showcase { margin-top: 0; }
+}
+
+html[data-design] .product-artwork--hero { max-width: 16rem; }
+html[data-design] .product-artwork--feature { max-width: 12.5rem; }
+html[data-design] .product-artwork--source { max-width: 13rem; }
+
+/* Direction one — a warm, annotated field notebook. */
+html[data-design="field-notes"] body {
+  background-color: #f5f1e6;
+  background-image:
+    linear-gradient(to right, transparent 0, transparent 4.7rem, color-mix(in srgb, var(--rust) 18%, transparent) 4.7rem, color-mix(in srgb, var(--rust) 18%, transparent) calc(4.7rem + 1px), transparent calc(4.7rem + 1px)),
+    repeating-linear-gradient(to bottom, transparent 0, transparent 2rem, color-mix(in srgb, var(--ink-ghost) 35%, transparent) 2rem, color-mix(in srgb, var(--ink-ghost) 35%, transparent) calc(2rem + 1px));
+}
+
+html[data-design="field-notes"] .hero--product {
+  padding-top: clamp(5rem, 12vw, 10rem);
+  border-bottom-style: dashed;
+}
+
+html[data-design="field-notes"] .hero-copy::before {
+  content: "01 / A place for the unfinished";
+  display: block;
+  margin-bottom: 1.1rem;
+  color: var(--rust);
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+html[data-design="field-notes"] .hero h1 {
+  font-size: clamp(4rem, 10vw, 8rem);
+  letter-spacing: 0.015em;
+}
+
+html[data-design="field-notes"] .product-artwork {
+  border: 0.45rem solid var(--paper);
+  box-shadow: 0 0.9rem 0 color-mix(in srgb, var(--rust) 52%, transparent), 0 1.5rem 3rem color-mix(in srgb, var(--ink) 18%, transparent);
+}
+
+html[data-design="field-notes"] .feature-section {
+  border-top-style: dashed;
+}
+
+html[data-design="field-notes"] .source-showcase {
+  background: #2a2018;
+}
+
+/* Direction two — a dark, instrumental personal control room. */
+html[data-design="control-room"] body {
+  color: #f6f4ee;
+  background-color: #0e0f0e;
+  background-image:
+    linear-gradient(color-mix(in srgb, #ffd83e 8%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, #ffd83e 8%, transparent) 1px, transparent 1px);
+  background-size: 2rem 2rem;
+}
+
+html[data-design="control-room"] header {
+  border-color: color-mix(in srgb, #ffffff 18%, transparent);
+  background: #0e0f0e;
+}
+
+html[data-design="control-room"] .wordmark,
+html[data-design="control-room"] header .link-row a,
+html[data-design="control-room"] .landing-main h1,
+html[data-design="control-room"] .landing-main h2,
+html[data-design="control-room"] .landing-main h3,
+html[data-design="control-room"] .landing-main p,
+html[data-design="control-room"] .landing-main li {
+  color: #f6f4ee;
+}
+
+html[data-design="control-room"] .landing-main a { color: #ffd83e; }
+
+html[data-design="control-room"] .landing-main section,
+html[data-design="control-room"] .hero {
+  border-color: color-mix(in srgb, #ffffff 20%, transparent);
+}
+
+html[data-design="control-room"] .hero--product {
+  min-height: min(46rem, 90vh);
+  padding-top: clamp(4rem, 11vw, 9rem);
+}
+
+html[data-design="control-room"] .hero-copy::before {
+  content: "IOTHS / Personal system online";
+  display: block;
+  margin-bottom: 1.1rem;
+  color: #ffd83e;
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+html[data-design="control-room"] .hero h1 {
+  font-size: clamp(4rem, 11vw, 9rem);
+  color: #ffd83e;
+}
+
+html[data-design="control-room"] .hero-descriptor {
+  color: #f6f4ee;
+}
+
+html[data-design="control-room"] .button-primary {
+  color: #111111;
+  background: #ffd83e;
+}
+
+html[data-design="control-room"] .cta-note,
+html[data-design="control-room"] .eyebrow,
+html[data-design="control-room"] .feature p {
+  color: color-mix(in srgb, #f6f4ee 68%, transparent) !important;
+}
+
+html[data-design="control-room"] .feature-grid {
+  gap: 0.8rem;
+}
+
+html[data-design="control-room"] .feature {
+  padding: 1rem;
+  border: 1px solid color-mix(in srgb, #ffffff 16%, transparent);
+  background: color-mix(in srgb, #ffffff 4%, transparent);
+}
+
+html[data-design="control-room"] .product-artwork {
+  border: 1px solid color-mix(in srgb, #ffd83e 62%, transparent);
+  box-shadow: 0 0 0 0.35rem color-mix(in srgb, #ffd83e 12%, transparent), 0 1.5rem 4rem color-mix(in srgb, #000000 80%, transparent);
+}
+
+html[data-design="control-room"] .source-showcase {
+  border: 1px solid color-mix(in srgb, #ffd83e 36%, transparent);
+  background: #151715;
+}
+
+html[data-design="control-room"] footer,
+html[data-design="control-room"] footer p,
+html[data-design="control-room"] footer a {
+  color: color-mix(in srgb, #f6f4ee 56%, transparent);
+  border-color: color-mix(in srgb, #ffffff 18%, transparent);
+}
+
+/* Direction three — fragments condense into a deliberate working structure. */
+html[data-design="emergence"] body {
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(circle at 14% 16%, color-mix(in srgb, #ffd83e 42%, transparent) 0 0.25rem, transparent 0.28rem),
+    radial-gradient(circle at 82% 8%, color-mix(in srgb, var(--rust) 28%, transparent) 0 0.18rem, transparent 0.2rem);
+  background-size: 3.2rem 3.2rem, 4.8rem 4.8rem;
+}
+
+html[data-design="emergence"] .hero--product {
+  padding-top: clamp(5rem, 13vw, 11rem);
+  border-bottom: 0;
+}
+
+html[data-design="emergence"] .hero h1 {
+  font-size: clamp(4.5rem, 13vw, 10rem);
+  line-height: 0.9;
+}
+
+html[data-design="emergence"] .hero-copy::before {
+  content: "Fragments / focus / flow";
+  display: block;
+  margin-bottom: 1.1rem;
+  color: var(--rust);
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+html[data-design="emergence"] .landing-main > .feature-section:first-of-type {
+  margin-top: 2rem;
+  padding: clamp(3rem, 8vw, 7rem);
+  border: 0;
+  background: #111111;
+}
+
+html[data-design="emergence"] .landing-main > .feature-section:first-of-type h2,
+html[data-design="emergence"] .landing-main > .feature-section:first-of-type h3,
+html[data-design="emergence"] .landing-main > .feature-section:first-of-type p {
+  color: #ffffff;
+}
+
+html[data-design="emergence"] .landing-main > .feature-section:first-of-type .feature p {
+  color: color-mix(in srgb, #ffffff 68%, transparent);
+}
+
+html[data-design="emergence"] .landing-main > .feature-section:first-of-type .product-artwork {
+  border: 0.4rem solid #ffd83e;
+}
+
+html[data-design="emergence"] .feature-section--reversed {
+  position: relative;
+  margin-top: 3rem;
+  padding: clamp(3rem, 8vw, 7rem);
+  border: 0;
+  background: #ffd83e;
+}
+
+html[data-design="emergence"] .feature-section--reversed .product-artwork {
+  border: 0.4rem solid #111111;
+}
+
+html[data-design="emergence"] .source-showcase {
+  margin-top: 3rem;
+  background: #111111;
+}
+
+html[data-design="emergence"] .product-artwork--hero { transform: rotate(4deg) translateY(1rem); }
+html[data-design="emergence"] .product-artwork--feature { transform: rotate(-3deg); }
+html[data-design="emergence"] .feature-section--reversed .product-artwork--feature { transform: rotate(3deg); }
+html[data-design="emergence"] .product-artwork--source { transform: rotate(-4deg); }
+
+@media (max-width: 760px) {
+  html[data-design] .product-artwork--hero { max-width: min(14rem, 68vw); }
+  html[data-design] .product-artwork--feature,
+  html[data-design] .product-artwork--source { max-width: min(11rem, 56vw); }
+
+  html[data-design="control-room"] .hero--product { min-height: 0; }
+  html[data-design="emergence"] .landing-main > .feature-section:first-of-type,
+  html[data-design="emergence"] .feature-section--reversed { margin-inline: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-artwork,
+  .product-artwork--hero,
+  .product-artwork--feature,
+  .product-artwork--source { transform: none !important; }
 }
