@@ -478,14 +478,22 @@ footer p {
 
 header .link-row { margin-top: 0; }
 
-.icon-figure {
-  text-align: center;
-  margin: var(--space-xl) 0;
+.why-section-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(12rem, 0.3fr);
+  align-items: center;
+  gap: clamp(2rem, 7vw, 6rem);
 }
 
-.icon-figure img {
-  width: 120px;
-  height: 120px;
+.why-artwork {
+  justify-self: end;
+  margin: 0;
+}
+
+.why-artwork img {
+  display: block;
+  width: min(13.333rem, 55vw);
+  height: auto;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-card);
 }
@@ -531,6 +539,10 @@ header .link-row { margin-top: 0; }
 
 .feature-section--reversed .product-artwork {
   order: -1;
+}
+
+.feature-section--reversed {
+  grid-template-columns: minmax(15rem, 0.42fr) minmax(0, 1fr);
 }
 
 .product-artwork--feature {
@@ -601,7 +613,8 @@ header .link-row { margin-top: 0; }
 
   .hero--product,
   .feature-section--with-artwork,
-  .source-showcase {
+  .source-showcase,
+  .why-section-content {
     grid-template-columns: 1fr;
   }
 
@@ -610,7 +623,8 @@ header .link-row { margin-top: 0; }
   .product-artwork--hero,
   .product-artwork--feature,
   .feature-section--reversed .product-artwork--feature,
-  .product-artwork--source {
+  .product-artwork--source,
+  .why-artwork {
     justify-self: center;
   }
 
