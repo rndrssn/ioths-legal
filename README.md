@@ -1,12 +1,12 @@
-# ioths-legal
+# ioths-public-site
 
-Public legal and contact pages for **ioths**, an offline-first note-taking app for iOS.
+The public marketing, legal, support, and contact site for **ioths**, an offline-first note-taking app for iOS.
 
-This repo exists because an App Store app needs a privacy policy at a URL that
-resolves, and because a contact channel shouldn't require the app to run a
-server or collect an account. It is deliberately small: static HTML, one
-stylesheet, and a single Cloudflare Worker that turns a contact form into a
-private GitHub issue.
+This repository provides the public product presence: an App Store app needs a
+privacy policy at a URL that resolves, and its marketing and support surfaces
+should not require the app to run a server or collect an account. It is
+deliberately small: static HTML, one stylesheet, and a single Cloudflare Worker
+that turns a contact form into a private GitHub issue.
 
 ---
 

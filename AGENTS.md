@@ -6,7 +6,7 @@ Agent instructions for this repository.
 
 ## Project
 
-**ioths-legal** hosts the public legal and contact pages for ioths, an offline-first iOS note-taking app.
+**ioths-public-site** hosts the public marketing, legal, support, and contact pages for ioths, an offline-first iOS note-taking app.
 
 The repository contains:
 
