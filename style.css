@@ -502,9 +502,9 @@ header .link-row { margin-top: 0; }
    than a list of claims. These are final, representative App Store captures. */
 .hero--product {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.56fr);
+  grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.62fr);
   align-items: center;
-  gap: clamp(2rem, 7vw, 6rem);
+  gap: clamp(3rem, 6vw, 5rem);
 }
 
 .hero-copy {
@@ -525,16 +525,16 @@ header .link-row { margin-top: 0; }
 }
 
 .product-artwork--hero {
-  max-width: 22rem;
+  max-width: 26rem;
   justify-self: end;
   transform: rotate(2deg);
 }
 
 .feature-section--with-artwork {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(15rem, 0.42fr);
+  grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.48fr);
   align-items: center;
-  gap: clamp(2rem, 7vw, 6rem);
+  gap: clamp(3rem, 6vw, 5rem);
 }
 
 .feature-section--reversed .product-artwork {
@@ -542,11 +542,11 @@ header .link-row { margin-top: 0; }
 }
 
 .feature-section--reversed {
-  grid-template-columns: minmax(15rem, 0.42fr) minmax(0, 1fr);
+  grid-template-columns: minmax(16rem, 0.48fr) minmax(0, 1fr);
 }
 
 .product-artwork--feature {
-  max-width: 18rem;
+  max-width: 22rem;
   justify-self: end;
   transform: rotate(1.25deg);
 }
@@ -558,9 +558,9 @@ header .link-row { margin-top: 0; }
 
 .source-showcase {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(15rem, 0.46fr);
+  grid-template-columns: minmax(0, 1fr) minmax(16.5rem, 0.52fr);
   align-items: center;
-  gap: clamp(2rem, 7vw, 6rem);
+  gap: clamp(3rem, 6vw, 5rem);
   margin-top: 3rem;
   padding: clamp(2rem, 7vw, 5rem);
   border: 0;
@@ -593,7 +593,7 @@ header .link-row { margin-top: 0; }
 }
 
 .product-artwork--source {
-  max-width: 18rem;
+  max-width: 22rem;
   justify-self: end;
   transform: rotate(2deg);
 }
@@ -628,18 +628,18 @@ header .link-row { margin-top: 0; }
     justify-self: center;
   }
 
-  .product-artwork--hero { max-width: min(22rem, 82vw); }
+  .product-artwork--hero { max-width: min(26rem, 82vw); }
   .product-artwork--feature,
-  .product-artwork--source { max-width: min(18rem, 72vw); }
+  .product-artwork--source { max-width: min(22rem, 78vw); }
 
   .feature-section--reversed .product-artwork { order: 0; }
 
   .source-showcase { margin-top: 0; }
 }
 
-html[data-design] .product-artwork--hero { max-width: 16rem; }
-html[data-design] .product-artwork--feature { max-width: 12.5rem; }
-html[data-design] .product-artwork--source { max-width: 13rem; }
+html[data-design] .product-artwork--hero { max-width: 20rem; }
+html[data-design] .product-artwork--feature { max-width: 16rem; }
+html[data-design] .product-artwork--source { max-width: 16.5rem; }
 
 /* Direction one — a warm, annotated field notebook. */
 html[data-design="field-notes"] body {
@@ -852,9 +852,9 @@ html[data-design="emergence"] .feature-section--reversed .product-artwork--featu
 html[data-design="emergence"] .product-artwork--source { transform: rotate(-4deg); }
 
 @media (max-width: 760px) {
-  html[data-design] .product-artwork--hero { max-width: min(14rem, 68vw); }
+  html[data-design] .product-artwork--hero { max-width: min(17.5rem, 75vw); }
   html[data-design] .product-artwork--feature,
-  html[data-design] .product-artwork--source { max-width: min(11rem, 56vw); }
+  html[data-design] .product-artwork--source { max-width: min(14rem, 60vw); }
 
   html[data-design="control-room"] .hero--product { min-height: 0; }
   html[data-design="emergence"] .landing-main > .feature-section:first-of-type,
