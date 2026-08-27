@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IOTHS — Markdown Capture for Your Vault</title>
-  <meta name="description" content="Private, offline-first Markdown capture for iPhone and iPad. Start with a note, let tasks take shape, and keep every file in your existing vault.">
+  <title>IOTHS — Markdown Notes Inspired by Complexity Theory</title>
+  <meta name="description" content="Private, offline-first Markdown notes for iPhone and iPad, inspired by complexity theory, Conway's Game of Life, and complex adaptive systems.">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="author" content="Bedrock Rebellion">
   <meta name="theme-color" content="#0e0f0e">
@@ -15,16 +15,16 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ioths.bedrockrebel.app/">
   <meta property="og:site_name" content="IOTHS">
-  <meta property="og:title" content="IOTHS — Markdown Capture for Your Vault">
-  <meta property="og:description" content="Private, offline-first Markdown capture for iPhone and iPad. Start with a note and let the work take shape.">
+  <meta property="og:title" content="IOTHS — Markdown Notes Inspired by Complexity Theory">
+  <meta property="og:description" content="Private, offline-first Markdown notes inspired by complexity theory and Conway's Game of Life. Let a note grow as work takes shape.">
   <meta property="og:image" content="https://ioths.bedrockrebel.app/assets/marketing/social-card.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="IOTHS: private Markdown capture for an existing vault">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="IOTHS — Markdown Capture for Your Vault">
-  <meta name="twitter:description" content="Private, offline-first Markdown capture for iPhone and iPad. Start with a note and let the work take shape.">
+  <meta name="twitter:title" content="IOTHS — Markdown Notes Inspired by Complexity Theory">
+  <meta name="twitter:description" content="Private, offline-first Markdown notes inspired by complexity theory and Conway's Game of Life. Let a note grow as work takes shape.">
   <meta name="twitter:image" content="https://ioths.bedrockrebel.app/assets/marketing/social-card.png">
   <meta name="twitter:image:alt" content="IOTHS: private Markdown capture for an existing vault">
 
@@ -38,7 +38,12 @@
           "url": "https://ioths.bedrockrebel.app/",
           "name": "IOTHS",
           "alternateName": ["ioths", "ioths.bedrockrebel.app"],
-          "description": "Private, offline-first Markdown capture for an existing vault on iPhone and iPad.",
+          "description": "Private, offline-first Markdown notes for an existing vault on iPhone and iPad, inspired by complexity theory and Conway's Game of Life.",
+          "about": [
+            { "@type": "Thing", "name": "Complexity theory" },
+            { "@type": "Thing", "name": "Conway's Game of Life" },
+            { "@type": "Thing", "name": "Complex adaptive systems" }
+          ],
           "inLanguage": "en"
         },
         {
@@ -46,7 +51,7 @@
           "@id": "https://ioths.bedrockrebel.app/#app",
           "name": "IOTHS",
           "url": "https://ioths.bedrockrebel.app/",
-          "description": "A private, offline-first Markdown capture app for iPhone and iPad. Notes stay as plain files in an existing vault and can grow into tasks and a personal board.",
+          "description": "A private, offline-first Markdown notes app for iPhone and iPad. Inspired by complexity theory, Conway's Game of Life, and complex adaptive systems, it lets notes grow into tasks and a personal board.",
           "applicationCategory": "ProductivityApplication",
           "operatingSystem": ["iOS 18.0 or later", "iPadOS 18.0 or later"],
           "image": "https://ioths.bedrockrebel.app/assets/marketing/social-card.png",
@@ -139,9 +144,13 @@
           <button class="life-button life-button--quiet" id="life-reset" type="button">Reset</button>
           <span id="life-status" class="life-status" aria-live="off">Generation 0</span>
         </div>
-        <p class="life-playground-note">A small, ordinary Conway's Game of Life field. It is a playful reference, not a model of your work.</p>
-        <p class="life-deeper-link">For a deeper dive, explore <a href="https://rndrssn.github.io/platoscave/modules/emergence/" target="_blank" rel="noopener noreferrer">Plato's Cave's emergence experiments</a>.</p>
-        <p class="life-reference">Reference: John Horton Conway's Game of Life (1970) &mdash; <a href="https://web.stanford.edu/class/sts145/Library/life.pdf" target="_blank" rel="noopener noreferrer">the original public account</a> by Martin Gardner.</p>
+        <details class="life-context">
+          <summary class="life-playground-note">A small, ordinary Conway's Game of Life field. It is a playful reference, not a model of your work.</summary>
+          <div class="life-context-copy">
+            <p class="life-deeper-link">For a deeper dive, explore <a href="https://rndrssn.github.io/platoscave/modules/emergence/" target="_blank" rel="noopener noreferrer">Plato's Cave's emergence experiments</a>.</p>
+            <p class="life-reference">Reference: John Horton Conway's Game of Life (1970) &mdash; <a href="https://web.stanford.edu/class/sts145/Library/life.pdf" target="_blank" rel="noopener noreferrer">the original public account</a> by Martin Gardner.</p>
+          </div>
+        </details>
       </aside>
     </section>
 
@@ -237,7 +246,7 @@
         <div>
           <h2>Why this exists</h2>
           <p>I built IOTHS for myself, first. I'd never found a notes app that actually fit — not functionally, not in how it felt to use — so I made the one I wanted. That's where it started: not to monetize it, not to be seen. Just to have it.</p>
-          <p>The icon is a small nod to Conway's Game of Life: simple local rules, surprising patterns. IOTHS is not a complexity model. It is simply a place where a thought can stay small until the work asks for more structure.</p>
+          <p>The icon is a small nod to Conway's Game of Life and complexity theory: simple local rules, surprising patterns. It is a familiar way to think about emergence in complex adaptive systems, not a claim that IOTHS models them. IOTHS is simply a place where a thought can stay small until the work asks for more structure.</p>
         </div>
         <!-- icon-why.png: composited from the app's own AppIcon.icon foreground
              layer, not exported from a build — Xcode's thinned build output had

@@ -62,7 +62,7 @@ function extractSourceCatalog(html) {
 
   let elementIndex = 0;
   const contentSource = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '');
-  for (const match of contentSource.matchAll(/<(h1|h2|h3|p|li|button|a|span)\b[^>]*>([\s\S]*?)<\/\1>/gi)) {
+  for (const match of contentSource.matchAll(/<(h1|h2|h3|p|li|button|a|span|summary)\b[^>]*>([\s\S]*?)<\/\1>/gi)) {
     add(`content.${match[1]}.${elementIndex}`, match[2], `${match[1].toUpperCase()} content. Preserve any inline HTML tags and attributes.`);
     elementIndex += 1;
   }

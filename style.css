@@ -667,7 +667,7 @@ header .link-row { margin-top: 0; }
    is a small invitation to play, paired with the concrete work flow it evokes. */
 .emergence-story {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.72fr);
+  grid-template-columns: minmax(0, 0.95fr) minmax(20rem, 1fr);
   align-items: center;
   gap: clamp(3rem, 7vw, 6rem);
   padding: clamp(3rem, 8vw, 6rem);
@@ -720,7 +720,7 @@ header .link-row { margin-top: 0; }
 }
 
 .life-playground {
-  padding: var(--space-md);
+  padding: var(--space-sm);
   border: 1px solid color-mix(in srgb, #ffffff 18%, transparent);
   background: #0e0f0e;
 }
@@ -730,7 +730,7 @@ header .link-row { margin-top: 0; }
   align-items: center;
   justify-content: space-between;
   gap: var(--space-sm);
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-xs);
 }
 
 .life-playground-kicker {
@@ -744,8 +744,8 @@ header .link-row { margin-top: 0; }
 .life-playground-icon {
   display: block;
   flex: 0 0 auto;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-card);
 }
@@ -763,13 +763,13 @@ header .link-row { margin-top: 0; }
   flex-wrap: wrap;
   align-items: center;
   gap: var(--space-xs);
-  margin-top: var(--space-md);
+  margin-top: var(--space-sm);
 }
 
 .life-button {
   border: 1px solid #ffd83e;
   border-radius: var(--radius-pill);
-  padding: 0.55rem 0.8rem;
+  padding: var(--space-xs) var(--space-sm);
   color: #111111;
   background: #ffd83e;
   font-family: var(--font-mono);
@@ -792,15 +792,35 @@ header .link-row { margin-top: 0; }
   font-size: 0.6875rem;
 }
 
+.life-context {
+  margin-top: var(--space-sm);
+}
+
 .life-playground-note {
-  margin: var(--space-md) 0 0;
+  margin: 0;
   font-family: var(--font-mono);
   font-size: 0.6875rem;
   line-height: 1.6;
+  cursor: pointer;
+}
+
+.life-playground-note::after {
+  content: "+";
+  margin-left: var(--space-xs);
+  color: #ffd83e;
+}
+
+.life-context[open] .life-playground-note::after { content: "−"; }
+
+.life-context-copy {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-xs) var(--space-sm);
+  margin-top: var(--space-xs);
 }
 
 .life-deeper-link {
-  margin: var(--space-sm) 0 0;
+  margin: 0;
   color: color-mix(in srgb, #f6f4ee 64%, transparent);
   font-family: var(--font-mono);
   font-size: 0.6875rem;
@@ -810,7 +830,7 @@ header .link-row { margin-top: 0; }
 .life-deeper-link a { color: #ffd83e; }
 
 .life-reference {
-  margin: var(--space-sm) 0 0;
+  margin: 0;
   color: color-mix(in srgb, #f6f4ee 52%, transparent);
   font-family: var(--font-mono);
   font-size: 0.625rem;
@@ -833,6 +853,7 @@ header .link-row { margin-top: 0; }
   .wordmark { font-size: calc(1.1rem * 1.8525); }
   h1 { font-size: 2rem; }
   .feature-grid { grid-template-columns: 1fr; }
+  .life-context-copy { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 760px) {

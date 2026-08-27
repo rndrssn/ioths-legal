@@ -1,25 +1,25 @@
 {
   "locale": "en",
-  "sourceDigest": "beba1c1d08331518e373fca3670ddaa87eebd9d5f4069c954d7c22706aa5410e",
+  "sourceDigest": "dc92f4666d1b443de50a10b6285a90da576ef394c682d0525463ca1129c973ae",
   "entries": [
     {
       "id": "metadata.title",
-      "source": "IOTHS — Markdown Capture for Your Vault",
+      "source": "IOTHS — Markdown Notes Inspired by Complexity Theory",
       "context": "Browser title and social-card title."
     },
     {
       "id": "metadata.description.0",
-      "source": "Private, offline-first Markdown capture for iPhone and iPad. Start with a note, let tasks take shape, and keep every file in your existing vault.",
+      "source": "Private, offline-first Markdown notes for iPhone and iPad, inspired by complexity theory, Conway's Game of Life, and complex adaptive systems.",
       "context": "Metadata: description."
     },
     {
       "id": "metadata.og.title.1",
-      "source": "IOTHS — Markdown Capture for Your Vault",
+      "source": "IOTHS — Markdown Notes Inspired by Complexity Theory",
       "context": "Metadata: og:title."
     },
     {
       "id": "metadata.og.description.2",
-      "source": "Private, offline-first Markdown capture for iPhone and iPad. Start with a note and let the work take shape.",
+      "source": "Private, offline-first Markdown notes inspired by complexity theory and Conway's Game of Life. Let a note grow as work takes shape.",
       "context": "Metadata: og:description."
     },
     {
@@ -29,12 +29,12 @@
     },
     {
       "id": "metadata.twitter.title.4",
-      "source": "IOTHS — Markdown Capture for Your Vault",
+      "source": "IOTHS — Markdown Notes Inspired by Complexity Theory",
       "context": "Metadata: twitter:title."
     },
     {
       "id": "metadata.twitter.description.5",
-      "source": "Private, offline-first Markdown capture for iPhone and iPad. Start with a note and let the work take shape.",
+      "source": "Private, offline-first Markdown notes inspired by complexity theory and Conway's Game of Life. Let a note grow as work takes shape.",
       "context": "Metadata: twitter:description."
     },
     {
@@ -198,9 +198,9 @@
       "context": "SPAN content. Preserve any inline HTML tags and attributes."
     },
     {
-      "id": "content.p.21",
+      "id": "content.summary.21",
       "source": "A small, ordinary Conway's Game of Life field. It is a playful reference, not a model of your work.",
-      "context": "P content. Preserve any inline HTML tags and attributes."
+      "context": "SUMMARY content. Preserve any inline HTML tags and attributes."
     },
     {
       "id": "content.p.22",
@@ -374,7 +374,7 @@
     },
     {
       "id": "content.p.56",
-      "source": "The icon is a small nod to Conway's Game of Life: simple local rules, surprising patterns. IOTHS is not a complexity model. It is simply a place where a thought can stay small until the work asks for more structure.",
+      "source": "The icon is a small nod to Conway's Game of Life and complexity theory: simple local rules, surprising patterns. It is a familiar way to think about emergence in complex adaptive systems, not a claim that IOTHS models them. IOTHS is simply a place where a thought can stay small until the work asks for more structure.",
       "context": "P content. Preserve any inline HTML tags and attributes."
     },
     {
@@ -404,12 +404,12 @@
     },
     {
       "id": "structuredData.website.description",
-      "source": "Private, offline-first Markdown capture for an existing vault on iPhone and iPad.",
+      "source": "Private, offline-first Markdown notes for an existing vault on iPhone and iPad, inspired by complexity theory and Conway's Game of Life.",
       "context": "Schema.org WebSite description. Preserve the product claim exactly."
     },
     {
       "id": "structuredData.application.description",
-      "source": "A private, offline-first Markdown capture app for iPhone and iPad. Notes stay as plain files in an existing vault and can grow into tasks and a personal board.",
+      "source": "A private, offline-first Markdown notes app for iPhone and iPad. Inspired by complexity theory, Conway's Game of Life, and complex adaptive systems, it lets notes grow into tasks and a personal board.",
       "context": "Schema.org SoftwareApplication description. Preserve the product claim exactly."
     },
     {
