@@ -129,7 +129,10 @@
       </div>
 
       <aside class="life-playground" aria-label="A small Conway's Game of Life playground">
-        <p class="life-playground-kicker">A nod to the icon</p>
+        <div class="life-playground-heading">
+          <p class="life-playground-kicker">A nod to the icon</p>
+          <img class="life-playground-icon" src="/icon-why-240.png" alt="" width="48" height="48" loading="lazy" decoding="async">
+        </div>
         <canvas id="life-field" class="life-field" width="720" height="432" role="img" aria-label="A paused Conway's Game of Life field seeded with an R-pentomino pattern"></canvas>
         <div class="life-controls" role="group" aria-label="Game of Life controls">
           <button class="life-button" id="life-toggle" type="button" aria-pressed="false">Let it evolve</button>

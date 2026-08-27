@@ -725,12 +725,29 @@ header .link-row { margin-top: 0; }
   background: #0e0f0e;
 }
 
-.life-playground-kicker {
+.life-playground-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
   margin-bottom: var(--space-sm);
+}
+
+.life-playground-kicker {
+  margin: 0;
   font-family: var(--font-mono);
   font-size: 0.6875rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.life-playground-icon {
+  display: block;
+  flex: 0 0 auto;
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card);
 }
 
 .life-field {
