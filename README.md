@@ -46,8 +46,13 @@ App and documentation links use the `ioths.bedrockrebel.app` custom domain.
 | `contact-worker/` | Cloudflare Worker backing the contact form |
 | `AGENTS.md` / `CLAUDE.md` | Rules for AI agents working in this repo |
 
-The pages are plain HTML with a little vanilla JavaScript. There is no
-framework, no bundler, and no build step. Don't add one.
+The pages are plain HTML with a little vanilla JavaScript. There is no frontend
+framework or runtime bundler. `scripts/build-pages.sh` stages the static files
+and generates unlinked, noindex draft pages for the priority marketing locales
+in `locales/marketing-locales.json`, falling back to English until a catalog is
+complete. A draft must not be
+linked, added to the sitemap, or given `hreflang` until reviewed translation is
+available.
 
 ---
 

@@ -1,0 +1,471 @@
+{
+  "locale": "en",
+  "sourceDigest": "b249e0fdd56c752e9b146f51fefa427e7e3d38e169f732f8fcd6582a5fdfc896",
+  "entries": [
+    {
+      "id": "metadata.title",
+      "source": "IOTHS — Markdown Capture for Your Vault",
+      "context": "Browser title and social-card title."
+    },
+    {
+      "id": "metadata.description.0",
+      "source": "Private, offline-first Markdown capture for iPhone and iPad. Start with a note, let tasks take shape, and keep every file in your existing vault.",
+      "context": "Metadata: description."
+    },
+    {
+      "id": "metadata.og.title.1",
+      "source": "IOTHS — Markdown Capture for Your Vault",
+      "context": "Metadata: og:title."
+    },
+    {
+      "id": "metadata.og.description.2",
+      "source": "Private, offline-first Markdown capture for iPhone and iPad. Start with a note and let the work take shape.",
+      "context": "Metadata: og:description."
+    },
+    {
+      "id": "metadata.og.image.alt.3",
+      "source": "IOTHS: private Markdown capture for an existing vault",
+      "context": "Metadata: og:image:alt."
+    },
+    {
+      "id": "metadata.twitter.title.4",
+      "source": "IOTHS — Markdown Capture for Your Vault",
+      "context": "Metadata: twitter:title."
+    },
+    {
+      "id": "metadata.twitter.description.5",
+      "source": "Private, offline-first Markdown capture for iPhone and iPad. Start with a note and let the work take shape.",
+      "context": "Metadata: twitter:description."
+    },
+    {
+      "id": "metadata.twitter.image.alt.6",
+      "source": "IOTHS: private Markdown capture for an existing vault",
+      "context": "Metadata: twitter:image:alt."
+    },
+    {
+      "id": "accessibility.0",
+      "source": "Primary",
+      "context": "Accessible description."
+    },
+    {
+      "id": "accessibility.1",
+      "source": "IOTHS Library in dark mode on iPhone, showing notes, task progress, tags, and link previews",
+      "context": "Accessible description."
+    },
+    {
+      "id": "accessibility.2",
+      "source": "A small Conway's Game of Life playground",
+      "context": "Accessible description."
+    },
+    {
+      "id": "accessibility.3",
+      "source": "A paused Conway's Game of Life field seeded with an R-pentomino pattern",
+      "context": "Accessible description."
+    },
+    {
+      "id": "accessibility.4",
+      "source": "Game of Life controls",
+      "context": "Accessible description."
+    },
+    {
+      "id": "accessibility.5",
+      "source": "IOTHS Kanban view on iPhone with open, in-progress, and done task lanes",
+      "context": "Accessible description."
+    },
+    {
+      "id": "accessibility.6",
+      "source": "IOTHS note editor on iPhone with a photo attachment, Markdown link, tags, and checklist",
+      "context": "Accessible description."
+    },
+    {
+      "id": "accessibility.7",
+      "source": "IOTHS raw Markdown editor on iPhone, showing portable Markdown source",
+      "context": "Accessible description."
+    },
+    {
+      "id": "accessibility.8",
+      "source": "IOTHS Storage setup on iPhone with on-device, Files folder, GitHub, GitLab, and portable export options",
+      "context": "Accessible description."
+    },
+    {
+      "id": "accessibility.9",
+      "source": "The IOTHS app icon: a note dissolving into scattered pixels",
+      "context": "Accessible description."
+    },
+    {
+      "id": "content.a.0",
+      "source": "IOTHS",
+      "context": "A content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.a.1",
+      "source": "Support",
+      "context": "A content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.a.2",
+      "source": "Privacy",
+      "context": "A content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.a.3",
+      "source": "Terms",
+      "context": "A content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.p.4",
+      "source": "For people who think in plain text",
+      "context": "P content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.h1.5",
+      "source": "<span class=\"hero-product-name\">IOTHS</span><span class=\"hero-descriptor\">Capture the work before it becomes a plan</span>",
+      "context": "H1 content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.p.6",
+      "source": "A private, offline-first Markdown companion for your existing vault. Begin with a note, add checkboxes when the work appears, and keep every file readable, portable, and yours.",
+      "context": "P content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.span.7",
+      "source": "Coming soon to the App Store",
+      "context": "SPAN content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.span.8",
+      "source": "No account required. No proprietary format.",
+      "context": "SPAN content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.p.9",
+      "source": "A small idea about emergence",
+      "context": "P content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.h2.10",
+      "source": "Start with the smallest true thing.",
+      "context": "H2 content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.p.11",
+      "source": "Knowledge work rarely arrives as a neat plan. It starts as an observation, a question, or a half-formed thought. In IOTHS, that thought can stay a note until a few checkboxes reveal work worth doing.",
+      "context": "P content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.p.12",
+      "source": "The app does not pretend to predict what happens next. It gives the work somewhere calm to change shape: a note becomes a checklist, a checklist becomes active work, and the board shows the pattern that is already there.",
+      "context": "P content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.li.13",
+      "source": "<span class=\"work-shape-step\">01</span><span><strong>Notice</strong> Write the first useful sentence.</span>",
+      "context": "LI content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.li.14",
+      "source": "<span class=\"work-shape-step\">02</span><span><strong>Explore</strong> Add a checklist when there are next steps.</span>",
+      "context": "LI content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.li.15",
+      "source": "<span class=\"work-shape-step\">03</span><span><strong>Commit</strong> Mark one note in progress when it matters now.</span>",
+      "context": "LI content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.li.16",
+      "source": "<span class=\"work-shape-step\">04</span><span><strong>See</strong> Let the task view and board make the work visible.</span>",
+      "context": "LI content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.p.17",
+      "source": "A nod to the icon",
+      "context": "P content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.button.18",
+      "source": "Let it evolve",
+      "context": "BUTTON content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.button.19",
+      "source": "Reset",
+      "context": "BUTTON content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.span.20",
+      "source": "Generation 0",
+      "context": "SPAN content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.p.21",
+      "source": "A small, ordinary Conway's Game of Life field. It is a playful reference, not a model of your work.",
+      "context": "P content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.p.22",
+      "source": "For a deeper dive, explore <a href=\"https://rndrssn.github.io/platoscave/modules/emergence/\" target=\"_blank\" rel=\"noopener noreferrer\">Plato's Cave's emergence experiments</a>.",
+      "context": "P content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.p.23",
+      "source": "Reference: John Horton Conway's Game of Life (1970) &mdash; <a href=\"https://web.stanford.edu/class/sts145/Library/life.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">the original public account</a> by Martin Gardner.",
+      "context": "P content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.h2.24",
+      "source": "Tasks, kanban, and focus",
+      "context": "H2 content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.h3.25",
+      "source": "Notes that double as tasks",
+      "context": "H3 content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.p.26",
+      "source": "Any checklist inside a note turns it into a task note — no separate task manager to maintain.",
+      "context": "P content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.h3.27",
+      "source": "A kanban board built for one",
+      "context": "H3 content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.p.28",
+      "source": "Switch between List, Tile, Kanban, and Thoughts layouts. Cards move lanes automatically as tasks get checked off — a kanban board built for one, not a team.",
+      "context": "P content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.h3.29",
+      "source": "A work-in-progress limit that means it",
+      "context": "H3 content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.p.30",
+      "source": "Cap how many notes can be \"in progress\" at once, so focus stays real instead of aspirational.",
+      "context": "P content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.h3.31",
+      "source": "Every task, one screen",
+      "context": "H3 content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.p.32",
+      "source": "A dedicated Tasks view flattens every open checklist item across your whole Library into one list.",
+      "context": "P content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.h2.33",
+      "source": "Capture, fast",
+      "context": "H2 content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.h3.34",
+      "source": "Type, dictate, or snap a photo",
+      "context": "H3 content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.p.35",
+      "source": "Camera, voice, and Share Extension capture land straight in Markdown.",
+      "context": "P content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.h3.36",
+      "source": "PDF to Markdown",
+      "context": "H3 content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.p.37",
+      "source": "Convert a PDF to Markdown with on-device review before you save.",
+      "context": "P content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.h3.38",
+      "source": "Tags, pins, and search",
+      "context": "H3 content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.p.39",
+      "source": "Tags, pinned notes, and quick search keep everything findable.",
+      "context": "P content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.h3.40",
+      "source": "Widgets",
+      "context": "H3 content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.p.41",
+      "source": "A Home Screen widget for a glanceable view of what matters most.",
+      "context": "P content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.p.42",
+      "source": "No black box",
+      "context": "P content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.h2.43",
+      "source": "Built on plain files",
+      "context": "H2 content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.p.44",
+      "source": "Notes are stored as <code>.md</code> files with YAML frontmatter — the same structure Obsidian vaults use. Nothing proprietary, nothing to migrate later. Open your notes in any text editor, on any device, at any time.",
+      "context": "P content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.h2.45",
+      "source": "Private by default",
+      "context": "H2 content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.p.46",
+      "source": "Your notes stay on this device until you explicitly turn on a sync destination. There's no IOTHS account and no developer-operated sign-in. Usage analytics are off unless you turn them on, and even then they never include note content, titles, or tags. Nothing is sold. Nothing trains an AI model. Read the full <a href=\"/legal/privacy\">Privacy Policy</a>.",
+      "context": "P content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.h2.47",
+      "source": "Unlock more storage",
+      "context": "H2 content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.p.48",
+      "source": "<strong>Full Unlock</strong> is a one-time purchase — not a subscription — that adds:",
+      "context": "P content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.li.49",
+      "source": "<strong>Files folder storage</strong>, through any Files-compatible provider such as an Obsidian vault, Box, Dropbox, or Microsoft OneDrive",
+      "context": "LI content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.li.50",
+      "source": "<strong>GitHub storage and sync</strong>, to a dedicated repository path",
+      "context": "LI content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.li.51",
+      "source": "<strong>GitLab storage and sync</strong>, to a dedicated project path",
+      "context": "LI content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.li.52",
+      "source": "<strong>Portable export</strong> — save your whole Library as a ZIP archive anytime",
+      "context": "LI content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.p.53",
+      "source": "Capture, editing, reading, sharing, PDF conversion, tagging, task tracking, archive, and trash recovery are free, forever.",
+      "context": "P content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.h2.54",
+      "source": "Why this exists",
+      "context": "H2 content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.p.55",
+      "source": "I built IOTHS for myself, first. I'd never found a notes app that actually fit — not functionally, not in how it felt to use — so I made the one I wanted. That's where it started: not to monetize it, not to be seen. Just to have it.",
+      "context": "P content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.p.56",
+      "source": "The icon is a small nod to Conway's Game of Life: simple local rules, surprising patterns. IOTHS is not a complexity model. It is simply a place where a thought can stay small until the work asks for more structure.",
+      "context": "P content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.a.57",
+      "source": "Support",
+      "context": "A content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.a.58",
+      "source": "Privacy Policy",
+      "context": "A content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.a.59",
+      "source": "Terms of Use",
+      "context": "A content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.p.60",
+      "source": "IOTHS &mdash; made with care by Bedrock Rebellion",
+      "context": "P content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "content.p.61",
+      "source": "<a href=\"/support\">Contact</a> &middot; <a href=\"/legal/privacy\">Privacy Policy</a> &middot; <a href=\"/legal/terms\">Terms of Use</a><span id=\"impressum-link\"> &middot; <a href=\"/legal/impressum\">Legal Notice</a></span>",
+      "context": "P content. Preserve any inline HTML tags and attributes."
+    },
+    {
+      "id": "structuredData.website.description",
+      "source": "Private, offline-first Markdown capture for an existing vault on iPhone and iPad.",
+      "context": "Schema.org WebSite description. Preserve the product claim exactly."
+    },
+    {
+      "id": "structuredData.application.description",
+      "source": "A private, offline-first Markdown capture app for iPhone and iPad. Notes stay as plain files in an existing vault and can grow into tasks and a personal board.",
+      "context": "Schema.org SoftwareApplication description. Preserve the product claim exactly."
+    },
+    {
+      "id": "structuredData.application.feature.0",
+      "source": "Offline-first note capture and editing",
+      "context": "Schema.org SoftwareApplication feature. Keep concise and factual."
+    },
+    {
+      "id": "structuredData.application.feature.1",
+      "source": "Portable Markdown files with YAML frontmatter",
+      "context": "Schema.org SoftwareApplication feature. Keep concise and factual."
+    },
+    {
+      "id": "structuredData.application.feature.2",
+      "source": "Checklist, task, and kanban views",
+      "context": "Schema.org SoftwareApplication feature. Keep concise and factual."
+    },
+    {
+      "id": "structuredData.application.feature.3",
+      "source": "On-device PDF-to-Markdown conversion",
+      "context": "Schema.org SoftwareApplication feature. Keep concise and factual."
+    },
+    {
+      "id": "structuredData.application.feature.4",
+      "source": "Optional Files-folder, GitHub, and GitLab storage",
+      "context": "Schema.org SoftwareApplication feature. Keep concise and factual."
+    },
+    {
+      "id": "life.pause",
+      "source": "Pause",
+      "context": "Game of Life control shown while the simulation is running."
+    },
+    {
+      "id": "life.generation",
+      "source": "Generation {generation}",
+      "context": "Game of Life generation label. Keep {generation} exactly once."
+    },
+    {
+      "id": "localeSuggestion.prompt",
+      "source": "View this page in your language",
+      "context": "Browser-language suggestion. Translate naturally for the target locale."
+    },
+    {
+      "id": "localeSuggestion.language",
+      "source": "your language",
+      "context": "Link label for the translated marketing page."
+    },
+    {
+      "id": "localeSuggestion.dismiss",
+      "source": "Stay in English",
+      "context": "Dismissal action for the browser-language suggestion."
+    },
+    {
+      "id": "localeSuggestion.aria",
+      "source": "Language preference",
+      "context": "Accessible label for the browser-language suggestion."
+    }
+  ]
+}

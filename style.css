@@ -439,6 +439,77 @@ footer p {
   color: var(--fg-ghost);
 }
 
+/* Browser-language suggestion; it stays out of the document flow so it never
+   changes the first-visit layout or competes with the primary CTA. */
+.locale-suggestion {
+  position: fixed;
+  right: var(--space-xl);
+  bottom: var(--space-xl);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  max-width: min(34rem, calc(100vw - 2 * var(--space-xl)));
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--ink-ghost);
+  border-radius: var(--radius-sm);
+  color: var(--fg);
+  background: var(--bg-raised);
+  box-shadow: var(--shadow-card);
+}
+
+.locale-suggestion p {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  line-height: 1.4;
+}
+
+.locale-suggestion-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-shrink: 0;
+}
+
+.locale-suggestion-link,
+.locale-suggestion-dismiss {
+  border: 0;
+  padding: 0;
+  color: var(--link-text);
+  background: transparent;
+  font: inherit;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+  cursor: pointer;
+}
+
+.locale-suggestion-link:hover,
+.locale-suggestion-dismiss:hover { color: var(--link-text-hover); }
+
+html[data-design="control-room"] .locale-suggestion {
+  border-color: color-mix(in srgb, #ffd83e 36%, transparent);
+  color: #f6f4ee;
+  background: #151715;
+  box-shadow: 0 1rem 3rem color-mix(in srgb, #000000 50%, transparent);
+}
+
+html[data-design="control-room"] .locale-suggestion-link,
+html[data-design="control-room"] .locale-suggestion-dismiss { color: #ffd83e; }
+
+@media (max-width: 640px) {
+  .locale-suggestion {
+    right: var(--space-sm);
+    bottom: var(--space-sm);
+    left: var(--space-sm);
+    display: block;
+  }
+
+  .locale-suggestion-actions { margin-top: var(--space-xs); }
+}
+
 /* Landing feature grid */
 
 .feature-grid {
@@ -592,6 +663,145 @@ header .link-row { margin-top: 0; }
   color: var(--showcase-ink);
 }
 
+/* The icon's reference needs to stay subordinate to the product story: this
+   is a small invitation to play, paired with the concrete work flow it evokes. */
+.emergence-story {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.72fr);
+  align-items: center;
+  gap: clamp(3rem, 7vw, 6rem);
+  padding: clamp(3rem, 8vw, 6rem);
+  border: 1px solid color-mix(in srgb, #ffd83e 50%, transparent);
+  background: #151715;
+}
+
+.emergence-story h2,
+.emergence-story p,
+.emergence-story li,
+.emergence-story strong { color: #f6f4ee; }
+
+.emergence-story .eyebrow,
+.life-playground-kicker,
+.life-playground-note,
+.life-status { color: color-mix(in srgb, #f6f4ee 64%, transparent); }
+
+.emergence-story h2 {
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.emergence-story-copy { max-width: 36rem; }
+
+.work-shape-path {
+  display: grid;
+  gap: var(--space-sm);
+  list-style: none;
+  margin-top: var(--space-xl);
+}
+
+.work-shape-path li {
+  display: grid;
+  grid-template-columns: 2.25rem minmax(0, 1fr);
+  gap: var(--space-sm);
+  align-items: baseline;
+  padding-top: var(--space-sm);
+  border-top: 1px solid color-mix(in srgb, #ffffff 18%, transparent);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+.work-shape-path strong { font-weight: 700; }
+
+.work-shape-step {
+  color: #ffd83e;
+  font-size: 0.6875rem;
+}
+
+.life-playground {
+  padding: var(--space-md);
+  border: 1px solid color-mix(in srgb, #ffffff 18%, transparent);
+  background: #0e0f0e;
+}
+
+.life-playground-kicker {
+  margin-bottom: var(--space-sm);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.life-field {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #111111;
+  image-rendering: pixelated;
+}
+
+.life-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-top: var(--space-md);
+}
+
+.life-button {
+  border: 1px solid #ffd83e;
+  border-radius: var(--radius-pill);
+  padding: 0.55rem 0.8rem;
+  color: #111111;
+  background: #ffd83e;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+.life-button:hover { opacity: 0.84; }
+
+.life-button--quiet {
+  color: #f6f4ee;
+  background: transparent;
+  border-color: color-mix(in srgb, #ffffff 30%, transparent);
+}
+
+.life-status {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+}
+
+.life-playground-note {
+  margin: var(--space-md) 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  line-height: 1.6;
+}
+
+.life-deeper-link {
+  margin: var(--space-sm) 0 0;
+  color: color-mix(in srgb, #f6f4ee 64%, transparent);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  line-height: 1.6;
+}
+
+.life-deeper-link a { color: #ffd83e; }
+
+.life-reference {
+  margin: var(--space-sm) 0 0;
+  color: color-mix(in srgb, #f6f4ee 52%, transparent);
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  line-height: 1.6;
+}
+
+.life-reference a { color: color-mix(in srgb, #ffd83e 82%, transparent); }
+
 .product-artwork--source {
   max-width: 22rem;
   justify-self: end;
@@ -614,6 +824,7 @@ header .link-row { margin-top: 0; }
   .hero--product,
   .feature-section--with-artwork,
   .source-showcase,
+  .emergence-story,
   .why-section-content {
     grid-template-columns: 1fr;
   }
@@ -635,6 +846,8 @@ header .link-row { margin-top: 0; }
   .feature-section--reversed .product-artwork { order: 0; }
 
   .source-showcase { margin-top: 0; }
+
+  .life-status { margin-left: 0; }
 }
 
 html[data-design] .product-artwork--hero { max-width: 20rem; }

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
-  <title id="title">IOTHS — Offline Markdown notes and kanban tasks</title>
-  <desc id="description">Dark control-room artwork for IOTHS with a yellow grid, product name, and feature labels.</desc>
+  <title id="title">IOTHS — Markdown capture for your existing vault</title>
+  <desc id="description">Dark artwork for IOTHS with a yellow grid, product name, and a message about Markdown capture for an existing vault.</desc>
   <defs>
     <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
       <path d="M48 0H0V48" fill="none" stroke="#ffd83e" stroke-opacity="0.09" stroke-width="2"/>
@@ -9,9 +9,9 @@
   <rect width="1200" height="630" fill="#0e0f0e"/>
   <rect width="1200" height="630" fill="url(#grid)"/>
   <rect x="64" y="64" width="1072" height="502" fill="none" stroke="#ffd83e" stroke-opacity="0.55" stroke-width="2"/>
-  <text x="104" y="126" fill="#ffd83e" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" letter-spacing="5">PERSONAL SYSTEM ONLINE</text>
+  <text x="104" y="126" fill="#ffd83e" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" letter-spacing="5">FOR PEOPLE WHO THINK IN PLAIN TEXT</text>
   <text x="96" y="354" fill="#ffd83e" font-family="Impact, Haettenschweiler, Arial Narrow Bold, sans-serif" font-size="208" letter-spacing="8">IOTHS</text>
-  <text x="104" y="426" fill="#f6f4ee" font-family="Georgia, serif" font-size="37">Offline Markdown notes with kanban tasks.</text>
+  <text x="104" y="426" fill="#f6f4ee" font-family="Georgia, serif" font-size="37">Markdown capture for your existing vault.</text>
   <g fill="#ffd83e" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" letter-spacing="2">
     <text x="104" y="513">OFFLINE FIRST</text>
     <text x="405" y="513">PLAIN FILES</text>
