@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://ioths.bedrockrebel.app/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-29</lastmod>
     <image:image>
       <image:loc>https://ioths.bedrockrebel.app/assets/marketing/library-744.png</image:loc>
       <image:title>IOTHS offline Markdown notes library</image:title>
@@ -12,7 +12,7 @@
     <image:image>
       <image:loc>https://ioths.bedrockrebel.app/assets/marketing/kanban-744.png</image:loc>
       <image:title>IOTHS kanban task board</image:title>
-      <image:caption>IOTHS Kanban view with open, in-progress, and done task lanes.</image:caption>
+      <image:caption>IOTHS Kanban view with a focused lane of Markdown task notes.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://ioths.bedrockrebel.app/assets/marketing/natural-note-744.png</image:loc>

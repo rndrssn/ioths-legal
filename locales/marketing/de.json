@@ -1,8 +1,7 @@
 {
   "locale": "de",
-  "sourceDigest": "dc92f4666d1b443de50a10b6285a90da576ef394c682d0525463ca1129c973ae",
+  "sourceDigest": "a1cdc7f9beeaffec5bc481ed4fe1932879ab12ca72c71ba95abfc8944e2ad41a",
   "translations": {
-    "content.summary.21": "Ein kleines, gewöhnliches Feld von Conway's Game of Life. Eine spielerische Anspielung, kein Modell deiner Arbeit.",
     "metadata.title": "IOTHS — Markdown-Notizen, inspiriert von der Komplexitätstheorie",
     "metadata.description.0": "Private, offline-first Markdown-Notizen für iPhone und iPad, inspiriert von Komplexitätstheorie, Conway's Game of Life und komplexen adaptiven Systemen.",
     "metadata.og.title.1": "IOTHS — Markdown-Notizen, inspiriert von der Komplexitätstheorie",
@@ -16,7 +15,7 @@
     "accessibility.2": "Ein kleines Spielfeld für Conway's Game of Life",
     "accessibility.3": "Ein pausiertes Feld von Conway's Game of Life mit einem R-Pentomino als Anfangsmuster",
     "accessibility.4": "Steuerung für Game of Life",
-    "accessibility.5": "IOTHS-Kanban-Ansicht auf dem iPhone mit Bereichen für offene, in Bearbeitung befindliche und erledigte Aufgaben",
+    "accessibility.5": "IOTHS-Kanban-Ansicht mit einer fokussierten Spalte von Markdown-Aufgabennotizen",
     "accessibility.6": "IOTHS-Notizeditor auf dem iPhone mit Fotoanhang, Markdown-Link, Tags und Checkliste",
     "accessibility.7": "IOTHS-Editor für Markdown-Quelltext auf dem iPhone mit portierbarem Markdown-Text",
     "accessibility.8": "IOTHS-Speichereinrichtung auf dem iPhone mit Optionen für Gerätespeicher, Files-Ordner, GitHub, GitLab und portablen Export",
@@ -42,6 +41,7 @@
     "content.button.18": "Entstehen lassen",
     "content.button.19": "Zurücksetzen",
     "content.span.20": "Generation 0",
+    "content.summary.21": "Jedes Feld spielt ein kleines Überlebensspiel: Lebende Zellen überleben mit zwei oder drei Nachbarn, leere Zellen entstehen mit drei. Dies ist eine spielerische Anspielung, kein Modell deiner Arbeit.",
     "content.p.22": "Wenn du tiefer eintauchen möchtest, erkunde <a href=\"https://rndrssn.github.io/platoscave/modules/emergence/\" target=\"_blank\" rel=\"noopener noreferrer\">die Emergenz-Experimente von Plato's Cave</a>.",
     "content.p.23": "Quelle: John Horton Conway's Game of Life (1970) &mdash; <a href=\"https://web.stanford.edu/class/sts145/Library/life.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">die ursprüngliche öffentliche Beschreibung</a> von Martin Gardner.",
     "content.h2.24": "Aufgaben, Kanban und Fokus",

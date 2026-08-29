@@ -138,14 +138,14 @@
           <p class="life-playground-kicker">A nod to the icon</p>
           <img class="life-playground-icon" src="/icon-why-240.png" alt="" width="48" height="48" loading="lazy" decoding="async">
         </div>
-        <canvas id="life-field" class="life-field" width="720" height="432" role="img" aria-label="A paused Conway's Game of Life field seeded with an R-pentomino pattern"></canvas>
+        <canvas id="life-field" class="life-field" width="720" height="576" role="img" aria-label="A paused Conway's Game of Life field seeded with an R-pentomino pattern"></canvas>
         <div class="life-controls" role="group" aria-label="Game of Life controls">
           <button class="life-button" id="life-toggle" type="button" aria-pressed="false">Let it evolve</button>
           <button class="life-button life-button--quiet" id="life-reset" type="button">Reset</button>
           <span id="life-status" class="life-status" aria-live="off">Generation 0</span>
         </div>
         <details class="life-context">
-          <summary class="life-playground-note">A small, ordinary Conway's Game of Life field. It is a playful reference, not a model of your work.</summary>
+          <summary class="life-playground-note">Every square plays a tiny survival game: living cells survive with two or three neighbours, and empty squares are born with three. This is a playful reference, not a model of your work.</summary>
           <div class="life-context-copy">
             <p class="life-deeper-link">For a deeper dive, explore <a href="https://rndrssn.github.io/platoscave/modules/emergence/" target="_blank" rel="noopener noreferrer">Plato's Cave's emergence experiments</a>.</p>
             <p class="life-reference">Reference: John Horton Conway's Game of Life (1970) &mdash; <a href="https://web.stanford.edu/class/sts145/Library/life.pdf" target="_blank" rel="noopener noreferrer">the original public account</a> by Martin Gardner.</p>
@@ -154,7 +154,7 @@
       </aside>
     </section>
 
-    <section class="feature-section feature-section--with-artwork">
+    <section class="feature-section feature-section--with-artwork feature-section--kanban">
       <div>
         <h2>Tasks, kanban, and focus</h2>
         <div class="feature-grid">
@@ -176,8 +176,8 @@
           </div>
         </div>
       </div>
-      <figure class="product-artwork product-artwork--feature">
-        <img src="/assets/marketing/kanban-496.png" srcset="/assets/marketing/kanban-496.png 496w, /assets/marketing/kanban-744.png 744w" sizes="(max-width: 760px) 224px, 256px" alt="IOTHS Kanban view on iPhone with open, in-progress, and done task lanes" width="496" height="1073" loading="lazy" decoding="async">
+      <figure class="product-artwork product-artwork--feature product-artwork--kanban">
+        <img src="/assets/marketing/kanban-496.png" srcset="/assets/marketing/kanban-496.png 496w, /assets/marketing/kanban-744.png 744w, /assets/marketing/kanban.png 1242w" sizes="(max-width: 760px) 78vw, 432px" alt="IOTHS Kanban view with a focused lane of Markdown task notes" width="496" height="992" loading="lazy" decoding="async">
       </figure>
     </section>
 
@@ -344,7 +344,7 @@
       if (!context) return;
 
       const columns = 60;
-      const rows = 36;
+      const rows = 48;
       const cellSize = 12;
       const generationInterval = 140;
       let grid = new Uint8Array(columns * rows);
@@ -358,7 +358,7 @@
       const seed = () => {
         grid.fill(0);
         [[0, 1], [1, 0], [1, 1], [1, 2], [2, 0]].forEach(([x, y]) => {
-          grid[indexFor(x + 29, y + 16)] = 1;
+          grid[indexFor(x + 29, y + 22)] = 1;
         });
         generation = 0;
       };

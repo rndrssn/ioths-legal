@@ -1,8 +1,7 @@
 {
   "locale": "ko",
-  "sourceDigest": "dc92f4666d1b443de50a10b6285a90da576ef394c682d0525463ca1129c973ae",
+  "sourceDigest": "a1cdc7f9beeaffec5bc481ed4fe1932879ab12ca72c71ba95abfc8944e2ad41a",
   "translations": {
-    "content.summary.21": "작고 평범한 Conway's Game of Life 필드예요. 재미를 더한 참고일 뿐, 내 일을 모델링한 것은 아니에요.",
     "metadata.title": "IOTHS — 복잡성 이론에서 영감을 받은 Markdown 노트",
     "metadata.description.0": "복잡성 이론, Conway's Game of Life, 복잡 적응 시스템에서 영감을 받은 iPhone 및 iPad용 비공개 오프라인 우선 Markdown 노트입니다.",
     "metadata.og.title.1": "IOTHS — 복잡성 이론에서 영감을 받은 Markdown 노트",
@@ -16,7 +15,7 @@
     "accessibility.2": "작은 Conway's Game of Life 실험 공간",
     "accessibility.3": "R-펜토미노 패턴으로 시작하고 일시 정지된 Conway's Game of Life 필드",
     "accessibility.4": "Game of Life 컨트롤",
-    "accessibility.5": "대기 중, 진행 중, 완료 레인이 있는 iPhone의 IOTHS Kanban 보기",
+    "accessibility.5": "Markdown 작업 노트가 담긴 하나의 레인에 초점을 맞춘 IOTHS Kanban 보기",
     "accessibility.6": "사진 첨부, Markdown 링크, 태그, 체크리스트가 있는 iPhone의 IOTHS 노트 편집기",
     "accessibility.7": "옮겨 쓸 수 있는 Markdown 원문을 보여 주는 iPhone의 IOTHS 원본 Markdown 편집기",
     "accessibility.8": "기기 내, Files 폴더, GitHub, GitLab, 휴대용 내보내기 옵션이 있는 iPhone의 IOTHS 저장 공간 설정",
@@ -42,6 +41,7 @@
     "content.button.18": "변화 시작",
     "content.button.19": "초기화",
     "content.span.20": "0세대",
+    "content.summary.21": "각 칸은 작은 생존 게임을 합니다. 살아 있는 세포는 이웃이 둘 또는 셋이면 살아남고, 빈 칸은 셋이면 태어납니다. 이는 작업을 모델링한 것이 아니라 장난스러운 참조입니다.",
     "content.p.22": "더 깊이 알아보려면 <a href=\"https://rndrssn.github.io/platoscave/modules/emergence/\" target=\"_blank\" rel=\"noopener noreferrer\">Plato's Cave의 창발 실험</a>을 살펴보세요.",
     "content.p.23": "참고: John Horton Conway의 Conway's Game of Life(1970) &mdash; Martin Gardner가 쓴 <a href=\"https://web.stanford.edu/class/sts145/Library/life.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">최초의 대중 소개 글</a>.",
     "content.h2.24": "할 일, Kanban, 집중",

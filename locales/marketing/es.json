@@ -1,8 +1,7 @@
 {
   "locale": "es",
-  "sourceDigest": "dc92f4666d1b443de50a10b6285a90da576ef394c682d0525463ca1129c973ae",
+  "sourceDigest": "a1cdc7f9beeaffec5bc481ed4fe1932879ab12ca72c71ba95abfc8944e2ad41a",
   "translations": {
-    "content.summary.21": "Un pequeño campo de Conway's Game of Life, sencillo y corriente. Es una referencia lúdica, no un modelo de tu trabajo.",
     "metadata.title": "IOTHS — Notas Markdown inspiradas en la teoría de la complejidad",
     "metadata.description.0": "Notas Markdown privadas y sin conexión para iPhone y iPad, inspiradas en la teoría de la complejidad, Conway's Game of Life y los sistemas adaptativos complejos.",
     "metadata.og.title.1": "IOTHS — Notas Markdown inspiradas en la teoría de la complejidad",
@@ -16,7 +15,7 @@
     "accessibility.2": "Un pequeño espacio interactivo de Conway's Game of Life",
     "accessibility.3": "Un campo pausado de Conway's Game of Life iniciado con un patrón de pentominó R",
     "accessibility.4": "Controles de Game of Life",
-    "accessibility.5": "Vista Kanban de IOTHS en un iPhone, con columnas de tareas pendientes, en curso y completadas",
+    "accessibility.5": "Vista Kanban de IOTHS con una columna enfocada de notas de tareas en Markdown",
     "accessibility.6": "Editor de notas de IOTHS en un iPhone, con una foto adjunta, un enlace Markdown, etiquetas y una lista de comprobación",
     "accessibility.7": "Editor de código Markdown de IOTHS en un iPhone, mostrando el contenido Markdown portátil",
     "accessibility.8": "Configuración de almacenamiento de IOTHS en un iPhone, con opciones en el dispositivo, carpeta de Files, GitHub, GitLab y exportación portátil",
@@ -42,6 +41,7 @@
     "content.button.18": "Déjalo evolucionar",
     "content.button.19": "Reiniciar",
     "content.span.20": "Generación 0",
+    "content.summary.21": "Cada casilla juega un pequeño juego de supervivencia: las células vivas sobreviven con dos o tres vecinas y las casillas vacías nacen con tres. Es una referencia lúdica, no un modelo de tu trabajo.",
     "content.p.22": "Para profundizar, explora <a href=\"https://rndrssn.github.io/platoscave/modules/emergence/\" target=\"_blank\" rel=\"noopener noreferrer\">los experimentos sobre emergencia de Plato's Cave</a>.",
     "content.p.23": "Referencia: Conway's Game of Life (1970), de John Horton Conway &mdash; <a href=\"https://web.stanford.edu/class/sts145/Library/life.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">la presentación pública original</a> de Martin Gardner.",
     "content.h2.24": "Tareas, kanban y concentración",

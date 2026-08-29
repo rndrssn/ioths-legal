@@ -608,6 +608,10 @@ header .link-row { margin-top: 0; }
   gap: clamp(3rem, 6vw, 5rem);
 }
 
+.feature-section--kanban {
+  grid-template-columns: minmax(0, 1fr) minmax(23rem, 0.75fr);
+}
+
 .feature-section--reversed .product-artwork {
   order: -1;
 }
@@ -621,6 +625,8 @@ header .link-row { margin-top: 0; }
   justify-self: end;
   transform: rotate(1.25deg);
 }
+
+.product-artwork--kanban { max-width: 27rem; }
 
 .feature-section--reversed .product-artwork--feature {
   justify-self: start;
@@ -881,6 +887,8 @@ header .link-row { margin-top: 0; }
   .product-artwork--feature,
   .product-artwork--source { max-width: min(22rem, 78vw); }
 
+  .product-artwork--kanban { max-width: min(27rem, 78vw); }
+
   .feature-section--reversed .product-artwork { order: 0; }
 
   .source-showcase { margin-top: 0; }
@@ -890,6 +898,7 @@ header .link-row { margin-top: 0; }
 
 html[data-design] .product-artwork--hero { max-width: 20rem; }
 html[data-design] .product-artwork--feature { max-width: 16rem; }
+html[data-design] .product-artwork--kanban { max-width: 27rem; }
 html[data-design] .product-artwork--source { max-width: 16.5rem; }
 
 /* Direction one — a warm, annotated field notebook. */
@@ -1106,6 +1115,8 @@ html[data-design="emergence"] .product-artwork--source { transform: rotate(-4deg
   html[data-design] .product-artwork--hero { max-width: min(17.5rem, 75vw); }
   html[data-design] .product-artwork--feature,
   html[data-design] .product-artwork--source { max-width: min(14rem, 60vw); }
+
+  html[data-design] .product-artwork--kanban { max-width: min(27rem, 78vw); }
 
   html[data-design="control-room"] .hero--product { min-height: 0; }
   html[data-design="emergence"] .landing-main > .feature-section:first-of-type,

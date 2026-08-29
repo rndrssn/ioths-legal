@@ -1,6 +1,6 @@
 {
   "locale": "en",
-  "sourceDigest": "dc92f4666d1b443de50a10b6285a90da576ef394c682d0525463ca1129c973ae",
+  "sourceDigest": "a1cdc7f9beeaffec5bc481ed4fe1932879ab12ca72c71ba95abfc8944e2ad41a",
   "entries": [
     {
       "id": "metadata.title",
@@ -69,7 +69,7 @@
     },
     {
       "id": "accessibility.5",
-      "source": "IOTHS Kanban view on iPhone with open, in-progress, and done task lanes",
+      "source": "IOTHS Kanban view with a focused lane of Markdown task notes",
       "context": "Accessible description."
     },
     {
@@ -199,7 +199,7 @@
     },
     {
       "id": "content.summary.21",
-      "source": "A small, ordinary Conway's Game of Life field. It is a playful reference, not a model of your work.",
+      "source": "Every square plays a tiny survival game: living cells survive with two or three neighbours, and empty squares are born with three. This is a playful reference, not a model of your work.",
       "context": "SUMMARY content. Preserve any inline HTML tags and attributes."
     },
     {

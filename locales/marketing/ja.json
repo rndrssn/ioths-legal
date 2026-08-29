@@ -1,8 +1,7 @@
 {
   "locale": "ja",
-  "sourceDigest": "dc92f4666d1b443de50a10b6285a90da576ef394c682d0525463ca1129c973ae",
+  "sourceDigest": "a1cdc7f9beeaffec5bc481ed4fe1932879ab12ca72c71ba95abfc8944e2ad41a",
   "translations": {
-    "content.summary.21": "小さく、ごく普通のConway's Game of Lifeフィールドです。遊び心のある引用であり、あなたの仕事をモデル化するものではありません。",
     "metadata.title": "IOTHS — 複雑性理論に着想を得たMarkdownノート",
     "metadata.description.0": "複雑性理論、Conway's Game of Life、複雑適応系に着想を得た、iPhoneとiPad向けのプライベートでオフラインファーストなMarkdownノート。",
     "metadata.og.title.1": "IOTHS — 複雑性理論に着想を得たMarkdownノート",
@@ -16,7 +15,7 @@
     "accessibility.2": "小さなConway's Game of Lifeの実験場",
     "accessibility.3": "Rペントミノパターンを初期配置した、一時停止中のConway's Game of Lifeフィールド",
     "accessibility.4": "Game of Lifeの操作",
-    "accessibility.5": "未着手、進行中、完了のタスクレーンを表示した、iPhone上のIOTHS Kanbanビュー",
+    "accessibility.5": "Markdownのタスクノートを集めたレーンに焦点を当てたIOTHSのKanbanビュー",
     "accessibility.6": "写真の添付、Markdownリンク、タグ、チェックリストを表示した、iPhone上のIOTHSノートエディタ",
     "accessibility.7": "持ち運べるMarkdownソースを表示した、iPhone上のIOTHSプレーンMarkdownエディタ",
     "accessibility.8": "デバイス内、Filesフォルダ、GitHub、GitLab、ポータブル書き出しの選択肢を表示した、iPhone上のIOTHSストレージ設定",
@@ -42,6 +41,7 @@
     "content.button.18": "進化させる",
     "content.button.19": "リセット",
     "content.span.20": "第0世代",
+    "content.summary.21": "すべてのマスが小さな生存ゲームをします。生きたセルは隣接するセルが2つか3つで生き残り、空のマスは3つで生まれます。これは遊び心のある参照であり、あなたの仕事のモデルではありません。",
     "content.p.22": "さらに深く知りたい方は、<a href=\"https://rndrssn.github.io/platoscave/modules/emergence/\" target=\"_blank\" rel=\"noopener noreferrer\">Plato's Caveの創発実験</a>をご覧ください。",
     "content.p.23": "参考：John Horton ConwayによるConway's Game of Life（1970年）&mdash; Martin Gardnerによる<a href=\"https://web.stanford.edu/class/sts145/Library/life.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">最初の一般向け紹介記事</a>。",
     "content.h2.24": "タスク、Kanban、そして集中",
