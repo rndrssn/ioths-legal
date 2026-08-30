@@ -1,6 +1,6 @@
 {
   "locale": "it",
-  "sourceDigest": "a1cdc7f9beeaffec5bc481ed4fe1932879ab12ca72c71ba95abfc8944e2ad41a",
+  "sourceDigest": "3c911e0e0feeac875c3f6c59d2dc0baca6bf03c28cf78d84c0859525193948af",
   "translations": {
     "metadata.title": "IOTHS — Note Markdown ispirate alla teoria della complessità",
     "metadata.description.0": "Note Markdown private e offline per iPhone e iPad, ispirate alla teoria della complessità, Conway's Game of Life e ai sistemi adattivi complessi.",
@@ -48,7 +48,7 @@
     "content.h3.25": "Note che diventano anche attività",
     "content.p.26": "Qualsiasi lista di controllo dentro una nota la trasforma in una nota con attività, senza dover mantenere un gestore separato.",
     "content.h3.27": "Una bacheca kanban pensata per una persona",
-    "content.p.28": "Alterna i layout Elenco, Riquadro, Kanban e Pensieri. Le schede cambiano colonna automaticamente man mano che completi le attività: una bacheca kanban pensata per una persona, non per un team.",
+    "content.p.28": "Alterna i layout Riquadro, Elenco e Kanban. Le schede cambiano colonna automaticamente man mano che completi le attività: una bacheca kanban pensata per una persona, non per un team.",
     "content.h3.29": "Un limite al lavoro in corso che conta davvero",
     "content.p.30": "Limita quante note possono essere «In corso» contemporaneamente, così la concentrazione resta reale anziché soltanto auspicata.",
     "content.h3.31": "Ogni attività, in un'unica schermata",

@@ -1,6 +1,6 @@
 {
   "locale": "en",
-  "sourceDigest": "a1cdc7f9beeaffec5bc481ed4fe1932879ab12ca72c71ba95abfc8944e2ad41a",
+  "sourceDigest": "3c911e0e0feeac875c3f6c59d2dc0baca6bf03c28cf78d84c0859525193948af",
   "entries": [
     {
       "id": "metadata.title",
@@ -234,7 +234,7 @@
     },
     {
       "id": "content.p.28",
-      "source": "Switch between List, Tile, Kanban, and Thoughts layouts. Cards move lanes automatically as tasks get checked off — a kanban board built for one, not a team.",
+      "source": "Switch between Tile, List, and Kanban layouts. Cards move lanes automatically as tasks get checked off — a kanban board built for one, not a team.",
       "context": "P content. Preserve any inline HTML tags and attributes."
     },
     {

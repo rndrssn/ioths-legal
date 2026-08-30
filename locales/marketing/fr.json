@@ -1,6 +1,6 @@
 {
   "locale": "fr",
-  "sourceDigest": "a1cdc7f9beeaffec5bc481ed4fe1932879ab12ca72c71ba95abfc8944e2ad41a",
+  "sourceDigest": "3c911e0e0feeac875c3f6c59d2dc0baca6bf03c28cf78d84c0859525193948af",
   "translations": {
     "metadata.title": "IOTHS — Notes Markdown inspirées par la théorie de la complexité",
     "metadata.description.0": "Notes Markdown privées et hors ligne pour iPhone et iPad, inspirées par la théorie de la complexité, Conway's Game of Life et les systèmes adaptatifs complexes.",
@@ -48,7 +48,7 @@
     "content.h3.25": "Des notes qui font aussi office de tâches",
     "content.p.26": "Toute liste de contrôle ajoutée à une note la transforme en note de tâche — aucun gestionnaire de tâches distinct à maintenir.",
     "content.h3.27": "Un tableau Kanban conçu pour une personne",
-    "content.p.28": "Basculez entre les dispositions Liste, Tuile, Kanban et Pensées. Les cartes changent automatiquement de colonne à mesure que les tâches sont cochées — un tableau Kanban conçu pour une personne, pas pour une équipe.",
+    "content.p.28": "Basculez entre les dispositions Tuile, Liste et Kanban. Les cartes changent automatiquement de colonne à mesure que les tâches sont cochées — un tableau Kanban conçu pour une personne, pas pour une équipe.",
     "content.h3.29": "Une vraie limite au travail en cours",
     "content.p.30": "Limitez le nombre de notes pouvant être « en cours » simultanément, pour que la concentration reste réelle plutôt qu’un simple objectif.",
     "content.h3.31": "Toutes les tâches sur un seul écran",

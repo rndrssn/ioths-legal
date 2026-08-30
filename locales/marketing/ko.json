@@ -1,6 +1,6 @@
 {
   "locale": "ko",
-  "sourceDigest": "a1cdc7f9beeaffec5bc481ed4fe1932879ab12ca72c71ba95abfc8944e2ad41a",
+  "sourceDigest": "3c911e0e0feeac875c3f6c59d2dc0baca6bf03c28cf78d84c0859525193948af",
   "translations": {
     "metadata.title": "IOTHS — 복잡성 이론에서 영감을 받은 Markdown 노트",
     "metadata.description.0": "복잡성 이론, Conway's Game of Life, 복잡 적응 시스템에서 영감을 받은 iPhone 및 iPad용 비공개 오프라인 우선 Markdown 노트입니다.",
@@ -48,7 +48,7 @@
     "content.h3.25": "할 일이 되는 노트",
     "content.p.26": "노트 안에 체크리스트를 하나라도 만들면 할 일 노트가 돼요. 따로 할 일 관리 도구를 관리할 필요가 없어요.",
     "content.h3.27": "한 사람을 위한 Kanban 보드",
-    "content.p.28": "목록, 타일, Kanban, 생각 레이아웃을 오갈 수 있어요. 할 일을 완료할 때마다 카드는 레인 사이를 자동으로 이동해요. 팀이 아닌, 한 사람을 위해 만든 Kanban 보드예요.",
+    "content.p.28": "타일, 목록, Kanban 레이아웃을 오갈 수 있어요. 할 일을 완료할 때마다 카드는 레인 사이를 자동으로 이동해요. 팀이 아닌, 한 사람을 위해 만든 Kanban 보드예요.",
     "content.h3.29": "말뿐이 아닌 진행 중 제한",
     "content.p.30": "동시에 '진행 중'으로 둘 수 있는 노트 수를 제한해서 막연한 다짐이 아닌 실제 집중을 지켜요.",
     "content.h3.31": "모든 할 일을 한 화면에",

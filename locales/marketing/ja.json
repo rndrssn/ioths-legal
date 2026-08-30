@@ -1,6 +1,6 @@
 {
   "locale": "ja",
-  "sourceDigest": "a1cdc7f9beeaffec5bc481ed4fe1932879ab12ca72c71ba95abfc8944e2ad41a",
+  "sourceDigest": "3c911e0e0feeac875c3f6c59d2dc0baca6bf03c28cf78d84c0859525193948af",
   "translations": {
     "metadata.title": "IOTHS — 複雑性理論に着想を得たMarkdownノート",
     "metadata.description.0": "複雑性理論、Conway's Game of Life、複雑適応系に着想を得た、iPhoneとiPad向けのプライベートでオフラインファーストなMarkdownノート。",
@@ -48,7 +48,7 @@
     "content.h3.25": "タスクにもなるノート",
     "content.p.26": "ノート内にチェックリストを1つ作るだけで、そのノートがタスクノートになります。別のタスク管理ツールを維持する必要はありません。",
     "content.h3.27": "ひとりのためのKanbanボード",
-    "content.p.28": "リスト、タイル、Kanban、思考の各レイアウトを切り替えられます。タスクにチェックを入れると、カードはレーン間を自動で移動します。チームではなく、自分ひとりのためのKanbanボードです。",
+    "content.p.28": "タイル、リスト、Kanbanの各レイアウトを切り替えられます。タスクにチェックを入れると、カードはレーン間を自動で移動します。チームではなく、自分ひとりのためのKanbanボードです。",
     "content.h3.29": "形だけではない進行中の上限",
     "content.p.30": "同時に「進行中」にできるノート数を制限すれば、集中は願望ではなく現実のものになります。",
     "content.h3.31": "すべてのタスクを、1つの画面に",

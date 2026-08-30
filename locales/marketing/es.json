@@ -1,6 +1,6 @@
 {
   "locale": "es",
-  "sourceDigest": "a1cdc7f9beeaffec5bc481ed4fe1932879ab12ca72c71ba95abfc8944e2ad41a",
+  "sourceDigest": "3c911e0e0feeac875c3f6c59d2dc0baca6bf03c28cf78d84c0859525193948af",
   "translations": {
     "metadata.title": "IOTHS — Notas Markdown inspiradas en la teoría de la complejidad",
     "metadata.description.0": "Notas Markdown privadas y sin conexión para iPhone y iPad, inspiradas en la teoría de la complejidad, Conway's Game of Life y los sistemas adaptativos complejos.",
@@ -48,7 +48,7 @@
     "content.h3.25": "Notas que también son tareas",
     "content.p.26": "Cualquier lista de comprobación dentro de una nota la convierte en una nota con tareas, sin tener que mantener un gestor aparte.",
     "content.h3.27": "Un tablero kanban para una sola persona",
-    "content.p.28": "Cambia entre los diseños Lista, Mosaico, Kanban y Pensamientos. Las tarjetas cambian de columna automáticamente al completar tareas: un tablero kanban para una persona, no para un equipo.",
+    "content.p.28": "Cambia entre los diseños Mosaico, Lista y Kanban. Las tarjetas cambian de columna automáticamente al completar tareas: un tablero kanban para una persona, no para un equipo.",
     "content.h3.29": "Un límite de trabajo en curso que se cumple de verdad",
     "content.p.30": "Limita cuántas notas pueden estar «En curso» a la vez para que la concentración sea real, no solo una aspiración.",
     "content.h3.31": "Todas las tareas, en una sola pantalla",

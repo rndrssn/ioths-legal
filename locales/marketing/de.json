@@ -1,6 +1,6 @@
 {
   "locale": "de",
-  "sourceDigest": "a1cdc7f9beeaffec5bc481ed4fe1932879ab12ca72c71ba95abfc8944e2ad41a",
+  "sourceDigest": "3c911e0e0feeac875c3f6c59d2dc0baca6bf03c28cf78d84c0859525193948af",
   "translations": {
     "metadata.title": "IOTHS — Markdown-Notizen, inspiriert von der Komplexitätstheorie",
     "metadata.description.0": "Private, offline-first Markdown-Notizen für iPhone und iPad, inspiriert von Komplexitätstheorie, Conway's Game of Life und komplexen adaptiven Systemen.",
@@ -48,7 +48,7 @@
     "content.h3.25": "Notizen, die zugleich Aufgaben sind",
     "content.p.26": "Jede Checkliste in einer Notiz macht sie zur Aufgabennotiz — ohne separaten Aufgabenmanager, den du pflegen musst.",
     "content.h3.27": "Ein Kanban-Board für eine Person",
-    "content.p.28": "Wechsle zwischen den Layouts Liste, Kachel, Kanban und Gedanken. Karten wechseln automatisch den Bereich, wenn Aufgaben abgehakt werden — ein Kanban-Board für eine Person, nicht für ein Team.",
+    "content.p.28": "Wechsle zwischen den Layouts Kachel, Liste und Kanban. Karten wechseln automatisch den Bereich, wenn Aufgaben abgehakt werden — ein Kanban-Board für eine Person, nicht für ein Team.",
     "content.h3.29": "Ein ernst gemeintes Limit für laufende Arbeit",
     "content.p.30": "Begrenze, wie viele Notizen gleichzeitig „in Bearbeitung“ sein können, damit Fokus nicht nur ein Vorsatz bleibt.",
     "content.h3.31": "Alle Aufgaben auf einem Bildschirm",
