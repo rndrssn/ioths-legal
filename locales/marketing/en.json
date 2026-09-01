@@ -1,6 +1,6 @@
 {
   "locale": "en",
-  "sourceDigest": "3c911e0e0feeac875c3f6c59d2dc0baca6bf03c28cf78d84c0859525193948af",
+  "sourceDigest": "72740ba06cf9fb156baa73945cc5fd528643bdde9494b7be292a02a7e2b69ff3",
   "entries": [
     {
       "id": "metadata.title",
@@ -24,7 +24,7 @@
     },
     {
       "id": "metadata.og.image.alt.3",
-      "source": "IOTHS: private Markdown capture for an existing vault",
+      "source": "IOTHS: private Markdown capture for an existing notes library",
       "context": "Metadata: og:image:alt."
     },
     {
@@ -39,7 +39,7 @@
     },
     {
       "id": "metadata.twitter.image.alt.6",
-      "source": "IOTHS: private Markdown capture for an existing vault",
+      "source": "IOTHS: private Markdown capture for an existing notes library",
       "context": "Metadata: twitter:image:alt."
     },
     {
@@ -124,7 +124,7 @@
     },
     {
       "id": "content.p.6",
-      "source": "A private, offline-first Markdown companion for your existing vault. Begin with a note, add checkboxes when the work appears, and keep every file readable, portable, and yours.",
+      "source": "A private, offline-first Markdown companion for your existing notes library. Begin with a note, add checkboxes when the work appears, and keep every file readable, portable, and yours.",
       "context": "P content. Preserve any inline HTML tags and attributes."
     },
     {
@@ -314,7 +314,7 @@
     },
     {
       "id": "content.p.44",
-      "source": "Notes are stored as <code>.md</code> files with YAML frontmatter — the same structure Obsidian vaults use. Nothing proprietary, nothing to migrate later. Open your notes in any text editor, on any device, at any time.",
+      "source": "Notes are stored as <code>.md</code> files with YAML frontmatter — the same structure Obsidian uses. Nothing proprietary, nothing to migrate later. Open your notes in any text editor, on any device, at any time.",
       "context": "P content. Preserve any inline HTML tags and attributes."
     },
     {
@@ -339,7 +339,7 @@
     },
     {
       "id": "content.li.49",
-      "source": "<strong>Files folder storage</strong>, through any Files-compatible provider such as an Obsidian vault, Box, Dropbox, or Microsoft OneDrive",
+      "source": "<strong>Files folder storage</strong>, through any Files-compatible provider such as Obsidian, Box, Dropbox, or Microsoft OneDrive",
       "context": "LI content. Preserve any inline HTML tags and attributes."
     },
     {
@@ -404,7 +404,7 @@
     },
     {
       "id": "structuredData.website.description",
-      "source": "Private, offline-first Markdown notes for an existing vault on iPhone and iPad, inspired by complexity theory and Conway's Game of Life.",
+      "source": "Private, offline-first Markdown notes for an existing notes library on iPhone and iPad, inspired by complexity theory and Conway's Game of Life.",
       "context": "Schema.org WebSite description. Preserve the product claim exactly."
     },
     {
