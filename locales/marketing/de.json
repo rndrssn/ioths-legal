@@ -1,6 +1,6 @@
 {
   "locale": "de",
-  "sourceDigest": "72740ba06cf9fb156baa73945cc5fd528643bdde9494b7be292a02a7e2b69ff3",
+  "sourceDigest": "fc7cb5c59f68cae9a895a52dc116560d61668e6f8646be89d3c37ee81f23b7c4",
   "translations": {
     "metadata.title": "IOTHS — Markdown-Notizen, inspiriert von der Komplexitätstheorie",
     "metadata.description.0": "Private, offline-first Markdown-Notizen für iPhone und iPad, inspiriert von Komplexitätstheorie, Conway's Game of Life und komplexen adaptiven Systemen.",
@@ -69,7 +69,7 @@
     "content.p.46": "Deine Notizen bleiben auf diesem Gerät, bis du ausdrücklich ein Synchronisierungsziel aktivierst. Es gibt kein IOTHS-Konto und keine vom Entwickler betriebene Anmeldung. Nutzungsanalysen sind deaktiviert, sofern du sie nicht einschaltest; selbst dann enthalten sie niemals Inhalte, Titel oder Tags deiner Notizen. Nichts wird verkauft. Nichts wird zum Trainieren eines KI-Modells verwendet. Lies die vollständige <a href=\"/legal/privacy\">Datenschutzerklärung</a>.",
     "content.h2.47": "Mehr Speicher freischalten",
     "content.p.48": "<strong>Full Unlock</strong> ist ein einmaliger Kauf — kein Abonnement — und ergänzt:",
-    "content.li.49": "<strong>Speicher in Files-Ordnern</strong> über jeden Files-kompatiblen Anbieter, etwa Obsidian, Box, Dropbox oder Microsoft OneDrive",
+    "content.li.49": "<strong>Speicher in Files-Ordnern</strong>, wenn Ihr ausgewählter Anbieter die Ordnerauswahl zulässt",
     "content.li.50": "<strong>GitHub-Speicher und -Synchronisierung</strong> in einen festgelegten Repository-Pfad",
     "content.li.51": "<strong>GitLab-Speicher und -Synchronisierung</strong> in einen festgelegten Projektpfad",
     "content.li.52": "<strong>Portabler Export</strong> — speichere deine gesamte Bibliothek jederzeit als ZIP-Archiv",

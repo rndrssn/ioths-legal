@@ -1,6 +1,6 @@
 {
   "locale": "ja",
-  "sourceDigest": "72740ba06cf9fb156baa73945cc5fd528643bdde9494b7be292a02a7e2b69ff3",
+  "sourceDigest": "fc7cb5c59f68cae9a895a52dc116560d61668e6f8646be89d3c37ee81f23b7c4",
   "translations": {
     "metadata.title": "IOTHS — 複雑性理論に着想を得たMarkdownノート",
     "metadata.description.0": "複雑性理論、Conway's Game of Life、複雑適応系に着想を得た、iPhoneとiPad向けのプライベートでオフラインファーストなMarkdownノート。",
@@ -69,7 +69,7 @@
     "content.p.46": "同期先を明示的にオンにするまで、ノートはこのデバイス上に留まります。IOTHSアカウントも、開発者が運営するサインインもありません。利用状況の分析は、あなたがオンにしない限り無効です。有効にした場合も、ノートの内容、タイトル、タグが含まれることはありません。データを販売せず、AIモデルの学習にも使用しません。詳しくは<a href=\"/legal/privacy\">プライバシーポリシー</a>をご覧ください。",
     "content.h2.47": "ストレージ機能を追加",
     "content.p.48": "<strong>Full Unlock</strong>は、サブスクリプションではなく1回限りの購入で、次の機能が追加されます：",
-    "content.li.49": "<strong>Filesフォルダのストレージ</strong>。Obsidian、Box、Dropbox、Microsoft OneDriveなど、Files対応プロバイダを利用できます",
+    "content.li.49": "<strong>Filesフォルダのストレージ</strong>。選択したプロバイダがフォルダの選択を許可している場合に利用できます",
     "content.li.50": "<strong>GitHubのストレージと同期</strong>。専用リポジトリパスに保存します",
     "content.li.51": "<strong>GitLabのストレージと同期</strong>。専用プロジェクトパスに保存します",
     "content.li.52": "<strong>ポータブル書き出し</strong> — ライブラリ全体をいつでもZIPアーカイブとして保存できます",

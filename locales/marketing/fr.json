@@ -1,6 +1,6 @@
 {
   "locale": "fr",
-  "sourceDigest": "72740ba06cf9fb156baa73945cc5fd528643bdde9494b7be292a02a7e2b69ff3",
+  "sourceDigest": "fc7cb5c59f68cae9a895a52dc116560d61668e6f8646be89d3c37ee81f23b7c4",
   "translations": {
     "metadata.title": "IOTHS — Notes Markdown inspirées par la théorie de la complexité",
     "metadata.description.0": "Notes Markdown privées et hors ligne pour iPhone et iPad, inspirées par la théorie de la complexité, Conway's Game of Life et les systèmes adaptatifs complexes.",
@@ -69,7 +69,7 @@
     "content.p.46": "Vos notes restent sur cet appareil jusqu’à ce que vous activiez explicitement une destination de synchronisation. Il n’existe aucun compte IOTHS ni aucune connexion gérée par le développeur. Les statistiques d’utilisation sont désactivées, sauf si vous les activez ; même dans ce cas, elles n’incluent jamais le contenu, les titres ni les tags des notes. Rien n’est vendu. Rien ne sert à entraîner un modèle d’IA. Consultez la <a href=\"/legal/privacy\">Politique de confidentialité</a> complète.",
     "content.h2.47": "Débloquez davantage de stockage",
     "content.p.48": "<strong>Full Unlock</strong> est un achat unique — pas un abonnement — qui ajoute :",
-    "content.li.49": "<strong>Stockage dans des dossiers Files</strong>, via tout fournisseur compatible avec Files, comme Obsidian, Box, Dropbox ou Microsoft OneDrive",
+    "content.li.49": "<strong>Stockage dans des dossiers Files</strong>, lorsque le fournisseur que vous avez choisi autorise la sélection de dossiers",
     "content.li.50": "<strong>Stockage et synchronisation GitHub</strong>, vers un chemin dédié du dépôt",
     "content.li.51": "<strong>Stockage et synchronisation GitLab</strong>, vers un chemin dédié du projet",
     "content.li.52": "<strong>Exportation portable</strong> — enregistrez toute votre bibliothèque dans une archive ZIP à tout moment",

@@ -1,6 +1,6 @@
 {
   "locale": "ko",
-  "sourceDigest": "72740ba06cf9fb156baa73945cc5fd528643bdde9494b7be292a02a7e2b69ff3",
+  "sourceDigest": "fc7cb5c59f68cae9a895a52dc116560d61668e6f8646be89d3c37ee81f23b7c4",
   "translations": {
     "metadata.title": "IOTHS — 복잡성 이론에서 영감을 받은 Markdown 노트",
     "metadata.description.0": "복잡성 이론, Conway's Game of Life, 복잡 적응 시스템에서 영감을 받은 iPhone 및 iPad용 비공개 오프라인 우선 Markdown 노트입니다.",
@@ -69,7 +69,7 @@
     "content.p.46": "동기화 대상을 직접 켜기 전까지 노트는 이 기기에만 머물러요. IOTHS 계정도, 개발자가 운영하는 로그인도 없어요. 사용 분석은 직접 켜지 않는 한 꺼져 있고, 켜더라도 노트 내용, 제목, 태그는 절대 포함하지 않아요. 데이터를 판매하지 않으며 AI 모델 학습에도 사용하지 않아요. 자세한 내용은 <a href=\"/legal/privacy\">개인정보 처리방침</a>에서 확인하세요.",
     "content.h2.47": "더 다양한 저장 공간 사용하기",
     "content.p.48": "<strong>Full Unlock</strong>은 구독이 아닌 일회성 구매이며, 다음 기능을 추가해요:",
-    "content.li.49": "<strong>Files 폴더 저장 공간</strong>: Obsidian, Box, Dropbox, Microsoft OneDrive 등 Files 호환 제공업체를 사용할 수 있어요",
+    "content.li.49": "<strong>Files 폴더 저장 공간</strong>: 선택한 제공업체가 폴더 선택을 허용하는 경우에 사용할 수 있어요",
     "content.li.50": "<strong>GitHub 저장 공간 및 동기화</strong>: 전용 리포지토리 경로에 저장해요",
     "content.li.51": "<strong>GitLab 저장 공간 및 동기화</strong>: 전용 프로젝트 경로에 저장해요",
     "content.li.52": "<strong>휴대용 내보내기</strong> — 언제든 라이브러리 전체를 ZIP 아카이브로 저장해요",

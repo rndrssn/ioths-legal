@@ -1,6 +1,6 @@
 {
   "locale": "es",
-  "sourceDigest": "72740ba06cf9fb156baa73945cc5fd528643bdde9494b7be292a02a7e2b69ff3",
+  "sourceDigest": "fc7cb5c59f68cae9a895a52dc116560d61668e6f8646be89d3c37ee81f23b7c4",
   "translations": {
     "metadata.title": "IOTHS — Notas Markdown inspiradas en la teoría de la complejidad",
     "metadata.description.0": "Notas Markdown privadas y sin conexión para iPhone y iPad, inspiradas en la teoría de la complejidad, Conway's Game of Life y los sistemas adaptativos complejos.",
@@ -69,7 +69,7 @@
     "content.p.46": "Tus notas permanecen en este dispositivo hasta que activas explícitamente un destino de sincronización. No hay una cuenta de IOTHS ni un inicio de sesión gestionado por el desarrollador. Las analíticas de uso están desactivadas a menos que tú las actives e, incluso entonces, nunca incluyen el contenido, los títulos ni las etiquetas de las notas. No se vende nada. Nada se utiliza para entrenar un modelo de IA. Lee la <a href=\"/legal/privacy\">Política de privacidad</a> completa.",
     "content.h2.47": "Desbloquea más opciones de almacenamiento",
     "content.p.48": "<strong>Full Unlock</strong> es una compra única, no una suscripción, que añade:",
-    "content.li.49": "<strong>Almacenamiento en una carpeta de Files</strong>, mediante cualquier proveedor compatible con Files, como Obsidian, Box, Dropbox o Microsoft OneDrive",
+    "content.li.49": "<strong>Almacenamiento en una carpeta de Files</strong>, cuando el proveedor que elijas permita seleccionar carpetas",
     "content.li.50": "<strong>Almacenamiento y sincronización con GitHub</strong>, en una ruta específica del repositorio",
     "content.li.51": "<strong>Almacenamiento y sincronización con GitLab</strong>, en una ruta específica del proyecto",
     "content.li.52": "<strong>Exportación portátil</strong>: guarda toda tu Biblioteca como un archivo ZIP en cualquier momento",

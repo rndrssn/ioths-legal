@@ -1,6 +1,6 @@
 {
   "locale": "en",
-  "sourceDigest": "72740ba06cf9fb156baa73945cc5fd528643bdde9494b7be292a02a7e2b69ff3",
+  "sourceDigest": "fc7cb5c59f68cae9a895a52dc116560d61668e6f8646be89d3c37ee81f23b7c4",
   "entries": [
     {
       "id": "metadata.title",
@@ -339,7 +339,7 @@
     },
     {
       "id": "content.li.49",
-      "source": "<strong>Files folder storage</strong>, through any Files-compatible provider such as Obsidian, Box, Dropbox, or Microsoft OneDrive",
+      "source": "<strong>Files folder storage</strong>, when your selected provider allows folder selection",
       "context": "LI content. Preserve any inline HTML tags and attributes."
     },
     {
